@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>A Pen by  Ilya1</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet prefetch" />
+    <link href="css/main.css" rel="stylesheet" />
+    <script src="//api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+  </head>
+  <body>
+    <nav class="navbar navbar-default navbar-background"></nav>
+    <nav class="navbar navbar-default navbar-fixed-top navbar-main">
+      <div class="container">
+        <div class="navbar-header">
+          <button aria-controls="navbar" aria-expanded="false" class="navbar-toggle collapsed" data-target="#navbar" data-toggle="collapse" type="button"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a class="navbar-brand" href="#">ZOOPY</a>
+        </div>
+        <div class="navbar-collapse collapse" id="navbar">
+          <ul class="nav navbar-nav">
+            <li class="dropdown">
+              <a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" data-toggle="dropdown" href="#" role="button">Санкт-Петербург<span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a href="#">Москва</a>
+                </li>
+                <li>
+                  <a href="#">Уфа</a>
+                </li>
+                <li>
+                  <a href="#">Тула</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li>
+              <a href="#"><span class="glyphicon glyphicon-log-in"></span> Вход</a>
+            </li>
+            <li>
+              <a href="#">Хочу зарабатывать присмотром за животными</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <nav class="navbar navbar-filter navbar-fixed-top">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12">
+            <h1>
+              Присмотрят за <a href="#">кошкой</a>
+            </h1>
+          </div>
+          <div class="col-xs-12">
+            <ul class="nav navbar-nav">
+              <li>
+                <a href="#">Район</a>
+              </li>
+              <li>
+                <a href="#">Метро</a>
+              </li>
+              <li>
+                <a href="#">Еще...</a>
+              </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+              <li>
+                <a href="#">Цены<span class="glyphicon glyphicon-sort"></span></a>
+              </li>
+              <li>
+                <a href="#">за период</a>
+              </li>
+              <li>
+                <a href="#">сутки</a>
+              </li>
+              <li>
+                <a href="#">час</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div id="map"></div>
+    <div class="container main-content">
+      <div class="row">
+        <div class="col-sm-8 col-sm-offset-4 main-right-column">
+          <form class="form-search">
+            <input class="form-control" type="text" value="123" />
+          </form>
+          <div class="media">
+            <div class="media-left">
+              <a href="#"><img class="media-object" src="img/av1.jpg" /></a>
+            </div>
+            <div class="media-body">
+              <h4 class="media-heading">
+                Анатолий Saharoza
+              </h4>
+              <p>
+                Живу один в просторной квартире, не держу одновременно более одного животного. Работаю дома (писатель), поэтому уделю вашему любимцу максимум внимания. Очень люблю кошек.<br />Также с удовольствием присмотрю за грызунами.
+              </p>
+              <p>
+                Корм и наполнитель могу приобретать сам за деньги хозяина. Возможны забор и доставка животного.
+              </p>
+            </div>
+          </div>
+          <div class="media">
+            <div class="media-left">
+              <a href="#"><img class="media-object" src="img/av2.jpg" /></a>
+            </div>
+            <div class="media-body">
+              <h4 class="media-heading">
+                Елена Kononova
+              </h4>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis commodi expedita sequi nisi ipsa reiciendis, quia quam ullam sint aliquid beatae iure at nihil ad temporibus non sed culpa ducimus.
+              </p>
+            </div>
+          </div>
+          <div class="media">
+            <div class="media-left">
+              <a href="#"><img class="media-object" src="img/av3.jpg" /></a>
+            </div>
+            <div class="media-body">
+              <h4 class="media-heading">
+                Олеся Lacrimosa
+              </h4>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis commodi expedita sequi nisi ipsa reiciendis, quia quam ullam sint aliquid beatae iure at nihil ad temporibus non sed culpa ducimus.
+              </p>
+            </div>
+          </div>
+          <div class="media">
+            <div class="media-left">
+              <a href="#"><img class="media-object" src="http://placehold.it/130x130" /></a>
+            </div>
+            <div class="media-body">
+              <h4 class="media-heading">
+                Media heading 4
+              </h4>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis commodi expedita sequi nisi ipsa reiciendis, quia quam ullam sint aliquid beatae iure at nihil ad temporibus non sed culpa ducimus.
+              </p>
+            </div>
+          </div>
+          <div class="media">
+            <div class="media-left">
+              <a href="#"><img class="media-object" src="http://placehold.it/130x130" /></a>
+            </div>
+            <div class="media-body">
+              <h4 class="media-heading">
+                Media heading 4
+              </h4>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis commodi expedita sequi nisi ipsa reiciendis, quia quam ullam sint aliquid beatae iure at nihil ad temporibus non sed culpa ducimus.
+              </p>
+            </div>
+          </div>
+          <div class="media">
+            <div class="media-left">
+              <a href="#"><img class="media-object" src="http://placehold.it/130x130" /></a>
+            </div>
+            <div class="media-body">
+              <h4 class="media-heading">
+                Media heading 4
+              </h4>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis commodi expedita sequi nisi ipsa reiciendis, quia quam ullam sint aliquid beatae iure at nihil ad temporibus non sed culpa ducimus.
+              </p>
+            </div>
+          </div>
+          <div class="footer">
+            <div class="row">
+              <div class="col-xs-12 text-center">
+                <ul class="pagination">
+                  <li>
+                    <a>1</a>
+                  </li>
+                  <li>
+                    <a>2</a>
+                  </li>
+                  <li>
+                    <a>3</a>
+                  </li>
+                  <li>
+                    <a>4</a>
+                  </li>
+                  <li>
+                    <a>5</a>
+                  </li>
+                </ul>
+                <div class="copy">
+                  <div class="pull-left">
+                    <p>
+                      <a href="#123"> support@zoopy.ru</a>
+                    </p>
+                  </div>
+                  <div class="pull-right">
+                    <p>
+                      Подписывайтесь:
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
