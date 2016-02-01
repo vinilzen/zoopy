@@ -2,13 +2,8 @@
 <html>
   <head>
     <meta charset="UTF-8" />
-    <title>A Pen by  Ilya1</title>
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet prefetch" />
+    <title>ZOOPY</title>
     <link href="css/main.css" rel="stylesheet" />
-    <script src="//api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-    <script src="js/main.js"></script>
   </head>
   <body>
     <nav class="navbar navbar-default navbar-background"></nav>
@@ -67,7 +62,7 @@
             </ul>
             <ul class="nav navbar-nav navbar-right">
               <li>
-                <a href="#">Цены<span class="glyphicon glyphicon-sort"></span></a>
+                <a href="#">Цены <span class="glyphicon glyphicon-sort-by-attributes"></span></a>
               </li>
               <li>
                 <a href="#">за период</a>
@@ -84,123 +79,98 @@
       </div>
     </nav>
     <div id="map"></div>
-    <div class="container main-content">
-      <div class="row">
-        <div class="col-sm-8 col-sm-offset-4 main-right-column">
-          <form class="form-search">
-            <input class="form-control" type="text" value="123" />
-          </form>
-          <div class="media">
-            <div class="media-left">
-              <a href="#"><img class="media-object" src="img/av1.jpg" /></a>
+    <div class="wrapper">
+      <div class="container main-content">
+        <div class="row">
+          <div class="col-sm-8 col-sm-offset-4 main-right-column">
+            <form class="form-search">
+              <input class="form-control" placeholder="Имя, услуга, телефон, почта" type="text" />
+            </form>
+            <div class="media">
+              <div class="media-left">
+                <a href="#"><img class="media-object" src="img/av1.jpg" /></a>
+              </div>
+              <div class="media-body">
+                <h4 class="media-heading">
+                  Анатолий Saharoza
+                </h4>
+                <p>
+                  Живу один в просторной квартире, не держу одновременно более одного животного. Работаю дома (писатель), поэтому уделю вашему любимцу максимум внимания. Очень люблю кошек.<br />Также с удовольствием присмотрю за грызунами.
+                </p>
+                <p>
+                  Корм и наполнитель могу приобретать сам за деньги хозяина. Возможны забор и доставка животного.
+                </p>
+              </div>
             </div>
-            <div class="media-body">
-              <h4 class="media-heading">
-                Анатолий Saharoza
-              </h4>
-              <p>
-                Живу один в просторной квартире, не держу одновременно более одного животного. Работаю дома (писатель), поэтому уделю вашему любимцу максимум внимания. Очень люблю кошек.<br />Также с удовольствием присмотрю за грызунами.
-              </p>
-              <p>
-                Корм и наполнитель могу приобретать сам за деньги хозяина. Возможны забор и доставка животного.
-              </p>
+            <div class="media">
+              <div class="media-left">
+                <a href="#"><img class="media-object" src="img/av2.jpg" /></a>
+              </div>
+              <div class="media-body">
+                <h4 class="media-heading">
+                  Елена Kononova
+                </h4>
+                <p>
+                  Возьму на передержку любое животное. Звоните, не стесняитесь!<br />Обеспечу ласку, игры и уход.
+                </p>
+              </div>
             </div>
-          </div>
-          <div class="media">
-            <div class="media-left">
-              <a href="#"><img class="media-object" src="img/av2.jpg" /></a>
+            <div class="media">
+              <div class="media-left">
+                <a href="#"><img class="media-object" src="img/av3.jpg" /></a>
+              </div>
+              <div class="media-body">
+                <h4 class="media-heading">
+                  Олеся Lacrimosa
+                </h4>
+                <p>
+                  На время вашего отпуска, командировки или выходных, с удовольствием возьму вашу маленькую собачку или кошку, предоставляю свои услуги по уходу и содержанию в хороших домашних условиях, любовь и нежность гарантирую!!! <br />Друзья, звоните буду безгранично рада вашим питомцам.)
+                </p>
+              </div>
             </div>
-            <div class="media-body">
-              <h4 class="media-heading">
-                Елена Kononova
-              </h4>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis commodi expedita sequi nisi ipsa reiciendis, quia quam ullam sint aliquid beatae iure at nihil ad temporibus non sed culpa ducimus.
-              </p>
-            </div>
-          </div>
-          <div class="media">
-            <div class="media-left">
-              <a href="#"><img class="media-object" src="img/av3.jpg" /></a>
-            </div>
-            <div class="media-body">
-              <h4 class="media-heading">
-                Олеся Lacrimosa
-              </h4>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis commodi expedita sequi nisi ipsa reiciendis, quia quam ullam sint aliquid beatae iure at nihil ad temporibus non sed culpa ducimus.
-              </p>
-            </div>
-          </div>
-          <div class="media">
-            <div class="media-left">
-              <a href="#"><img class="media-object" src="http://placehold.it/130x130" /></a>
-            </div>
-            <div class="media-body">
-              <h4 class="media-heading">
-                Media heading 4
-              </h4>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis commodi expedita sequi nisi ipsa reiciendis, quia quam ullam sint aliquid beatae iure at nihil ad temporibus non sed culpa ducimus.
-              </p>
-            </div>
-          </div>
-          <div class="media">
-            <div class="media-left">
-              <a href="#"><img class="media-object" src="http://placehold.it/130x130" /></a>
-            </div>
-            <div class="media-body">
-              <h4 class="media-heading">
-                Media heading 4
-              </h4>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis commodi expedita sequi nisi ipsa reiciendis, quia quam ullam sint aliquid beatae iure at nihil ad temporibus non sed culpa ducimus.
-              </p>
-            </div>
-          </div>
-          <div class="media">
-            <div class="media-left">
-              <a href="#"><img class="media-object" src="http://placehold.it/130x130" /></a>
-            </div>
-            <div class="media-body">
-              <h4 class="media-heading">
-                Media heading 4
-              </h4>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis commodi expedita sequi nisi ipsa reiciendis, quia quam ullam sint aliquid beatae iure at nihil ad temporibus non sed culpa ducimus.
-              </p>
-            </div>
-          </div>
-          <div class="footer">
-            <div class="row">
-              <div class="col-xs-12 text-center">
-                <ul class="pagination">
-                  <li>
-                    <a>1</a>
-                  </li>
-                  <li>
-                    <a>2</a>
-                  </li>
-                  <li>
-                    <a>3</a>
-                  </li>
-                  <li>
-                    <a>4</a>
-                  </li>
-                  <li>
-                    <a>5</a>
-                  </li>
-                </ul>
-                <div class="copy">
-                  <div class="pull-left">
-                    <p>
-                      <a href="#123"> support@zoopy.ru</a>
-                    </p>
-                  </div>
-                  <div class="pull-right">
-                    <p>
-                      Подписывайтесь:
-                    </p>
+            <div class="footer">
+              <div class="row">
+                <div class="col-xs-12 text-center">
+                  <ul class="pagination pagination-lg">
+                    <li class="previous">
+                      <a href="#"><span aria-hidden="true">&larr;</span></a>
+                    </li>
+                    <li class="active">
+                      <a href="#">1</a>
+                    </li>
+                    <li>
+                      <a href="#">2</a>
+                    </li>
+                    <li>
+                      <a href="#">3</a>
+                    </li>
+                    <li>
+                      <a href="#">4</a>
+                    </li>
+                    <li>
+                      <a href="#">5</a>
+                    </li>
+                    <li>
+                      <span>...</span>
+                    </li>
+                    <li>
+                      <a href="#">48</a>
+                    </li>
+                    <li class="next">
+                      <a href="#"><span aria-hidden="true">&rarr;</span></a>
+                    </li>
+                  </ul>
+                  <div class="copy">
+                    <div class="pull-left">
+                      <p>
+                        <a href="#123"> support@zoopy.ru</a>
+                      </p>
+                    </div>
+                    <div class="pull-right">
+                      <p>
+                        Подписывайтесь: <a href="#">Vk </a><a href="#">Fb </a><a href="#">Ok </a><a href="#">Tw </a>
+                      </p>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -208,6 +178,11 @@
           </div>
         </div>
       </div>
+      <div class="footer-bgr"></div>
     </div>
+    <script src="//api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
   </body>
 </html>
