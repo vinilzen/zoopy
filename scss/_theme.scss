@@ -1,58 +1,11 @@
 .main-content {
-  padding-top: 130px;
-}
-
-.navbar-filter {
-  background-color: #fff;
-  margin-bottom: 0;
-  z-index: 1;
-  top:60px;
-  border-bottom: 1px solid rgba(0,0,0,.1);
-}
-.navbar-main {
-  border: none;
-}
-
-.navbar-default {
-  background-color: rgba(0,0,0,0);
-  border-color: rgba(0,0,0,0);
-  margin-bottom: 0;
-  &.navbar-background {
-    background-color: #91a2ad;
-    border-color: #91a2ad;
-    border-radius: 0;
-    border: none;
-  }
-  .navbar-brand {
-    color: #fff;
-    font-weight: bold;
-  }
-  .navbar-nav>li>a,
-  .navbar-nav>.active>a, 
-  .navbar-nav>.active>a:focus, 
-  .navbar-nav>.active>a:hover {
-    color: #fff;
-    background-color: transparent;
-  }
-  &.affix { 
-    background-color: #fff;
-    .navbar-nav>li>a,
-    .navbar-nav>.active>a, 
-    .navbar-nav>.active>a:focus, 
-    .navbar-nav>.active>a:hover {
-      color: #000;
-      background-color: transparent;
-    }
-    .navbar-brand {
-      color: #91a2ad;
-    }
-  }
+  padding-top: 122px;
 }
 
 #map {
   width: 33.33333333%;
   position: fixed;
-  top: 190px;
+  top: 182px;
   bottom: 0;
   left: 0;
   background-color: rgba(109,251,106,1);
@@ -73,7 +26,6 @@
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f8f8f8', endColorstr='#e3e3e3',GradientType=0 ); /* IE6-9 */
   border-top: 1px solid #e5e5e5;
 }
-
 .wrapper {
   position: relative;
 }
@@ -88,14 +40,63 @@
 .footer {
   z-index: 1;
   position: relative;
-  margin-top: 30px;
+  margin-top: 0;
   .col-xs-12 {
     min-height: 170px;
-    //@extend .ftr;
   }
 }
-.media {
-  padding-top: 40px;
+.tags {
+  padding-top: 1px;
+  padding-bottom: 13px;
+  padding-left: 1px;
+  @include clearfix;
+  .btn-lime, .btn-default {
+    float: left;
+    margin-top: -1px;
+    margin-left: -1px;
+  }
 }
-.main-right-column {
+.pets {
+  margin-top: 4px;
+  @include clearfix;
+  span {
+    float: left;
+    font-size: 27px;
+    margin-right: 20px;
+    color: #262626;
+    &.disabled {
+      color: #b6b6b6;
+    }
+    em {
+      color: #0076ad;
+      margin: 2px auto 0;
+      display: block;
+      content: ' ';
+      width: 16px;
+      height: 17px;
+      font-size: 16px;
+    }
+  }
 }
+.soc-btns {
+  margin-left: -7px;
+  margin-right: -7px;
+}
+.soc {
+  display: inline-block;
+  width: 33px;
+  height: 33px;
+  background-image: url(../img/soc.png);
+  background-repeat: no-repeat;
+  margin: 0 7px;
+  &.soc-vk {
+    background-position: left  top;
+  }
+  &.soc-fb {
+    background-position: -48px  top;
+  }
+  &.soc-ok {
+    background-position: -96px  top;
+  }
+}
+

@@ -1,31 +1,53 @@
-ymaps.ready(function () {
+/*ymaps.ready(function () {
     var myMap = new ymaps.Map('map', {
             center: [55.751574, 37.573856],
             zoom: 9
         });
     myMap.behaviors.disable("scrollZoom");
-});
+});*/
 
 $(function(){
-    var ww = $(window).width();
+    var ww = $(window).width(),
+        $c = $('body').find('.container'),
+        $mrc = $('body').find('.main-right-column'),
+        fixed_width = 1599,
+        gap = 28;
 
-    if (ww>1440) {
-        setMapWidth(ww);
-    }
+    setMapWidth(ww);
+    setHrWidth(ww);
 
     $( window ).resize(function() {
         setMapWidth( $(window).width() );
+        setHrWidth( $(window).width() );
     });
 
     function setMapWidth(ww) {
-        if (ww > 1440) {
-            var wc = $('body').find('.container').outerWidth(),
-                wrc = $('body').find('.main-right-column').outerWidth(),
-                wu = (ww-wc)/2;
+        var wc = $c.width(),
+            wrc = $mrc.width(),
+            wu = (ww-wc)/2;
 
-            $('#map').width( ww-wrc-wu );
+        if (ww > fixed_width) {
+            $('#map').width( ww-wrc-wu-gap);
         } else {
-            $('#map').css('width','33.33333333%');
+            $('#map').width( ww-wrc-45-gap );
+        }
+    }
+    
+    function setHrWidth(ww){
+
+        var wc = $c.outerWidth(),
+            wu = (ww-wc)/2;
+
+        if (ww > fixed_width) {
+            $('.full-width').css({
+                'margin-left': -wu+'px',
+                'margin-right': -wu+'px'
+            });
+        } else {
+            $('.full-width').css({
+                'margin-left': -17+'px',
+                'margin-right': -17+'px'
+            });
         }
     }
 

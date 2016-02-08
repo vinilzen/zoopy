@@ -1,0 +1,32 @@
+.media {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+.form-search + .media {
+  padding-top: 12px;
+}
+.media-object {
+  padding-top: 5px;
+}
+.media-heading {
+  margin-bottom: 9px;
+  margin-top: 3px;
+  a {
+    text-decoration: none;
+    padding-bottom: 1px;
+    background: url(../img/point.png) repeat-x left bottom;// border-bottom: 1px dotted #999999;
+    color: #000;
+    margin-right: 8px;
+    span {
+      color: #b6b6b6;
+      margin-left: 4px;
+    }
+    &:hover, &:focus {
+      border-bottom-color: rgba(0,0,0,0);
+    }
+  }
+  span.glyphicon {
+    font-size: .9em;
+    color: #999999;
+  }
+}

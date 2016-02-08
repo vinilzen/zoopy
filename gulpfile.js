@@ -16,13 +16,14 @@ gulp.task('serve', function() {
         open: false
     });
 
-	gulp.watch("scss/*.scss", ['sass']);
+    gulp.watch("scss/*.scss", ['sass']);
+	gulp.watch(bootstrapDir+"/assets/stylesheets/*/*.scss", ['sass']);
 	gulp.watch("slim/*.slim", ['slim']);
 	gulp.watch("*.html").on('change', browserSync.reload);
 });
 
 gulp.task('slim', function(){
-  gulp.src("slim/*.slim")
+  gulp.src("slim/index.slim")
     .pipe(slim({
       pretty: true
     }))

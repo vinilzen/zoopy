@@ -1,0 +1,61 @@
+.form-search {
+  margin-top: 13px;
+  .form-group {
+    position: relative;
+    padding-right: 44px;
+  }
+  .form-control {
+    border-color: #e5e5e5;
+    padding-left: 35px;
+    &::-webkit-input-placeholder {
+      color: #aeaeae;
+      font-size: 14px;
+    }
+    &:-moz-placeholder {
+      color: #aeaeae;
+      font-size: 14px;
+    }
+    &::-moz-placeholder {
+      color: #aeaeae;
+      font-size: 14px;
+    }
+    &:-ms-input-placeholder {
+      color: #aeaeae;
+      font-size: 14px;
+    }
+  }
+}
+
+.form-control {
+  border: none;
+  &:focus {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
+}
+/* Поиск с иконкой */
+.icon-addon {
+  position: relative;
+  color: #555;
+  display: block;
+  &:after,
+  &:before {
+    display: table;
+    content: " ";
+  }
+  &:after {
+    clear: both;
+  }
+  .glyphicon {
+    color: #e5e5e5;
+    position: absolute;
+    z-index: 0;
+    left: 10px;
+    font-size: 16px;
+    width: 20px;
+    margin-left: -2px;
+    text-align: center;
+    padding: 10px 0;
+    top: 0;
+  }
+}

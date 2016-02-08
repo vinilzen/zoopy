@@ -1,26 +1,34 @@
 @import "bootstrap";
 @import "pagination";
+@import "form";
+@import "navbar";
+@import "typo";
 @import "theme";
+@import "media";
+@import "photoline";
+@import "reviews";
 
 html, body {
   min-height: 100%;
   height: 100%;
 }
-.form-search {
-  margin-top: 15px;
+a, a:focus {
+  outline: none; /* Убираем границу вокруг ссылок  */
 }
-@media (max-width: 1440px) {
+@media (max-width: 1599px) {
   .container {
     width: auto;
+    padding-left: 45px;
+    padding-right: 45px;
   }
 }
-@media (min-width: 1440px) {
-  .container {
-    width: 1200px;
-  }
-}
-@media (min-width: 1650px) {
+@media (min-width: 1600px) {
   .container {
       width: 1534px;
   }
+}
+.full-width {
+  display: block;
+  clear: both;
+  margin-top: 0;
 }

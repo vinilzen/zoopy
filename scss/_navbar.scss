@@ -1,0 +1,163 @@
+.navbar-filter {
+  background-color: #fff;
+  margin-bottom: 0;
+  z-index: 3;
+  top:60px;
+  height: 122px;
+  // overflow: hidden;
+  border-bottom: 1px solid rgba(0,0,0,.1);
+  .navbar-nav > li {
+    padding: 0 7px;
+    > a {
+      padding-top: 10px;
+      padding-bottom: 4px;
+      padding-left: 0;
+      padding-right: 0;
+    }
+    &.active {
+      a {
+        color: #7ead1a;
+        border-bottom: 1px solid #666666;
+        span {
+          border-color: transparent;
+        }
+      }
+    }
+  }
+}
+.navbar-main {
+  border: none;
+}
+.navbar-left {
+  margin-left: -15px;
+}
+.navbar-default {
+  background-color: rgba(0,0,0,0);
+  border-color: rgba(0,0,0,0);
+  margin-bottom: 0;
+  &.navbar-background {
+    background-color: #91a2ad;
+    border-color: #91a2ad;
+    border-radius: 0;
+    border: none;
+  }
+  .navbar-brand {
+    color: #fff;
+    font-weight: bold;
+  }
+  .navbar-nav>li>a,
+  .navbar-nav>.active>a, 
+  .navbar-nav>.active>a:focus, 
+  .navbar-nav>.active>a:hover {
+    color: #fff;
+    background-color: transparent;
+  }
+  &.affix { 
+    background-color: #fff;
+    .navbar-nav>li>a,
+    .navbar-nav>.active>a, 
+    .navbar-nav>.active>a:focus, 
+    .navbar-nav>.active>a:hover {
+      color: #000;
+      background-color: transparent;
+    }
+    .navbar-brand {
+      color: #91a2ad;
+    }
+  }
+}
+.watch {
+  display: inline-block;
+  line-height: 52px;
+  margin-right: 24px;
+  margin-top: 24px;
+  position: relative;
+  .caret {
+    position: absolute;
+    right: -14px;
+    top: 50%;
+  }
+}
+.date-days {
+  display: inline-block;
+  margin: 0 3px 0 3px;
+  p  {
+    top: -21px;
+    position: relative;
+    width: 56px;
+    margin-top: -10px;
+    padding-bottom: 4px;
+    border-bottom: 3px solid #000;
+  }
+}
+.date-choice {
+  height: 54px;
+  top: -3px;
+  line-height: 54px;
+  border: 1px solid #d3d3d3;
+  border-radius: 7px;
+  display: inline-block;
+  padding: 0 40px 0 20px;
+  position: relative;
+  cursor: pointer;
+  .corner-cut {
+    overflow: hidden;
+    width: 20px;
+    height: 20px;
+    right: -1px;
+    top: -1px;
+    position: absolute;
+    display: none;
+  }
+  .corner-circle {
+    position: absolute;
+    opacity: 1;
+    top: -10px;
+    right: -10px;
+    border-radius:0 0 0 12px;
+    border-color: #d3d3d3;
+    border-top-color: rgba(0,0,0,0);
+    border-right-color: rgba(0,0,0,0);
+    border-style: solid;
+    border-width: 1px;
+    background-color: #fff;
+    width: 22px;
+    height: 22px
+  }
+  .close {
+    display: none;
+    color: #999999;
+    font-size: 14px;
+    position: absolute;
+    opacity: 1;
+    top: -11px;
+    right: -9px;
+    padding: 3px;
+  }
+  &:hover {
+    .corner-cut, .close {
+      display: block;
+    }
+  }
+  a.calendar {
+    display: block;
+    position: absolute;
+    right: 3px;
+    bottom: 3px;
+    width: 15px;
+    height: 11px;
+    background: url(../img/kletka.gif) no-repeat left top;
+  }
+  p {
+    position: relative;
+    top: 3px;
+    line-height: 52px;
+    margin-bottom: 0;
+    font-size: 45px;
+    font-family: 'Flexy Regular';
+  }
+  .date-month {
+    font-size: 30px;
+    margin-left: 5px;
+  }
+}

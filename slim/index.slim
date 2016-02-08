@@ -1,96 +1,220 @@
 doctype html
 html
   head
-    meta charset="UTF-8" /
-    title ZOOPY
-    link href="css/main.css" rel="stylesheet" /
+    == Slim::Template.new("slim/head.slim").render
   body
-    nav.navbar.navbar-default.navbar-background
-    nav.navbar.navbar-default.navbar-fixed-top.navbar-main
-      .container
-        .navbar-header
-          button.navbar-toggle.collapsed aria-controls="navbar" aria-expanded="false" data-target="#navbar" data-toggle="collapse" type="button" 
-            span.sr-only Toggle navigation
-            span.icon-bar
-            span.icon-bar
-            span.icon-bar
-          a.navbar-brand href="#" ZOOPY
-        #navbar.navbar-collapse.collapse
-          ul.nav.navbar-nav
-            li.dropdown
-              a.dropdown-toggle aria-expanded="false" aria-haspopup="true" data-toggle="dropdown" href="#" role="button" 
-                | Санкт-Петербург
-                span.caret
-              ul.dropdown-menu
-                li
-                  a href="#" Москва
-                li
-                  a href="#" Уфа
-                li
-                  a href="#" Тула
-          ul.nav.navbar-nav.navbar-right
-            li
-              a href="#"
-                span.glyphicon.glyphicon-log-in
-                |  Вход
-            li
-              a href="#" Хочу зарабатывать присмотром за животными
-    nav.navbar.navbar-filter.navbar-fixed-top
-      .container
-        .row
-          .col-xs-12
-            h1 
-              | Присмотрят за 
-              a[href="#"] кошкой
-          .col-xs-12
-            ul.nav.navbar-nav
-              li
-                a href="#" Район
-              li
-                a href="#" Метро
-              li
-                a href="#" Еще...
-            ul.nav.navbar-nav.navbar-right
-              li
-                a href="#"
-                  | Цены 
-                  span.glyphicon.glyphicon-sort-by-attributes
-              li
-                a href="#" за период
-              li
-                a href="#" сутки
-              li
-                a href="#" час
+    == Slim::Template.new("slim/nav.slim").render
     #map
     .wrapper
       .container.main-content
         .row
           .col-sm-8.col-sm-offset-4.main-right-column
             form.form-search
-              input.form-control type="text" placeholder="Имя, услуга, телефон, почта" /
+              .form-group
+                .icon-addon.addon-lg
+                  input.form-control type="text" placeholder="Имя, услуга, телефон, почта" /
+                  label.glyphicon.glyphicon-search rel="tooltip" title="search"
             .media
               .media-left
                 a href="#" 
                   img.media-object src="img/av1.jpg" /
               .media-body
+                .pull-right
+                  span.label.label-price цена не указана
+                  span.favorite.glyphicon.glyphicon-star-empty
                 h4.media-heading
-                  | Анатолий Saharoza
+                  a href="#"
+                    | Анатолий Saharoza
+                    span.glyphicon.glyphicon-map-marker
+                  span.glyphicon.glyphicon-info-sign
                 p
                   | Живу один в просторной квартире, не держу одновременно более одного животного. Работаю дома (писатель), поэтому уделю вашему любимцу максимум внимания. Очень люблю кошек.
                   br
                   | Также с удовольствием присмотрю за грызунами.
                 p Корм и наполнитель могу приобретать сам за деньги хозяина. Возможны забор и доставка животного.
+                dl.dl-horizontal
+                  dt.text-left
+                    span Опыт
+                  dd несколько животных
+                  dt.text-left
+                    span Дети
+                  dd нет
+                  dt.text-left
+                    span Животные в доме
+                  dd кошка стерил. , 2 кота не кастр. , доберман-девочка не стерил. , попугай
+
+                p.text-lime.text-sm Предлагаю
+
+                .tags
+                  .btn.btn-lime.btn-xs всегда дома
+                  .btn.btn-lime.btn-xs ветуслуги
+                  .btn.btn-lime.btn-xs груминг (уход)
+                  .btn.btn-lime.btn-xs хендлинг
+                  .btn.btn-lime.btn-xs стрижка
+                  .btn.btn-lime.btn-xs зоопсихолог
+                  .btn.btn-lime.btn-xs ветеринар
+                  .btn.btn-lime.btn-xs дрессировка
+                  .btn.btn-lime.btn-xs выгул
+                  .btn.btn-lime.btn-xs без детей
+                  .btn.btn-lime.btn-xs коррекция поведения
+                  .btn.btn-lime.btn-xs парк рядом
+                  .btn.btn-lime.btn-xs зоотакси
+                  .btn.btn-lime.btn-xs фото/видео-отчеты
+
+                p.text-sm.text-muted Требования
+                .tags
+                  .btn.btn-default.btn-xs всегда дома
+                  .btn.btn-default.btn-xs ветуслуги
+                  .btn.btn-default.btn-xs груминг (уход)
+                  .btn.btn-default.btn-xs хендлинг
+                  .btn.btn-default.btn-xs стрижка
+                  .btn.btn-default.btn-xs зоопсихолог
+                  .btn.btn-default.btn-xs ветеринар
+                  .btn.btn-default.btn-xs дрессировка
+                  .btn.btn-default.btn-xs выгул
+                  .btn.btn-default.btn-xs без детей
+                  .btn.btn-default.btn-xs коррекция поведения
+                  .btn.btn-default.btn-xs парк рядом
+
+                p.text-sm.text-muted Беру
+                .pets
+                  span.glyphicon.glyphicon-user
+                    em.glyphicon.glyphicon-search
+                  span.glyphicon.glyphicon-leaf
+                    em
+                  span.glyphicon.glyphicon-fire
+                    em
+                  span.glyphicon.glyphicon-eye-open
+                    em
+                  span.glyphicon.glyphicon-user.disabled
+                    em
+                  span.glyphicon.glyphicon-leaf
+                    em
+                  span.glyphicon.glyphicon-heart-empty
+                    em
+                  span.glyphicon.glyphicon-phone
+                    em
+                  span.glyphicon.glyphicon-tower
+                    em
+              
+                .panel.panel-contact.pull-right
+                  .panel-body
+                    p
+                      span.tel +7 962 987-●●-●●
+                      br
+                      a href="#" s...@gmail.com
+                  .panel-right
+                    span.glyphicon.glyphicon-eye-open
+
+                .photo-preview
+                  .list-photo                  
+                    a href="#"
+                      img src="img/photo1.jpg"
+                    a href="#"
+                      img src="img/photo2.jpg"
+                    a href="#"
+                      img src="img/photo3.jpg"
+                    a href="#"
+                      img src="img/photo4.jpg"
+                  p
+                    | 40 m
+                    sup 2
+                  a.control href="#"
+                    span.glyphicon.glyphicon-triangle-right
+                
+                == Slim::Template.new("slim/review_link.slim").render
+          .clearfix
+          == Slim::Template.new("slim/review_content.slim").render
+                
+          hr.full-width
+          .col-sm-8.col-sm-offset-4.main-right-column
             .media
               .media-left
                 a href="#" 
                   img.media-object src="img/av2.jpg" /
               .media-body
+                .pull-right
+                  span.label.label-price.label-is-price
+                    | 2800
+                    em.rub &#8399;
+                  span.glyphicon.glyphicon-star-empty
                 h4.media-heading
-                  | Елена Kononova
+                  a href="#"
+                    | Елена Kononova
+                    span.glyphicon.glyphicon-map-marker
+                  span.glyphicon.glyphicon-info-sign
+                  span.glyphicon.glyphicon-sign
                 p
-                  | Возьму на передержку любое животное. Звоните, не стесняитесь!
-                  br
-                  | Обеспечу ласку, игры и уход.
+                  | Возьму на передержку любое животное. Звоните, не стесняйтесь! Обеспечу ласку, игры и уход.
+                dl.dl-horizontal
+                  dt.text-left
+                    span Опыт
+                  dd только свои животные
+                  dt.text-left
+                    span Дети
+                  dd да
+                  dt.text-left
+                    span Животные в доме
+                  dd кролик    , кошка стерил.    , 2 крысы
+
+                p.text-lime.text-sm Предлагаю
+
+                .tags
+                  .btn.btn-lime.btn-xs всегда дома
+                  .btn.btn-lime.btn-xs ветуслуги
+                  .btn.btn-lime.btn-xs груминг (уход)
+                  .btn.btn-lime.btn-xs хендлинг
+                  .btn.btn-lime.btn-xs стрижка
+                  .btn.btn-lime.btn-xs зоопсихолог
+                  .btn.btn-lime.btn-xs ветеринар
+                  .btn.btn-lime.btn-xs дрессировка
+                  .btn.btn-lime.btn-xs выгул
+
+                p.text-sm.text-muted Требования
+                .tags
+                  .btn.btn-default.btn-xs всегда дома
+                  .btn.btn-default.btn-xs ветуслуги
+                  .btn.btn-default.btn-xs груминг (уход)
+                  .btn.btn-default.btn-xs хендлинг
+                  .btn.btn-default.btn-xs стрижка
+                  .btn.btn-default.btn-xs зоопсихолог
+                  .btn.btn-default.btn-xs ветеринар
+
+                p.text-sm.text-muted Беру
+                .pets
+                  span.glyphicon.glyphicon-user
+                  span.glyphicon.glyphicon-leaf
+                  span.glyphicon.glyphicon-fire
+                  span.glyphicon.glyphicon-eye-open
+                  span.glyphicon.glyphicon-user.disabled
+                  span.glyphicon.glyphicon-leaf
+
+              
+                .panel.panel-contact.pull-right
+                  .panel-body
+                    p
+                      span.tel +7 929 807-●●-●●
+                  .panel-right
+                    span.glyphicon.glyphicon-eye-open
+
+                .photo-preview
+                  .list-photo                  
+                    a href="#"
+                      img src="img/photo1.jpg"
+                    a href="#"
+                      img src="img/photo2.jpg"
+                    a href="#"
+                      img src="img/photo3.jpg"
+                  p
+                    | 45 m
+                    sup 2
+                
+                == Slim::Template.new("slim/review_link.slim").render
+          .clearfix
+          == Slim::Template.new("slim/review_content.slim").render
+
+          hr.full-width
+          .col-sm-8.col-sm-offset-4.main-right-column
             .media
               .media-left
                 a href="#" 
@@ -103,45 +227,60 @@ html
                   br
                   | Друзья, звоните буду безгранично рада вашим питомцам.)
 
-            .footer
-              .row
-                .col-xs-12.text-center
-                  ul.pagination.pagination-lg
-                    li.previous
-                      a href="#"
-                        span aria-hidden="true" &larr;
-                    li.active
-                      a href="#" 1
-                    li
-                      a href="#" 2
-                    li
-                      a href="#" 3
-                    li
-                      a href="#" 4
-                    li
-                      a href="#" 5
-                    li
-                      span ...
-                    li
-                      a href="#" 48
-                    li.next
-                      a href="#"
-                        span aria-hidden="true" &rarr;
-                  .copy
-                    .pull-left
-                      p
-                        a href="#123"  support@zoopy.ru
-                    .pull-right
-                      p
-                        | Подписывайтесь: 
-                        a href="#" Vk 
-                        a href="#" Fb 
-                        a href="#" Ok 
-                        a href="#" Tw 
+                dl.dl-horizontal
+                  dt.text-left
+                    span Опыт
+                  dd только свои животные
+                  dt.text-left
+                    span Дети
+                  dd да
+                  dt.text-left
+                    span Животные в доме
+                  dd кролик    , кошка стерил.    , 2 крысы
+
+                p.text-sm.text-muted Беру
+                .pets
+                  span.glyphicon.glyphicon-user
+                  span.glyphicon.glyphicon-leaf.disabled
+                  span.glyphicon.glyphicon-fire.disabled
+                  span.glyphicon.glyphicon-eye-open.disabled
+                  span.glyphicon.glyphicon-user.disabled
+                  span.glyphicon.glyphicon-leaf.disabled
+
+                .panel.panel-contact.pull-right
+                  .panel-body
+                    p
+                      span.tel +7 962 987-●●-●●
+                      br
+                      a href="#" s...@yandex.ru
+                  .panel-right
+                    span.glyphicon.glyphicon-eye-open
+
+                .photo-preview
+                  .list-photo                  
+                    a href="#"
+                      img src="img/photo1.jpg"
+                    a href="#"
+                      img src="img/photo2.jpg"
+                    a href="#"
+                      img src="img/photo3.jpg"
+                    a href="#"
+                      img src="img/photo3.jpg"
+                    a href="#"
+                      img src="img/photo3.jpg"
+                  p
+                    | 63 m
+                    sup 2
+
+                == Slim::Template.new("slim/review_link.slim").render
+          .clearfix
+          == Slim::Template.new("slim/review_content.slim").render
+          .col-sm-8.col-sm-offset-4.main-right-column
+            == Slim::Template.new("slim/footer.slim").render
 
       .footer-bgr
 
-    script src="//api-maps.yandex.ru/2.1/?lang=ru_RU"
+    //script src="//api-maps.yandex.ru/2.1/?lang=ru_RU"
     script src="js/jquery.min.js"
     script src="js/bootstrap.min.js"
     script src="js/main.js"
