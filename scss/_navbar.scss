@@ -1,11 +1,16 @@
+.main-content {
+  padding-top: 0px;
+}
 .navbar-filter {
   background-color: #fff;
   margin-bottom: 0;
   z-index: 3;
-  top:60px;
-  height: 122px;
-  // overflow: hidden;
+  position: static;
+  height: 123px;
   border-bottom: 1px solid rgba(0,0,0,.1);
+  &.affix {
+    position: fixed;
+  }
   .navbar-nav > li {
     padding: 0 7px;
     > a {
@@ -24,6 +29,32 @@
       }
     }
   }
+  .navbar-left, .navbar-right {
+    margin-left: 0;
+    > li {
+      margin-right: 35px;
+      padding-left: 0;
+      padding-right: 0;
+      > a {
+        padding: 8px 0 4px 0;
+      }
+    }
+  }
+  .navbar-right {
+    margin-right: 0;
+    > li {
+      margin-right: 0px;
+      margin-left: 13px;
+      > a {
+        padding-bottom: 7px;
+      }
+    }
+  }
+  .nav-price {
+    .glyphicon {
+      font-size: 7px;
+    }
+  }
 }
 .navbar-main {
   border: none;
@@ -35,15 +66,37 @@
   background-color: rgba(0,0,0,0);
   border-color: rgba(0,0,0,0);
   margin-bottom: 0;
+  .navbar-nav > li > a:hover,
+  .navbar-nav > li > a:focus {
+    color: #e9f6ff;
+  }
+  .navbar-nav > .open > a, 
+  .navbar-nav > .open > a:hover, 
+  .navbar-nav > .open > a:focus {
+    background-color: transparent;
+    color: #e9f6ff;
+  }
   &.navbar-background {
     background-color: #91a2ad;
     border-color: #91a2ad;
     border-radius: 0;
     border: none;
+    z-index: 4;
   }
+  /* &.navbar-background-white {
+    display: none;
+    background-color: #fff;
+    border-color: #fff;
+    position: fixed;
+    z-index: 3;
+    height: 60px;
+    width: 100%;
+  } */
   .navbar-brand {
     color: #fff;
+    position: fixed;
     font-weight: bold;
+    z-index: 4;
   }
   .navbar-nav>li>a,
   .navbar-nav>.active>a, 
@@ -52,18 +105,25 @@
     color: #fff;
     background-color: transparent;
   }
-  &.affix { 
-    background-color: #fff;
+  li.dropdown {
+    margin-left: 92px;
+  }
+  &.affix {
+    right: 0;
+    left: 0;
+    z-index: 3;
+
     .navbar-nav>li>a,
     .navbar-nav>.active>a, 
     .navbar-nav>.active>a:focus, 
     .navbar-nav>.active>a:hover {
-      color: #000;
+      // color: #000;
       background-color: transparent;
     }
-    .navbar-brand {
-      color: #91a2ad;
-    }
+  }
+
+  .navbar-brand.navbar-brand-inverse, .navbar-brand.affix {
+    color: #91a2ad;
   }
 }
 .watch {
@@ -159,5 +219,33 @@
   .date-month {
     font-size: 30px;
     margin-left: 5px;
+  }
+}
+.navbar-default .navbar-user {
+  margin: 12px 0;
+  background-color: #788b9a;
+  border-radius: 5px;
+  > li {
+    a {
+      border: 2px solid transparent;
+      background-color: #788b9a;
+      padding: 6px 16px;
+      border-radius: 4px;
+      &:hover, &:focus {
+        color: #e9f6ff;
+      }
+    }
+    &.active {
+      a {
+        border-color: #cdd7de;
+        &:hover, &:focus {
+          border-color: #e1efaa;
+        }
+      }
+    }
+    &:first-child {
+      margin-right: 24px;
+      padding-left: 8px;
+    }
   }
 }

@@ -1,5 +1,5 @@
-nav.navbar.navbar-default.navbar-background
-nav.navbar.navbar-default.navbar-fixed-top.navbar-main
+/ nav.navbar.navbar-default.navbar-background-white
+nav.navbar.navbar-default.navbar-main.navbar-background 
   .container
     .navbar-header
       button.navbar-toggle.collapsed aria-controls="navbar" aria-expanded="false" data-target="#navbar" data-toggle="collapse" type="button" 
@@ -7,7 +7,7 @@ nav.navbar.navbar-default.navbar-fixed-top.navbar-main
         span.icon-bar
         span.icon-bar
         span.icon-bar
-      a.navbar-brand href="#" ZOOPY
+      a.navbar-brand data-spy="affix" data-offset-top="20" href="#" ZOOPY
     #navbar.navbar-collapse.collapse
       ul.nav.navbar-nav
         li.dropdown
@@ -21,12 +21,12 @@ nav.navbar.navbar-default.navbar-fixed-top.navbar-main
               a href="#" Уфа
             li
               a href="#" Тула
-      ul.nav.navbar-nav.navbar-right
+      ul.nav.navbar-nav.navbar-right.navbar-user
         li
           a href="#"
             span.glyphicon.glyphicon-log-in
             |  Вход
-        li
+        li.active
           a href="#" Хочу зарабатывать присмотром за животными
 nav.navbar.navbar-filter.navbar-fixed-top
   .container
@@ -70,7 +70,7 @@ nav.navbar.navbar-filter.navbar-fixed-top
               span.dotted Еще...
         ul.nav.navbar-nav.navbar-right
           li
-            a href="#"
+            a.nav-price href="#"
               | Цены 
               span.glyphicon.glyphicon-sort-by-attributes
           li

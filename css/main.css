@@ -5858,7 +5858,7 @@ button.close {
 }
 */
 .form-search {
-  margin-top: 13px; }
+  margin-top: 14px; }
   .form-search .form-group {
     position: relative;
     padding-right: 44px; }
@@ -5878,11 +5878,9 @@ button.close {
       color: #aeaeae;
       font-size: 14px; }
 
-.form-control {
-  border: none; }
-  .form-control:focus {
-    -webkit-box-shadow: none;
-    box-shadow: none; }
+.form-control:focus {
+  -webkit-box-shadow: none;
+  box-shadow: none; }
 
 /* Поиск с иконкой */
 .icon-addon {
@@ -5906,13 +5904,18 @@ button.close {
     padding: 10px 0;
     top: 0; }
 
+.main-content {
+  padding-top: 0px; }
+
 .navbar-filter {
   background-color: #fff;
   margin-bottom: 0;
   z-index: 3;
-  top: 60px;
-  height: 122px;
+  position: static;
+  height: 123px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1); }
+  .navbar-filter.affix {
+    position: fixed; }
   .navbar-filter .navbar-nav > li {
     padding: 0 7px; }
     .navbar-filter .navbar-nav > li > a {
@@ -5925,6 +5928,23 @@ button.close {
       border-bottom: 1px solid #666666; }
       .navbar-filter .navbar-nav > li.active a span {
         border-color: transparent; }
+  .navbar-filter .navbar-left, .navbar-filter .navbar-right {
+    margin-left: 0; }
+    .navbar-filter .navbar-left > li, .navbar-filter .navbar-right > li {
+      margin-right: 35px;
+      padding-left: 0;
+      padding-right: 0; }
+      .navbar-filter .navbar-left > li > a, .navbar-filter .navbar-right > li > a {
+        padding: 8px 0 4px 0; }
+  .navbar-filter .navbar-right {
+    margin-right: 0; }
+    .navbar-filter .navbar-right > li {
+      margin-right: 0px;
+      margin-left: 13px; }
+      .navbar-filter .navbar-right > li > a {
+        padding-bottom: 7px; }
+  .navbar-filter .nav-price .glyphicon {
+    font-size: 7px; }
 
 .navbar-main {
   border: none; }
@@ -5935,31 +5955,54 @@ button.close {
 .navbar-default {
   background-color: transparent;
   border-color: transparent;
-  margin-bottom: 0; }
+  margin-bottom: 0;
+  /* &.navbar-background-white {
+    display: none;
+    background-color: #fff;
+    border-color: #fff;
+    position: fixed;
+    z-index: 3;
+    height: 60px;
+    width: 100%;
+  } */ }
+  .navbar-default .navbar-nav > li > a:hover,
+  .navbar-default .navbar-nav > li > a:focus {
+    color: #e9f6ff; }
+  .navbar-default .navbar-nav > .open > a,
+  .navbar-default .navbar-nav > .open > a:hover,
+  .navbar-default .navbar-nav > .open > a:focus {
+    background-color: transparent;
+    color: #e9f6ff; }
   .navbar-default.navbar-background {
     background-color: #91a2ad;
     border-color: #91a2ad;
     border-radius: 0;
-    border: none; }
+    border: none;
+    z-index: 4; }
   .navbar-default .navbar-brand {
     color: #fff;
-    font-weight: bold; }
+    position: fixed;
+    font-weight: bold;
+    z-index: 4; }
   .navbar-default .navbar-nav > li > a,
   .navbar-default .navbar-nav > .active > a,
   .navbar-default .navbar-nav > .active > a:focus,
   .navbar-default .navbar-nav > .active > a:hover {
     color: #fff;
     background-color: transparent; }
+  .navbar-default li.dropdown {
+    margin-left: 92px; }
   .navbar-default.affix {
-    background-color: #fff; }
+    right: 0;
+    left: 0;
+    z-index: 3; }
     .navbar-default.affix .navbar-nav > li > a,
     .navbar-default.affix .navbar-nav > .active > a,
     .navbar-default.affix .navbar-nav > .active > a:focus,
     .navbar-default.affix .navbar-nav > .active > a:hover {
-      color: #000;
       background-color: transparent; }
-    .navbar-default.affix .navbar-brand {
-      color: #91a2ad; }
+  .navbar-default .navbar-brand.navbar-brand-inverse, .navbar-default .navbar-brand.affix {
+    color: #91a2ad; }
 
 .watch {
   display: inline-block;
@@ -6045,6 +6088,25 @@ button.close {
     font-size: 30px;
     margin-left: 5px; }
 
+.navbar-default .navbar-user {
+  margin: 12px 0;
+  background-color: #788b9a;
+  border-radius: 5px; }
+  .navbar-default .navbar-user > li a {
+    border: 2px solid transparent;
+    background-color: #788b9a;
+    padding: 6px 16px;
+    border-radius: 4px; }
+    .navbar-default .navbar-user > li a:hover, .navbar-default .navbar-user > li a:focus {
+      color: #e9f6ff; }
+  .navbar-default .navbar-user > li.active a {
+    border-color: #cdd7de; }
+    .navbar-default .navbar-user > li.active a:hover, .navbar-default .navbar-user > li.active a:focus {
+      border-color: #e1efaa; }
+  .navbar-default .navbar-user > li:first-child {
+    margin-right: 24px;
+    padding-left: 8px; }
+
 @font-face {
   font-family: 'Flexy Regular';
   src: url("../fonts/flexy31-webfont.eot");
@@ -6087,9 +6149,9 @@ h1.watch {
     cursor: pointer;
     text-decoration: none; }
     h1.watch a:hover, h1.watch a:focus {
-      color: #000;
+      color: #cc3333;
       text-decoration: none;
-      border-bottom-color: transparent; }
+      background-image: url(../img/dashed_red.gif); }
 
 .text-sm {
   font-size: 12px;
@@ -6123,16 +6185,20 @@ dl {
   color: #000;
   border-color: #c7d6b5;
   padding: 0 20px; }
+  .btn-submit:hover, .btn-submit:focus {
+    border-color: #abc094; }
+  .btn-submit:active {
+    border-color: #c5d77f;
+    background-color: #c5d77f;
+    -webkit-box-shadow: none;
+    box-shadow: none; }
 
 .btn-lime {
-  border-color: #b4d373; }
+  border-color: #c7d6b5; }
 
 .btn-xs, .btn-group-xs > .btn, .btn-group-xs > .btn, .btn-group-xs > .btn {
   padding: 0px 6px 1px;
   line-height: 20px; }
-
-.main-content {
-  padding-top: 122px; }
 
 #map {
   width: 33.33333333%;
@@ -6144,7 +6210,10 @@ dl {
   -webkit-box-shadow: inset -1px 0px 0px 0px rgba(0, 0, 0, 0.1);
   -moz-box-shadow: inset -1px 0px 0px 0px rgba(0, 0, 0, 0.1);
   box-shadow: inset -1px 0px 0px 0px rgba(0, 0, 0, 0.1);
-  z-index: 1; }
+  z-index: 1;
+  /* &.affix {
+    position: fixed;
+  } */ }
 
 .ftr, .footer-bgr {
   min-height: 170px;
@@ -6393,9 +6462,6 @@ dl {
 .reviews .review_share {
   float: right; }
 
-.media-body {
-  overflow: visible; }
-
 .nav.nav-tabs-reviews {
   margin-left: -7px;
   border-bottom: none; }
@@ -6455,7 +6521,10 @@ dl {
       position: absolute; }
 
 .main-right-column.tab-content .media-body {
-  padding-top: 15px; }
+  padding-top: 15px;
+  overflow: visible; }
+  .main-right-column.tab-content .media-body .form-control {
+    border: none; }
   .main-right-column.tab-content .media-body .alert {
     font-size: 12px;
     margin-top: -15px;

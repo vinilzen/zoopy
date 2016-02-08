@@ -40,9 +40,6 @@
     float: right;
   }
 }
-.media-body {
-  overflow: visible;
-}
 .nav.nav-tabs-reviews {
   margin-left: -7px;
   border-bottom: none;
@@ -116,6 +113,10 @@
   }
   .media-body {
     padding-top: 15px;
+    overflow: visible;
+    .form-control {
+      border: none;
+    }
     .alert {
       font-size: 12px;
       margin-top: -15px;
@@ -223,7 +224,6 @@
     }    
   }
 }
-
 .review-list {
   float: left;
   margin-right: 95px;

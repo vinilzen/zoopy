@@ -45,15 +45,15 @@ h1.watch {
   a {
     color: #000;
     display: inline-block;
-    // border-bottom: 1px dashed #000;
     background: url(../img/dashed.gif) repeat-x 2px bottom;
     line-height: 41px;
     cursor: pointer;
     text-decoration: none;
     &:hover, &:focus {
-        color: #000;
-        text-decoration: none;
-        border-bottom-color: rgba(0,0,0,0);
+      color: #cc3333;
+      text-decoration: none;
+      background-image: url(../img/dashed_red.gif);
+    
     }
   }
 }
@@ -91,9 +91,18 @@ dl {
   color: #000;
   border-color: #c7d6b5;
   padding: 0 20px;
+  &:hover, &:focus {
+    border-color: #abc094;
+  }
+  &:active {
+    border-color: #c5d77f;
+    background-color: #c5d77f;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
 }
 .btn-lime {
-  border-color: #b4d373;
+  border-color: #c7d6b5;
 }
 .btn-xs, .btn-group-xs > .btn, .btn-group-xs > .btn {
   padding: 0px 6px 1px;
