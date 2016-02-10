@@ -1,0 +1,326 @@
+@import "variables";
+
+@font-face {
+    font-family: 'icozoopy';
+    src:
+        url('#{$icomoon-font-path}/icozoopy.ttf?v90vjf') format('truetype'),
+        url('#{$icomoon-font-path}/icozoopy.woff?v90vjf') format('woff'),
+        url('#{$icomoon-font-path}/icozoopy.svg?v90vjf#icozoopy') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+[class^="iconzoopy-"], [class*=" iconzoopy-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icozoopy' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.iconzoopy-pet-hamster {
+    &:before {
+        content: $iconzoopy-pet-hamster;
+    }
+}
+.iconzoopy-pet-ulitka {
+    &:before {
+        content: $iconzoopy-pet-ulitka;
+    }
+}
+.iconzoopy-pet-ezhik {
+    &:before {
+        content: $iconzoopy-pet-ezhik;
+    }
+}
+.iconzoopy-pet-turtle {
+    &:before {
+        content: $iconzoopy-pet-turtle;
+    }
+}
+.iconzoopy-pet-cat {
+    &:before {
+        content: $iconzoopy-pet-cat;
+    }
+}
+.iconzoopy-pet-dog {
+    &:before {
+        content: $iconzoopy-pet-dog;
+    }
+}
+.iconzoopy-pet-rabbit {
+    &:before {
+        content: $iconzoopy-pet-rabbit;
+    }
+}
+.iconzoopy-pet-horek {
+    &:before {
+        content: $iconzoopy-pet-horek;
+    }
+}
+.iconzoopy-pet-parrot {
+    &:before {
+        content: $iconzoopy-pet-parrot;
+    }
+}
+.iconzoopy-pet-fish {
+    &:before {
+        content: $iconzoopy-pet-fish;
+    }
+}
+.iconzoopy-geopoint {
+    &:before {
+        content: $iconzoopy-geopoint;
+    }
+}
+.iconzoopy-calendar {
+    &:before {
+        content: $iconzoopy-calendar;
+    }
+}
+.iconzoopy-price {
+    &:before {
+        content: $iconzoopy-price;
+    }
+}
+.iconzoopy-fb {
+    &:before {
+        content: $iconzoopy-fb;
+    }
+}
+.iconzoopy-vk {
+    &:before {
+        content: $iconzoopy-vk;
+    }
+}
+.iconzoopy-ok {
+    &:before {
+        content: $iconzoopy-ok;
+    }
+}
+.iconzoopy-tw {
+    &:before {
+        content: $iconzoopy-tw;
+    }
+}
+.iconzoopy-color-vk .path1 {
+    &:before {
+        content: $iconzoopy-color-vk-path1;    
+        color: rgb(92, 130, 172);
+    }
+}
+.iconzoopy-color-vk .path2 {
+    &:before {
+        content: $iconzoopy-color-vk-path2;    
+        margin-left: -1em;    
+        color: rgb(255, 255, 255);
+    }
+}
+.iconzoopy-color-ok .path1 {
+    &:before {
+        content: $iconzoopy-color-ok-path1;    
+        color: rgb(251, 132, 0);
+    }
+}
+.iconzoopy-color-ok .path2 {
+    &:before {
+        content: $iconzoopy-color-ok-path2;    
+        margin-left: -1em;    
+        color: rgb(255, 255, 255);
+    }
+}
+.iconzoopy-color-fb .path1 {
+    &:before {
+        content: $iconzoopy-color-fb-path1;    
+        color: rgb(51, 92, 156);
+    }
+}
+.iconzoopy-color-fb .path2 {
+    &:before {
+        content: $iconzoopy-color-fb-path2;    
+        margin-left: -1em;    
+        color: rgb(255, 255, 255);
+    }
+}
+.iconzoopy-color-tw .path1 {
+    &:before {
+        content: $iconzoopy-color-tw-path1;    
+        color: rgb(42, 169, 224);
+    }
+}
+.iconzoopy-color-tw .path2 {
+    &:before {
+        content: $iconzoopy-color-tw-path2;    
+        margin-left: -1em;    
+        color: rgb(255, 255, 255);
+    }
+}
+.iconzoopy-shpritz-no .path1 {
+    &:before {
+        content: $iconzoopy-shpritz-no-path1;    
+        color: rgb(127, 127, 127);
+    }
+}
+.iconzoopy-shpritz-no .path2 {
+    &:before {
+        content: $iconzoopy-shpritz-no-path2;    
+        margin-left: -1em;    
+        color: rgb(204, 51, 51);
+    }
+}
+.iconzoopy-shpritz-yes {
+    &:before {
+        content: $iconzoopy-shpritz-yes;
+    }
+}
+.iconzoopy-search {
+    &:before {
+        content: $iconzoopy-search;
+    }
+}
+.iconzoopy-pencil {
+    &:before {
+        content: $iconzoopy-pencil;
+    }
+}
+.iconzoopy-camera .path1 {
+    &:before {
+        content: $iconzoopy-camera-path1;    
+        color: rgba(0, 0, 0, 0.5);
+    }
+}
+.iconzoopy-camera .path2 {
+    &:before {
+        content: $iconzoopy-camera-path2;    
+        margin-left: -1.111328125em;    
+        color: rgba(255, 255, 255, 0.85);
+    }
+}
+.iconzoopy-X {
+    &:before {
+        content: $iconzoopy-X;
+    }
+}
+.iconzoopy-woman .path1 {
+    &:before {
+        content: $iconzoopy-woman-path1;    
+        color: rgb(0, 0, 0);
+    }
+}
+.iconzoopy-woman .path2 {
+    &:before {
+        content: $iconzoopy-woman-path2;    
+        margin-left: -0.650390625em;    
+        color: rgb(199, 41, 123);
+    }
+}
+.iconzoopy-man .path1 {
+    &:before {
+        content: $iconzoopy-man-path1;    
+        color: rgb(0, 0, 0);
+    }
+}
+.iconzoopy-man .path2 {
+    &:before {
+        content: $iconzoopy-man-path2;    
+        margin-left: -0.9375em;    
+        color: rgb(0, 118, 173);
+    }
+}
+.iconzoopy-V {
+    &:before {
+        content: $iconzoopy-V;
+    }
+}
+.iconzoopy-V2 {
+    &:before {
+        content: $iconzoopy-V2;
+    }
+}
+.iconzoopy-arrow-left {
+    &:before {
+        content: $iconzoopy-arrow-left;
+    }
+}
+.iconzoopy-arrow-right {
+    &:before {
+        content: $iconzoopy-arrow-right;
+    }
+}
+.iconzoopy-arrow-big-left {
+    &:before {
+        content: $iconzoopy-arrow-big-left;
+    }
+}
+.iconzoopy-arrow-big-right {
+    &:before {
+        content: $iconzoopy-arrow-big-right;
+    }
+}
+.iconzoopy-eye {
+    &:before {
+        content: $iconzoopy-eye;
+    }
+}
+.iconzoopy-key {
+    &:before {
+        content: $iconzoopy-key;
+    }
+}
+.iconzoopy-star-big-normal {
+    &:before {
+        content: $iconzoopy-star-big-normal;
+    }
+}
+.iconzoopy-star-big-active .path1 {
+    &:before {
+        content: $iconzoopy-star-big-active-path1;    
+        color: rgb(255, 199, 0);
+    }
+}
+.iconzoopy-star-big-active .path2 {
+    &:before {
+        content: $iconzoopy-star-big-active-path2;    
+        margin-left: -1.033203125em;    
+        color: rgb(255, 216, 76);
+    }
+}
+.iconzoopy-star-big-hover .path1 {
+    &:before {
+        content: $iconzoopy-star-big-hover-path1;    
+        color: rgb(236, 155, 0);
+    }
+}
+.iconzoopy-star-big-hover .path2 {
+    &:before {
+        content: $iconzoopy-star-big-hover-path2;    
+        margin-left: -1.033203125em;    
+        color: rgb(255, 216, 76);
+    }
+}
+.iconzoopy-star-mini-hover-click .path1 {
+    &:before {
+        content: $iconzoopy-star-mini-hover-click-path1;    
+        color: rgb(255, 199, 0);
+    }
+}
+.iconzoopy-star-mini-hover-click .path2 {
+    &:before {
+        content: $iconzoopy-star-mini-hover-click-path2;    
+        margin-left: -1.10546875em;    
+        color: rgb(255, 216, 76);
+    }
+}
+.iconzoopy-star-mini-normal {
+    &:before {
+        content: $iconzoopy-star-mini-normal;
+    }
+}
+

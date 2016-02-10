@@ -63,9 +63,12 @@
   margin-left: -15px;
 }
 .navbar-default {
-  background-color: rgba(0,0,0,0);
-  border-color: rgba(0,0,0,0);
   margin-bottom: 0;
+  background-color: #91a2ad;
+  border-color: #91a2ad;
+  border-radius: 0;
+  border: none;
+  z-index: 4;
   .navbar-nav > li > a:hover,
   .navbar-nav > li > a:focus {
     color: #e9f6ff;
@@ -77,26 +80,12 @@
     color: #e9f6ff;
   }
   &.navbar-background {
-    background-color: #91a2ad;
-    border-color: #91a2ad;
-    border-radius: 0;
     border: none;
     z-index: 4;
   }
-  /* &.navbar-background-white {
-    display: none;
-    background-color: #fff;
-    border-color: #fff;
-    position: fixed;
-    z-index: 3;
-    height: 60px;
-    width: 100%;
-  } */
   .navbar-brand {
     color: #fff;
-    position: fixed;
     font-weight: bold;
-    z-index: 4;
   }
   .navbar-nav>li>a,
   .navbar-nav>.active>a, 
@@ -122,8 +111,15 @@
     }
   }
 
-  .navbar-brand.navbar-brand-inverse, .navbar-brand.affix {
-    color: #91a2ad;
+  &.navbar-main {
+    .navbar-brand.navbar-brand-inverse, .navbar-brand.affix {
+      color: #91a2ad;
+    }
+
+    .navbar-brand {
+      position: fixed;
+      z-index: 4;
+    }
   }
 }
 .watch {
@@ -132,7 +128,7 @@
   margin-right: 24px;
   margin-top: 24px;
   position: relative;
-  .caret {
+  .iconzoopy-caret {
     position: absolute;
     right: -14px;
     top: 50%;
@@ -204,9 +200,14 @@
     position: absolute;
     right: 3px;
     bottom: 3px;
-    width: 15px;
-    height: 11px;
-    background: url(../img/kletka.gif) no-repeat left top;
+    color: #c0c0c0;
+    font-size: 12px;
+    height: 12px;
+    line-height: 1;
+    &:hover, &:focus {
+      color: #000;
+      text-decoration: none;
+    }
   }
   p {
     position: relative;
@@ -222,7 +223,7 @@
   }
 }
 .navbar-default .navbar-user {
-  margin: 12px 0;
+  margin: 12px -15px 12px 0;
   background-color: #788b9a;
   border-radius: 5px;
   > li {
@@ -247,5 +248,26 @@
       margin-right: 24px;
       padding-left: 8px;
     }
+  }
+}
+.navbar-create-user {
+  background-color: #788b9a;
+  a.avatar {
+    padding: 10px 11px 10px 26px;
+    display: inline-block;
+    img {
+      margin-right: 11px;
+      border-radius: 4px;
+    }
+  }
+}
+.navbar-login {
+  span {
+    font-size: 11px;
+  }
+}
+.nav-price {
+  span {
+    font-size: 8px;
   }
 }

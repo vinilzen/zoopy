@@ -11,7 +11,37 @@
 .media-heading {
   margin-bottom: 9px;
   margin-top: 3px;
-  a {
+
+  .soc-link {
+    display: inline-block;
+    color: #b6b6b6;
+    text-decoration: none;
+    position: relative;
+    padding-right: 4px;
+    .soc-link-color {
+      font-size: .9em;
+      color: #999999;
+      opacity: 0;
+      position: absolute;
+      left:0;
+      top:1px;
+    }
+
+    .soc-link-gray {
+      opacity: 1;
+    }
+
+    &:hover, &:focus {
+      .soc-link-gray {
+        opacity: 0;
+      }
+      .soc-link-color {
+        opacity: 1;
+      }
+    }
+
+  }
+  a.media-heading-title {
     text-decoration: none;
     padding-bottom: 1px;
     background: url(../img/point.png) repeat-x left bottom;// border-bottom: 1px dotted #999999;
@@ -25,8 +55,11 @@
       border-bottom-color: rgba(0,0,0,0);
     }
   }
-  span.glyphicon {
+  span.glyphicon, span[class^="iconzoopy-"], span[class*=" iconzoopy-"]  {
     font-size: .9em;
     color: #999999;
   }
+}
+.media-body-content {
+  overflow: visible;
 }

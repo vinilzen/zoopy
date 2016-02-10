@@ -23,7 +23,7 @@ gulp.task('serve', function() {
 });
 
 gulp.task('slim', function(){
-  gulp.src("slim/index.slim")
+  gulp.src(["slim/index.slim", "slim/create-profile.slim"])
     .pipe(slim({
       pretty: true
     }))
@@ -34,7 +34,7 @@ gulp.task('sass', function() {
     return gulp.src("scss/main.scss")
         .pipe(sourcemaps.init())
         .pipe(sass({
-            includePaths: [bootstrapDir + '/assets/stylesheets'],
+            includePaths: [bootstrapDir + '/assets/stylesheets', 'icozoopy'],
         }).on('error', sass.logError))
         .pipe(sourcemaps.write("."))
         .pipe(gulp.dest("./css"))

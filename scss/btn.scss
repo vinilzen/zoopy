@@ -1,0 +1,129 @@
+
+.btn-submit {
+  font-size: 14px;
+  line-height: 33px;
+  height: 33px;
+  background-color: #dbef8c;
+  color: #000;
+  border-color: #c7d6b5;
+  padding: 0 20px;
+  &:hover, &:focus {
+    border-color: #abc094;
+  }
+  &:active {
+    border-color: #c5d77f;
+    background-color: #c5d77f;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
+}
+.btn-lime {
+  border-color: #b4d373;
+}
+.btn-xs, .btn-group-xs > .btn,
+.btn-group-xs > .btn {
+  padding: 0px 6px 1px;
+  line-height: 20px;
+}
+.btn-text {
+  background-color: #f1f0e4;
+  border-radius: 4px;
+  height: 28px;
+  line-height: 28px;
+  padding: 0 12px;
+}
+.btn-add {
+  height: 33px;
+  line-height: 33px;
+  padding: 0 14px;
+  background-color: #f1f0e4;
+  border-radius: 4px;
+  .glyphicon {
+    color: #898679;
+    margin-right: 3px;
+  }
+}
+.dl-profile {
+  .btn-default {
+    line-height: 26px;
+    padding: 0 11px;
+    border: 1px solid #e5e5e5;
+    font-size: 14px;
+    background-color: transparent;
+    &:hover, &:focus {
+      color: #cc3333;
+      border-color: #f5d6d6;
+    }
+    .alert {
+      font-style: normal;
+      font-size: 12px;
+      background-color: transparent;
+      position: relative;
+      top: -0.5px;
+      display: inline-block;
+      margin: 0 4px;
+      text-decoration: none;
+      padding: 0;
+      border: none;
+    }
+    .alert-warning {
+      color: #e37600;
+    }
+    .alert-danger {
+      color: #cc3333;
+    }
+    .close {
+      position: absolute;
+      top: 2px;
+      right: 6px;
+    }
+  }
+  .btn-green-border {
+    &.active {
+      border-color: #b4d373;
+      background-color: transparent;
+      border-width: 2px;
+      box-shadow: none;
+      -webkit-box-shadow: none;
+      line-height: 24px;
+    }
+    &.moderated {
+      color: #999;
+    }
+    &.rejected {
+      color: #999;
+      position: relative;
+      padding-right: 24px;
+    }
+  }
+  .btn-gray-border {
+      &.active {
+        border-color: #b7b7b7;
+        border-width: 2px;
+        box-shadow: none;
+        -webkit-box-shadow: none;
+        line-height: 24px;
+        background-color: transparent;
+      }
+  }
+  .btn-xs {
+    font-size: 14px;
+  }
+  .btn-text {
+    .glyphicon {
+      color: #898679;
+      margin-right: 3px;
+    }
+  }
+}
+.btn-green {
+  background-color: #dbef8c;
+  color: #000;
+  border-color: #c7d6b5;
+  &.btn-lg {
+    font-size: 14px;
+    height: 45px;
+    line-height: 45px;
+    padding: 0 20px;
+  }
+}

@@ -64,8 +64,20 @@
   }
 }
 .tab-content {
-  background-color: #f3f2e8;
   float: none;
+}
+.tab-pane-review {
+  background-color: #f3f2e8;
+  padding-right: 28px;
+  padding-left: 28px;
+  margin-left: -28px;
+  
+  @media (max-width: 1599px) {
+    padding-right: 45px;
+    padding-left: 28px;
+    margin-left: -28px;
+    margin-right: -45px;
+  }
 }
 .main-right-column.tab-content {
   .media {
@@ -76,8 +88,12 @@
     position: relative;
     border-bottom: 1px solid #e6e5d8;
     padding-left: 155px;
-    margin-right: -28px;
     padding-bottom: 0;
+    margin-right: -28px;
+
+    @media (max-width: 1599px) {
+      margin-right: -45px;
+    }
     label {
       cursor: pointer;
       font-size: 12px;
@@ -124,6 +140,9 @@
       padding-top: 5px;
       padding-bottom: 5px;
       border-radius: 0;
+      @media (max-width: 1599px) {
+        margin-right: -45px;
+      }
       span.dotted {
         display: inline-block;
         border-bottom: 1px dotted #000;
@@ -238,7 +257,7 @@
   top:0;
   right: 0;
   bottom: 0;
-  width: 92px;
+  width: 90px;
 }
 .review-arrow {
   position: absolute;
@@ -247,13 +266,13 @@
   font-size: 19px;
   min-height: 46px;
   color: #000;
-  width: 46px;
+  width: 45px;
   height: 100%;
   text-align: center;
   display: table;
   float: left;
   &.review-arrow-left {
-    right: 46px;
+    right: 45px;
   }
   &.review-arrow-right {
     right: 0;

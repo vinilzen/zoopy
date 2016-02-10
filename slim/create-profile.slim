@@ -1,0 +1,576 @@
+doctype html
+html
+	head
+		== Slim::Template.new("slim/head.slim").render
+	body
+		nav.navbar.navbar-default
+			.container
+				.navbar-header
+					button.navbar-toggle.collapsed aria-controls="navbar" aria-expanded="false" data-target="#navbar" data-toggle="collapse" type="button" 
+						span.sr-only Toggle navigation
+						span.icon-bar
+						span.icon-bar
+						span.icon-bar
+					a.navbar-brand href="#" ZOOPY
+				.navbar-collapse.collapse
+					ul.nav.navbar-nav.navbar-right.navbar-create-user
+						li
+							a.avatar href="#"
+								img src="img/av1.jpg" width="40"
+								| Анатолий Saharoza
+						li
+							a href="#"
+								span.glyphicon.glyphicon-log-out
+		.container-fluid.alert.alert-warning
+			.row
+				.col-xs-12.text-center
+					h3 Вы успешно зарегистрировались
+					p Чтобы вас увидели, необходимо заполнить и опубликовать свой профиль
+		
+		.container
+			.row
+				.col-xs-12
+					dl.dl-horizontal.dl-profile
+						dt Адрес
+						dd 
+							p.text-bottom-36.text-top-4
+								span.attribute Город
+								span Москва
+							ul.list-inline.create-profile-list
+								li.active
+									a href="#new_addr" aria-controls="create-profile-addr" role="tab" data-toggle="tab"
+										span.dotted Ввести адрес
+								li
+									a href="#set_pin" aria-controls="create-profile-addr" role="tab" data-toggle="tab"
+										span.dotted Отметить на карте
+							
+							.tab-content
+								.tab-pane.tab-pane-addr.active#new_addr
+									.addr-propery
+										p
+											span Улица
+										p
+											span Дом
+										p
+											span Корпус
+										.caret-right
+										.caret-white.caret-right
+									.create-profile-comment
+										p
+											| Не будут опубликованы.
+											br
+											| Только точка на карте.
+								.tab-pane#set_pin
+
+
+		.container-fluid.container-map
+			.row
+				.col-xs-12
+					#map_profile
+
+		.container
+			.row
+				.col-xs-12
+					dl.dl-horizontal.dl-profile
+						dt Содержание
+						dd
+							ul.create-profile-list.list-inline
+								li.active
+									a href="#movement_free_in_house" aria-controls="create-profile-movement" role="tab" data-toggle="tab"
+										span.dotted свободное перемещение по дому
+								li
+									a href="#movement_cage" aria-controls="create-profile-movement" role="tab" data-toggle="tab"
+										span.dotted клетки, вольеры, номера
+								li
+									a href="#movement_both" aria-controls="create-profile-movement" role="tab" data-toggle="tab"
+										span.dotted оба варианта
+
+							.tab-content
+								.tab-pane.active#movement_free_in_house
+									p 
+										span.movemen-square Площадь
+										span
+											| m
+											sup 2
+								.tab-pane#movement_cage
+								.tab-pane#movement_both
+
+					dl.dl-horizontal.dl-profile
+						dt Дети в доме
+						dd
+							ul.list-inline.create-profile-list
+								li.active
+									a href="#children_yes" aria-controls="create-profile-children" role="tab" data-toggle="tab"
+										span.dotted нет
+								li
+									a href="#children_no" aria-controls="create-profile-children" role="tab" data-toggle="tab"
+										span.dotted есть
+
+					dl.dl-horizontal.dl-profile
+						dt
+							| Животные
+							br
+							| в доме
+						dd
+							table.table.table-create-profile.table-hover
+								tr
+									td Борис
+									td кот
+									td кастрирован
+									td
+										span.iconzoopy-shpritz-yes
+									td постоянно
+									td
+										a.edit-property href="#"
+											span.iconzoopy-pencil
+									td
+										a.edit-property href="#"
+											span.iconzoopy-X
+								tr
+									td Муся
+									td кошка
+									td
+										span.mark не стерелизована
+									td
+										span.iconzoopy-shpritz-no
+											span.path1
+											span.path2
+									td до 27 ноября
+									td
+										a.edit-property href="#"
+											span.iconzoopy-pencil
+									td
+										a.edit-property href="#"
+											span.iconzoopy-X
+								tr
+									td Рокси
+									td доберман девочка
+									td стерелизована
+									td
+										span.iconzoopy-shpritz-yes
+									td до 5 ноября
+									td
+										a.edit-property href="#"
+											span.iconzoopy-pencil
+									td
+										a.edit-property href="#"
+											span.iconzoopy-X
+								tr.disabled
+									td Бося
+									td йоркширский терьер мальчик
+									td не кастрирован
+									td
+										span.iconzoopy-shpritz-yes
+									td до 8 декабря
+									td
+									td
+										a.undo-property href="#"
+											span.glyphicon.glyphicon-repeat
+								tr
+									td Щуша
+									td шиншилла
+									td 
+									td
+									td до 4 ноября
+									td
+										a.edit-property href="#"
+											span.iconzoopy-pencil
+									td
+										a.edit-property href="#"
+											span.iconzoopy-X
+
+							.btn.btn-add
+								span.glyphicon.glyphicon-plus
+								| Добавить
+					dl.dl-horizontal.dl-profile
+						dt Беру
+						dd
+							ul.list-unstyled
+								li.pet-list
+									a.pet-item.collapsed href="#collapse-pet-cat" role="button" data-toggle="collapse"
+										span.iconzoopy-pet-cat
+										strong.pet-type Кошек
+									form.form-inline.form-pet.collapse#collapse-pet-cat
+
+										label.radio-inline
+											input type="radio" name="type1" value="option1"
+											|  всех
+										label.radio-inline
+											input type="radio" name="type1" value="option2"
+											|  мальчиков
+										label.radio-inline
+											input type="radio" name="type1" value="option3"
+											|  девочек
+
+										.clearfix
+
+										.pet-prices
+											.pet-price-range
+												span.pet-price.pet-price-one 250
+												span.pet-price.pet-price-from.hide
+												em.hide –
+												span.pet-price.pet-price-to.hide
+												
+											.dropdown.dropdown-pet-price-type.dib
+												a.dropdown-pet-pay data-toggle="dropdown" href="#"
+													span.dotted
+														em.rub &#8399;
+														| /сутки
+													span.iconzoopy-V.caret-icon
+												ul.dropdown-menu
+													li
+														a href="#"
+															em.rub &#8399;
+															| /сутки
+													li
+														a href="#"
+															em.rub &#8399;
+															| /час
+										
+
+										a.pet-add-price-type.text-muted href="#"
+											span.text-muted + 
+											span.dotted за час
+										
+										label.checkbox-inline.checkbox-pet-range
+											input type="checkbox" name="type2" value="option4"
+											|  Диапазон
+
+								li.pet-list
+									a.pet-item href="#collapse-pet-dog" role="button" data-toggle="collapse" aria-expanded="true"
+										span.iconzoopy-pet-dog
+										strong.pet-type собак
+									form.form-inline.form-pet.collapse.in#collapse-pet-dog aria-expanded="true"
+										label.radio-inline
+											input type="radio" name="type1" value="option1"
+											|  всех
+										label.radio-inline
+											input type="radio" name="type1" value="option2"
+											|  мальчиков
+										label.radio-inline
+											input type="radio" name="type1" value="option3"
+											|  девочек
+
+										.clearfix
+
+										.pet-prices
+											.pet-price-range
+												span.pet-price.pet-price-from 180
+												em
+												span.pet-price.pet-price-to 200
+												
+											.dropdown.dropdown-pet-price-type.dib
+												a.dropdown-pet-pay data-toggle="dropdown" href="#"
+													em.rub &#8399;
+													| /сутки
+
+										.pet-prices.pet-prices-second
+											.pet-price-range
+												span.pet-price.pet-price-from 20
+												em
+												span.pet-price.pet-price-to 40
+												
+											.dropdown.dropdown-pet-price-type.dib
+												a.dropdown-pet-pay data-toggle="dropdown" href="#"
+													em.rub &#8399;
+													| /час
+
+										a.pet-remove-price-type.text-muted href="#"
+											span.iconzoopy-X
+										
+										label.checkbox-inline.checkbox-pet-range
+											input type="checkbox" name="type2" value="option4" checked="checked"
+											|  Диапазон
+								li.pet-list
+									span.iconzoopy-pet-hamster
+									strong.pet-type мелких грызунов
+								li.pet-list
+									span.iconzoopy-pet-rabbit
+									strong.pet-type кроликов
+								li.pet-list
+									span.iconzoopy-pet-horek
+									strong.pet-type хорьков
+									form.form-inline.form-bottom-indent
+										label.radio-inline
+											input type="radio" name="type1" value="option1"
+											|  всех
+										label.radio-inline
+											input type="radio" name="type1" value="option2"
+											|  мальчиков
+										label.radio-inline
+											input type="radio" name="type1" value="option3"
+											|  девочек
+								li.pet-list
+									span.iconzoopy-pet-ezhik
+									strong.pet-type ежей
+								li.pet-list
+									span.iconzoopy-pet-turtle
+									strong.pet-type рептилий, амфибий
+									form.form-inline.form-bottom-indent
+										label.radio-inline
+											input type="radio" name="type1" value="option1"
+											|  всех
+										label.radio-inline
+											input type="radio" name="type1" value="option2"
+											|  мальчиков
+										label.radio-inline
+											input type="radio" name="type1" value="option3"
+											|  девочек
+								li.pet-list
+									span.iconzoopy-pet-parrot
+									strong.pet-type птиц
+								li.pet-list
+									span.iconzoopy-pet-fish
+									strong.pet-type рыбок
+								li.pet-list
+									span.iconzoopy-pet-ulitka
+									strong.pet-type улиток, пауков, насекомых
+					dl.dl-horizontal.dl-profile
+						dt Присмотрю
+						dd
+							ul.list-inline
+								li
+									a.btn.btn-text href="#" за всеми
+								li
+									a href="#"
+										span.dotted конкретным животным 
+								li  начиная 
+								li
+									a.btn.btn-green href="#"
+										| с 
+										span.dotted сегодня
+								li.text-muted
+									| (
+									span.dotted по...
+									| )
+
+		.container-fluid.container-calendar
+			.row
+				.col-xs-12
+					img.img-responsive src="img/calendar1.jpg" alt=""/
+
+		.container
+			.row
+				.col-xs-12
+					dl.dl-horizontal.dl-profile
+						dt Опыт
+						dd
+							ul.list-inline
+								li
+									a.btn.btn-text href="#" нет
+								li
+									a href="#" 
+										span.dotted только свои животные 
+								li
+									a href="#" 
+										span.dotted брал животных пару раз 
+								li
+									a href="#" 
+										span.dotted несколько животных 
+								li
+									a href="#"
+										span.dotted десятки животных 
+								li
+									a href="#"
+										span.dotted больше года 
+								li
+									a href="#"
+										span.dotted пару лет
+								li
+									a href="#"
+										span.dotted несколько лет
+								li
+									a href="#"
+										span.dotted занимаюсь профессионально
+
+					dl.dl-horizontal.dl-profile
+						dt.text-muted
+							strong Предлагаю
+							span Не обязательно
+						dd
+							.btn.btn-xs.btn-default.btn-green-border.active всегда дома
+							.btn.btn-xs.btn-default.btn-green-border свободное перемещение
+							.btn.btn-xs.btn-default.btn-green-border вольеры/номера
+							.btn.btn-xs.btn-default.btn-green-border аквариум
+							.btn.btn-xs.btn-default.btn-green-border террариум
+							.btn.btn-xs.btn-default.btn-green-border когтеточки
+							.btn.btn-xs.btn-default.btn-green-border игрушки
+							.btn.btn-xs.btn-default.btn-green-border рядом парк
+							.btn.btn-xs.btn-default.btn-green-border рядом природа
+							.btn.btn-xs.btn-default.btn-green-border ветеринар
+							.btn.btn-xs.btn-default.btn-green-border ветуслуги
+							.btn.btn-xs.btn-default.btn-green-border кинолог
+							.btn.btn-xs.btn-default.btn-green-border дрессировка
+							.btn.btn-xs.btn-default.btn-green-border зоопсихолог
+							.btn.btn-xs.btn-default.btn-green-border коррекция поведения
+							.btn.btn-xs.btn-default.btn-green-border груминг (уход)
+							.btn.btn-xs.btn-default.btn-green-border хендлинг (подготовка к выставке)
+							.btn.btn-xs.btn-default.btn-green-border стрижка
+							.btn.btn-xs.btn-default.btn-green-border фото/видео-отчеты
+							.btn.btn-xs.btn-default.btn-green-border приготовление еды
+							.btn.btn-xs.btn-default.btn-green-border выгул
+							.btn.btn-xs.btn-default.btn-green-border зоотакси
+							.btn.btn-xs.btn-default.btn-green-border.moderated
+								| чешу носик
+								em.alert.alert-warning на модерации
+							.btn.btn-xs.btn-default.btn-green-border.rejected
+								s кручу хвостик
+								em.alert.alert-danger отказано
+								.close
+									span aria-hidden="true" &times;
+							.btn.btn-xs.btn-text
+								span.glyphicon.glyphicon-plus
+								| Предложить свое...
+
+					dl.dl-horizontal.dl-profile
+						dt.text-muted
+							strong Требования
+							span Не обязательно
+						dd
+							.btn.btn-xs.btn-default.btn-gray-border прививки
+							.btn.btn-xs.btn-default.btn-gray-border ветпаспорт
+							.btn.btn-xs.btn-default.btn-gray-border.active договор
+							.btn.btn-xs.btn-default.btn-gray-border.active здоровое
+							.btn.btn-xs.btn-default.btn-gray-border не старое
+							.btn.btn-xs.btn-default.btn-gray-border взрослое
+							.btn.btn-xs.btn-default.btn-gray-border не крупное
+							.btn.btn-xs.btn-default.btn-gray-border не портит мебель, обои и т. п.
+							.btn.btn-xs.btn-default.btn-gray-border кастрация/стерилизация
+							.btn.btn-xs.btn-default.btn-gray-border приучено к лотку
+							.btn.btn-xs.btn-text
+								span.glyphicon.glyphicon-plus
+								| Предложить свое...
+
+					dl.dl-horizontal.dl-profile
+						dt Описание
+						dd
+							p
+								| Хозяева хотят быть уверенными, что доверяют питомца адекватному, порядочному, ответственному и доброму человеку.
+								br
+								| Расскажите о себе и условиях содержания.
+							.row-dd
+								.col-text
+									p Живу один в просторной квартире, не держу одновременно более одного животного. Работаю дома (писатель), поэтому уделю вашему любимцу максимум внимания. Очень люблю кошек. Также с удовольствием присмотрю за грызунами.
+									p Корм и наполнитель могу приобретать сам за деньги хозяина. Возможны забор и доставка животного.
+									p Живу один в просторной квартире, не держу одновременно более одного животного. Работаю дома (писатель), поэтому уделю вашему любимцу максимум внимания. Очень люблю кошек. Присмотрю за грызунами.
+								.col-vrezka
+									p Короткий емкий текст, разделенный на абзацы, воспринимается намного легче 
+									img src="img/parag.png" alt=""
+								.col-vrezka
+									p Нет смысла повторять то, что вы указали в «Предлагаю», «Требования» и других блоках
+									img src="img/kind.png" alt=""
+
+					dl.dl-horizontal.dl-profile
+						dt.text-muted
+							strong Эл. почта
+							span Не обязательно
+						dd
+							p example@gmail.com
+
+					dl.dl-horizontal.dl-profile
+						dt.text-muted
+							strong
+								| Социальные
+								br
+								| сети
+							span Не обязательно
+						dd
+							p
+								| Привязанный аккаунт соцсети это:
+								br
+								| — возможность входить без пароля, просто нажимая иконку любой из привязанных соцсетей
+								br
+								| — больше доверия пользователей
+								br
+								| — более полное представление о вас
+
+							.row
+								.col-sm
+									img src="img/vk.png" alt=""/
+									| https://vk.com/id29349184
+								.col-sm
+									a.btn.btn-add href="#"
+										span.glyphicon.glyphicon-link
+										|  Привязать
+							.row
+								.col-sm
+									img src="img/fb.png" alt=""/
+									span.text-muted Адрес страницы
+								.col-sm
+									a.btn.btn-add href="#"
+										span.glyphicon.glyphicon-link
+										|  Привязать
+							.row
+								.col-lg
+									img src="img/ok.png" alt=""
+									img src="img/av1.jpg" width="33" alt=""
+									span.nickname.dib
+										| Толя Сахаров
+										button.close type="button" aria-label="Close"
+											span aria-hidden="true" &times;
+									label.checkbox-inline
+										input type="checkbox"
+										| Использовать аватар
+
+					dl.dl-horizontal.dl-profile
+						dt Аватар
+						dd 
+							strong Пожалуйста, загрузите реальное фото
+							p
+								| Чтобы понять, что за человек, сначала смотрят на внешность.
+								br
+								| К профилям с фото больше доверия: «Похоже, у них нет причин скрывать лицо».
+
+					dl.dl-horizontal.dl-profile
+						dt Фото жилья
+						dd 
+							img.photo-house src="img/photo.jpg" alt=""/
+							img.photo-house src="img/photo.jpg" alt=""/
+							img.photo-house src="img/photo.jpg" alt=""/
+							p.text-sm Минимум 3 фотографии условий содержания
+							
+							.upload
+								h3 Загрузить фотографии
+								p 
+									| Перетащить сюда или 
+									span.dotted выбрать...
+
+	.container-fluid.container-footer
+		.row
+			.col-xs-12
+				dl.dl-horizontal.dl-profile
+					dt
+					dd
+						.btn.btn-lg.btn-green.pull-left Опубликовать
+						p.text-check 
+							| Необходимо заполнить еще 
+							span.dotted 3 блока
+				.copy
+					.pull-left
+						p
+							a href="#123"  support@zoopy.ru
+					.pull-right
+						p.footer-subscribe
+							| Подписывайтесь: 
+							a href="#"
+								span.iconzoopy-color-vk
+									span.path1
+									span.path2
+							a href="#"
+								span.iconzoopy-color-fb
+									span.path1
+									span.path2
+							a href="#"
+								span.iconzoopy-color-ok
+									span.path1
+									span.path2
+							a href="#"
+								span.iconzoopy-color-tw
+									span.path1
+									span.path2
+					.clearfix
+				
+		script src="//api-maps.yandex.ru/2.1/?lang=ru_RU"
+		script src="js/jquery.min.js"
+		script src="js/bootstrap.min.js"
+		script src="js/main.js"

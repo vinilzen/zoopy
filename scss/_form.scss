@@ -25,6 +25,11 @@
     }
   }
 }
+.radio-inline {
+  &:hover, &:focus {
+    color: #cc3333;
+  }
+}
 
 .form-control {
   &:focus {

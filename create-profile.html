@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>ZOOPY</title>
+    <link href="css/main.css" rel="stylesheet" />
+  </head>
+  <body>
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <button aria-controls="navbar" aria-expanded="false" class="navbar-toggle collapsed" data-target="#navbar" data-toggle="collapse" type="button"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a class="navbar-brand" href="#">ZOOPY</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right navbar-create-user">
+            <li>
+              <a class="avatar" href="#"><img src="img/av1.jpg" width="40" />Анатолий Saharoza</a>
+            </li>
+            <li>
+              <a href="#"><span class="glyphicon glyphicon-log-out"></span></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="container-fluid alert alert-warning">
+      <div class="row">
+        <div class="col-xs-12 text-center">
+          <h3>
+            Вы успешно зарегистрировались
+          </h3>
+          <p>
+            Чтобы вас увидели, необходимо заполнить и опубликовать свой профиль
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12">
+          <dl class="dl-horizontal dl-profile">
+            <dt>
+              Адрес
+            </dt>
+            <dd>
+              <p class="text-bottom-36 text-top-4">
+                <span class="attribute">Город</span><span>Москва</span>
+              </p>
+              <ul class="list-inline create-profile-list">
+                <li class="active">
+                  <a aria-controls="create-profile-addr" data-toggle="tab" href="#new_addr" role="tab"><span class="dotted">Ввести адрес</span></a>
+                </li>
+                <li>
+                  <a aria-controls="create-profile-addr" data-toggle="tab" href="#set_pin" role="tab"><span class="dotted">Отметить на карте</span></a>
+                </li>
+              </ul>
+              <div class="tab-content">
+                <div class="tab-pane tab-pane-addr active" id="new_addr">
+                  <div class="addr-propery">
+                    <p>
+                      <span>Улица</span>
+                    </p>
+                    <p>
+                      <span>Дом</span>
+                    </p>
+                    <p>
+                      <span>Корпус</span>
+                    </p>
+                    <div class="caret-right"></div>
+                    <div class="caret-white caret-right"></div>
+                  </div>
+                  <div class="create-profile-comment">
+                    <p>
+                      Не будут опубликованы.<br />Только точка на карте.
+                    </p>
+                  </div>
+                </div>
+                <div class="tab-pane" id="set_pin"></div>
+              </div>
+            </dd>
+          </dl>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid container-map">
+      <div class="row">
+        <div class="col-xs-12">
+          <div id="map_profile"></div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12">
+          <dl class="dl-horizontal dl-profile">
+            <dt>
+              Содержание
+            </dt>
+            <dd>
+              <ul class="create-profile-list list-inline">
+                <li class="active">
+                  <a aria-controls="create-profile-movement" data-toggle="tab" href="#movement_free_in_house" role="tab"><span class="dotted">свободное перемещение по дому</span></a>
+                </li>
+                <li>
+                  <a aria-controls="create-profile-movement" data-toggle="tab" href="#movement_cage" role="tab"><span class="dotted">клетки, вольеры, номера</span></a>
+                </li>
+                <li>
+                  <a aria-controls="create-profile-movement" data-toggle="tab" href="#movement_both" role="tab"><span class="dotted">оба варианта</span></a>
+                </li>
+              </ul>
+              <div class="tab-content">
+                <div class="tab-pane active" id="movement_free_in_house">
+                  <p>
+                    <span class="movemen-square">Площадь</span><span>m<sup>2</sup></span>
+                  </p>
+                </div>
+                <div class="tab-pane" id="movement_cage"></div>
+                <div class="tab-pane" id="movement_both"></div>
+              </div>
+            </dd>
+          </dl>
+          <dl class="dl-horizontal dl-profile">
+            <dt>
+              Дети в доме
+            </dt>
+            <dd>
+              <ul class="list-inline create-profile-list">
+                <li class="active">
+                  <a aria-controls="create-profile-children" data-toggle="tab" href="#children_yes" role="tab"><span class="dotted">нет</span></a>
+                </li>
+                <li>
+                  <a aria-controls="create-profile-children" data-toggle="tab" href="#children_no" role="tab"><span class="dotted">есть</span></a>
+                </li>
+              </ul>
+            </dd>
+          </dl>
+          <dl class="dl-horizontal dl-profile">
+            <dt>
+              Животные<br />в доме
+            </dt>
+            <dd>
+              <table class="table table-create-profile table-hover">
+                <tr>
+                  <td>
+                    Борис
+                  </td>
+                  <td>
+                    кот
+                  </td>
+                  <td>
+                    кастрирован
+                  </td>
+                  <td>
+                    <span class="iconzoopy-shpritz-yes"></span>
+                  </td>
+                  <td>
+                    постоянно
+                  </td>
+                  <td>
+                    <a class="edit-property" href="#"><span class="iconzoopy-pencil"></span></a>
+                  </td>
+                  <td>
+                    <a class="edit-property" href="#"><span class="iconzoopy-X"></span></a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    Муся
+                  </td>
+                  <td>
+                    кошка
+                  </td>
+                  <td>
+                    <span class="mark">не стерелизована</span>
+                  </td>
+                  <td>
+                    <span class="iconzoopy-shpritz-no"><span class="path1"></span><span class="path2"></span></span>
+                  </td>
+                  <td>
+                    до 27 ноября
+                  </td>
+                  <td>
+                    <a class="edit-property" href="#"><span class="iconzoopy-pencil"></span></a>
+                  </td>
+                  <td>
+                    <a class="edit-property" href="#"><span class="iconzoopy-X"></span></a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    Рокси
+                  </td>
+                  <td>
+                    доберман девочка
+                  </td>
+                  <td>
+                    стерелизована
+                  </td>
+                  <td>
+                    <span class="iconzoopy-shpritz-yes"></span>
+                  </td>
+                  <td>
+                    до 5 ноября
+                  </td>
+                  <td>
+                    <a class="edit-property" href="#"><span class="iconzoopy-pencil"></span></a>
+                  </td>
+                  <td>
+                    <a class="edit-property" href="#"><span class="iconzoopy-X"></span></a>
+                  </td>
+                </tr>
+                <tr class="disabled">
+                  <td>
+                    Бося
+                  </td>
+                  <td>
+                    йоркширский терьер мальчик
+                  </td>
+                  <td>
+                    не кастрирован
+                  </td>
+                  <td>
+                    <span class="iconzoopy-shpritz-yes"></span>
+                  </td>
+                  <td>
+                    до 8 декабря
+                  </td>
+                  <td></td>
+                  <td>
+                    <a class="undo-property" href="#"><span class="glyphicon glyphicon-repeat"></span></a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    Щуша
+                  </td>
+                  <td>
+                    шиншилла
+                  </td>
+                  <td></td>
+                  <td></td>
+                  <td>
+                    до 4 ноября
+                  </td>
+                  <td>
+                    <a class="edit-property" href="#"><span class="iconzoopy-pencil"></span></a>
+                  </td>
+                  <td>
+                    <a class="edit-property" href="#"><span class="iconzoopy-X"></span></a>
+                  </td>
+                </tr>
+              </table>
+              <div class="btn btn-add">
+                <span class="glyphicon glyphicon-plus"></span>Добавить
+              </div>
+            </dd>
+          </dl>
+          <dl class="dl-horizontal dl-profile">
+            <dt>
+              Беру
+            </dt>
+            <dd>
+              <ul class="list-unstyled">
+                <li class="pet-list">
+                  <a class="pet-item collapsed" data-toggle="collapse" href="#collapse-pet-cat" role="button"><span class="iconzoopy-pet-cat"></span><strong class="pet-type">Кошек</strong></a>
+                  <form class="form-inline form-pet collapse" id="collapse-pet-cat">
+                    <label class="radio-inline"><input name="type1" type="radio" value="option1" /> всех</label><label class="radio-inline"><input name="type1" type="radio" value="option2" /> мальчиков</label><label class="radio-inline"><input name="type1" type="radio" value="option3" /> девочек</label>
+                    <div class="clearfix"></div>
+                    <div class="pet-prices">
+                      <div class="pet-price-range">
+                        <span class="pet-price pet-price-one">250</span><span class="pet-price pet-price-from hide"></span><em class="hide">–</em><span class="pet-price pet-price-to hide"></span>
+                      </div>
+                      <div class="dropdown dropdown-pet-price-type dib">
+                        <a class="dropdown-pet-pay" data-toggle="dropdown" href="#"><span class="dotted"><em class="rub">&#8399;</em>/сутки</span><span class="iconzoopy-V caret-icon"></span></a>
+                        <ul class="dropdown-menu">
+                          <li>
+                            <a href="#"><em class="rub">&#8399;</em>/сутки</a>
+                          </li>
+                          <li>
+                            <a href="#"><em class="rub">&#8399;</em>/час</a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <a class="pet-add-price-type text-muted" href="#"><span class="text-muted">+ </span><span class="dotted">за час</span></a><label class="checkbox-inline checkbox-pet-range"><input name="type2" type="checkbox" value="option4" /> Диапазон</label>
+                  </form>
+                </li>
+                <li class="pet-list">
+                  <a aria-expanded="true" class="pet-item" data-toggle="collapse" href="#collapse-pet-dog" role="button"><span class="iconzoopy-pet-dog"></span><strong class="pet-type">собак</strong></a>
+                  <form aria-expanded="true" class="form-inline form-pet collapse in" id="collapse-pet-dog">
+                    <label class="radio-inline"><input name="type1" type="radio" value="option1" /> всех</label><label class="radio-inline"><input name="type1" type="radio" value="option2" /> мальчиков</label><label class="radio-inline"><input name="type1" type="radio" value="option3" /> девочек</label>
+                    <div class="clearfix"></div>
+                    <div class="pet-prices">
+                      <div class="pet-price-range">
+                        <span class="pet-price pet-price-from">180</span><em></em><span class="pet-price pet-price-to">200</span>
+                      </div>
+                      <div class="dropdown dropdown-pet-price-type dib">
+                        <a class="dropdown-pet-pay" data-toggle="dropdown" href="#"><em class="rub">&#8399;</em>/сутки</a>
+                      </div>
+                    </div>
+                    <div class="pet-prices pet-prices-second">
+                      <div class="pet-price-range">
+                        <span class="pet-price pet-price-from">20</span><em></em><span class="pet-price pet-price-to">40</span>
+                      </div>
+                      <div class="dropdown dropdown-pet-price-type dib">
+                        <a class="dropdown-pet-pay" data-toggle="dropdown" href="#"><em class="rub">&#8399;</em>/час</a>
+                      </div>
+                    </div>
+                    <a class="pet-remove-price-type text-muted" href="#"><span class="iconzoopy-X"></span></a><label class="checkbox-inline checkbox-pet-range"><input checked="checked" name="type2" type="checkbox" value="option4" /> Диапазон</label>
+                  </form>
+                </li>
+                <li class="pet-list">
+                  <span class="iconzoopy-pet-hamster"></span><strong class="pet-type">мелких грызунов</strong>
+                </li>
+                <li class="pet-list">
+                  <span class="iconzoopy-pet-rabbit"></span><strong class="pet-type">кроликов</strong>
+                </li>
+                <li class="pet-list">
+                  <span class="iconzoopy-pet-horek"></span><strong class="pet-type">хорьков</strong>
+                  <form class="form-inline form-bottom-indent">
+                    <label class="radio-inline"><input name="type1" type="radio" value="option1" /> всех</label><label class="radio-inline"><input name="type1" type="radio" value="option2" /> мальчиков</label><label class="radio-inline"><input name="type1" type="radio" value="option3" /> девочек</label>
+                  </form>
+                </li>
+                <li class="pet-list">
+                  <span class="iconzoopy-pet-ezhik"></span><strong class="pet-type">ежей</strong>
+                </li>
+                <li class="pet-list">
+                  <span class="iconzoopy-pet-turtle"></span><strong class="pet-type">рептилий, амфибий</strong>
+                  <form class="form-inline form-bottom-indent">
+                    <label class="radio-inline"><input name="type1" type="radio" value="option1" /> всех</label><label class="radio-inline"><input name="type1" type="radio" value="option2" /> мальчиков</label><label class="radio-inline"><input name="type1" type="radio" value="option3" /> девочек</label>
+                  </form>
+                </li>
+                <li class="pet-list">
+                  <span class="iconzoopy-pet-parrot"></span><strong class="pet-type">птиц</strong>
+                </li>
+                <li class="pet-list">
+                  <span class="iconzoopy-pet-fish"></span><strong class="pet-type">рыбок</strong>
+                </li>
+                <li class="pet-list">
+                  <span class="iconzoopy-pet-ulitka"></span><strong class="pet-type">улиток, пауков, насекомых</strong>
+                </li>
+              </ul>
+            </dd>
+          </dl>
+          <dl class="dl-horizontal dl-profile">
+            <dt>
+              Присмотрю
+            </dt>
+            <dd>
+              <ul class="list-inline">
+                <li>
+                  <a class="btn btn-text" href="#">за всеми</a>
+                </li>
+                <li>
+                  <a href="#"><span class="dotted">конкретным животным </span></a>
+                </li>
+                <li>
+                  начиная 
+                </li>
+                <li>
+                  <a class="btn btn-green" href="#">с <span class="dotted">сегодня</span></a>
+                </li>
+                <li class="text-muted">
+                  (<span class="dotted">по...</span>)
+                </li>
+              </ul>
+            </dd>
+          </dl>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid container-calendar">
+      <div class="row">
+        <div class="col-xs-12">
+          <img alt="" class="img-responsive" src="img/calendar1.jpg" />
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12">
+          <dl class="dl-horizontal dl-profile">
+            <dt>
+              Опыт
+            </dt>
+            <dd>
+              <ul class="list-inline">
+                <li>
+                  <a class="btn btn-text" href="#">нет</a>
+                </li>
+                <li>
+                  <a href="#"><span class="dotted">только свои животные </span></a>
+                </li>
+                <li>
+                  <a href="#"><span class="dotted">брал животных пару раз </span></a>
+                </li>
+                <li>
+                  <a href="#"><span class="dotted">несколько животных </span></a>
+                </li>
+                <li>
+                  <a href="#"><span class="dotted">десятки животных </span></a>
+                </li>
+                <li>
+                  <a href="#"><span class="dotted">больше года </span></a>
+                </li>
+                <li>
+                  <a href="#"><span class="dotted">пару лет</span></a>
+                </li>
+                <li>
+                  <a href="#"><span class="dotted">несколько лет</span></a>
+                </li>
+                <li>
+                  <a href="#"><span class="dotted">занимаюсь профессионально</span></a>
+                </li>
+              </ul>
+            </dd>
+          </dl>
+          <dl class="dl-horizontal dl-profile">
+            <dt class="text-muted">
+              <strong>Предлагаю</strong><span>Не обязательно</span>
+            </dt>
+            <dd>
+              <div class="btn btn-xs btn-default btn-green-border active">
+                всегда дома
+              </div>
+              <div class="btn btn-xs btn-default btn-green-border">
+                свободное перемещение
+              </div>
+              <div class="btn btn-xs btn-default btn-green-border">
+                вольеры/номера
+              </div>
+              <div class="btn btn-xs btn-default btn-green-border">
+                аквариум
+              </div>
+              <div class="btn btn-xs btn-default btn-green-border">
+                террариум
+              </div>
+              <div class="btn btn-xs btn-default btn-green-border">
+                когтеточки
+              </div>
+              <div class="btn btn-xs btn-default btn-green-border">
+                игрушки
+              </div>
+              <div class="btn btn-xs btn-default btn-green-border">
+                рядом парк
+              </div>
+              <div class="btn btn-xs btn-default btn-green-border">
+                рядом природа
+              </div>
+              <div class="btn btn-xs btn-default btn-green-border">
+                ветеринар
+              </div>
+              <div class="btn btn-xs btn-default btn-green-border">
+                ветуслуги
+              </div>
+              <div class="btn btn-xs btn-default btn-green-border">
+                кинолог
+              </div>
+              <div class="btn btn-xs btn-default btn-green-border">
+                дрессировка
+              </div>
+              <div class="btn btn-xs btn-default btn-green-border">
+                зоопсихолог
+              </div>
+              <div class="btn btn-xs btn-default btn-green-border">
+                коррекция поведения
+              </div>
+              <div class="btn btn-xs btn-default btn-green-border">
+                груминг (уход)
+              </div>
+              <div class="btn btn-xs btn-default btn-green-border">
+                хендлинг (подготовка к выставке)
+              </div>
+              <div class="btn btn-xs btn-default btn-green-border">
+                стрижка
+              </div>
+              <div class="btn btn-xs btn-default btn-green-border">
+                фото/видео-отчеты
+              </div>
+              <div class="btn btn-xs btn-default btn-green-border">
+                приготовление еды
+              </div>
+              <div class="btn btn-xs btn-default btn-green-border">
+                выгул
+              </div>
+              <div class="btn btn-xs btn-default btn-green-border">
+                зоотакси
+              </div>
+              <div class="btn btn-xs btn-default btn-green-border moderated">
+                чешу носик<em class="alert alert-warning">на модерации</em>
+              </div>
+              <div class="btn btn-xs btn-default btn-green-border rejected">
+                <s>кручу хвостик</s><em class="alert alert-danger">отказано</em>
+                <div class="close">
+                  <span aria-hidden="true">&times;</span>
+                </div>
+              </div>
+              <div class="btn btn-xs btn-text">
+                <span class="glyphicon glyphicon-plus"></span>Предложить свое...
+              </div>
+            </dd>
+          </dl>
+          <dl class="dl-horizontal dl-profile">
+            <dt class="text-muted">
+              <strong>Требования</strong><span>Не обязательно</span>
+            </dt>
+            <dd>
+              <div class="btn btn-xs btn-default btn-gray-border">
+                прививки
+              </div>
+              <div class="btn btn-xs btn-default btn-gray-border">
+                ветпаспорт
+              </div>
+              <div class="btn btn-xs btn-default btn-gray-border active">
+                договор
+              </div>
+              <div class="btn btn-xs btn-default btn-gray-border active">
+                здоровое
+              </div>
+              <div class="btn btn-xs btn-default btn-gray-border">
+                не старое
+              </div>
+              <div class="btn btn-xs btn-default btn-gray-border">
+                взрослое
+              </div>
+              <div class="btn btn-xs btn-default btn-gray-border">
+                не крупное
+              </div>
+              <div class="btn btn-xs btn-default btn-gray-border">
+                не портит мебель, обои и т. п.
+              </div>
+              <div class="btn btn-xs btn-default btn-gray-border">
+                кастрация/стерилизация
+              </div>
+              <div class="btn btn-xs btn-default btn-gray-border">
+                приучено к лотку
+              </div>
+              <div class="btn btn-xs btn-text">
+                <span class="glyphicon glyphicon-plus"></span>Предложить свое...
+              </div>
+            </dd>
+          </dl>
+          <dl class="dl-horizontal dl-profile">
+            <dt>
+              Описание
+            </dt>
+            <dd>
+              <p>
+                Хозяева хотят быть уверенными, что доверяют питомца адекватному, порядочному, ответственному и доброму человеку.<br />Расскажите о себе и условиях содержания.
+              </p>
+              <div class="row-dd">
+                <div class="col-text">
+                  <p>
+                    Живу один в просторной квартире, не держу одновременно более одного животного. Работаю дома (писатель), поэтому уделю вашему любимцу максимум внимания. Очень люблю кошек. Также с удовольствием присмотрю за грызунами.
+                  </p>
+                  <p>
+                    Корм и наполнитель могу приобретать сам за деньги хозяина. Возможны забор и доставка животного.
+                  </p>
+                  <p>
+                    Живу один в просторной квартире, не держу одновременно более одного животного. Работаю дома (писатель), поэтому уделю вашему любимцу максимум внимания. Очень люблю кошек. Присмотрю за грызунами.
+                  </p>
+                </div>
+                <div class="col-vrezka">
+                  <p>
+                    Короткий емкий текст, разделенный на абзацы, воспринимается намного легче 
+                  </p>
+                  <img alt="" src="img/parag.png" />
+                </div>
+                <div class="col-vrezka">
+                  <p>
+                    Нет смысла повторять то, что вы указали в «Предлагаю», «Требования» и других блоках
+                  </p>
+                  <img alt="" src="img/kind.png" />
+                </div>
+              </div>
+            </dd>
+          </dl>
+          <dl class="dl-horizontal dl-profile">
+            <dt class="text-muted">
+              <strong>Эл. почта</strong><span>Не обязательно</span>
+            </dt>
+            <dd>
+              <p>
+                example@gmail.com
+              </p>
+            </dd>
+          </dl>
+          <dl class="dl-horizontal dl-profile">
+            <dt class="text-muted">
+              <strong>Социальные<br />сети</strong><span>Не обязательно</span>
+            </dt>
+            <dd>
+              <p>
+                Привязанный аккаунт соцсети это:<br />— возможность входить без пароля, просто нажимая иконку любой из привязанных соцсетей<br />— больше доверия пользователей<br />— более полное представление о вас
+              </p>
+              <div class="row">
+                <div class="col-sm">
+                  <img alt="" src="img/vk.png" />https://vk.com/id29349184
+                </div>
+                <div class="col-sm">
+                  <a class="btn btn-add" href="#"><span class="glyphicon glyphicon-link"></span> Привязать</a>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-sm">
+                  <img alt="" src="img/fb.png" /><span class="text-muted">Адрес страницы</span>
+                </div>
+                <div class="col-sm">
+                  <a class="btn btn-add" href="#"><span class="glyphicon glyphicon-link"></span> Привязать</a>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-lg">
+                  <img alt="" src="img/ok.png" /><img alt="" src="img/av1.jpg" width="33" /><span class="nickname dib">Толя Сахаров<button aria-label="Close" class="close" type="button"><span aria-hidden="true">&times;</span></button></span><label class="checkbox-inline"><input type="checkbox" />Использовать аватар</label>
+                </div>
+              </div>
+            </dd>
+          </dl>
+          <dl class="dl-horizontal dl-profile">
+            <dt>
+              Аватар
+            </dt>
+            <dd>
+              <strong>Пожалуйста, загрузите реальное фото</strong>
+              <p>
+                Чтобы понять, что за человек, сначала смотрят на внешность.<br />К профилям с фото больше доверия: «Похоже, у них нет причин скрывать лицо».
+              </p>
+            </dd>
+          </dl>
+          <dl class="dl-horizontal dl-profile">
+            <dt>
+              Фото жилья
+            </dt>
+            <dd>
+              <img alt="" class="photo-house" src="img/photo.jpg" /><img alt="" class="photo-house" src="img/photo.jpg" /><img alt="" class="photo-house" src="img/photo.jpg" />
+              <p class="text-sm">
+                Минимум 3 фотографии условий содержания
+              </p>
+              <div class="upload">
+                <h3>
+                  Загрузить фотографии
+                </h3>
+                <p>
+                  Перетащить сюда или <span class="dotted">выбрать...</span>
+                </p>
+              </div>
+            </dd>
+          </dl>
+        </div>
+      </div>
+    </div>
+  </body>
+  <div class="container-fluid container-footer">
+    <div class="row">
+      <div class="col-xs-12">
+        <dl class="dl-horizontal dl-profile">
+          <dt></dt>
+          <dd>
+            <div class="btn btn-lg btn-green pull-left">
+              Опубликовать
+            </div>
+            <p class="text-check">
+              Необходимо заполнить еще <span class="dotted">3 блока</span>
+            </p>
+          </dd>
+        </dl>
+        <div class="copy">
+          <div class="pull-left">
+            <p>
+              <a href="#123"> support@zoopy.ru</a>
+            </p>
+          </div>
+          <div class="pull-right">
+            <p class="footer-subscribe">
+              Подписывайтесь: <a href="#"><span class="iconzoopy-color-vk"><span class="path1"></span><span class="path2"></span></span></a><a href="#"><span class="iconzoopy-color-fb"><span class="path1"></span><span class="path2"></span></span></a><a href="#"><span class="iconzoopy-color-ok"><span class="path1"></span><span class="path2"></span></span></a><a href="#"><span class="iconzoopy-color-tw"><span class="path1"></span><span class="path2"></span></span></a>
+            </p>
+          </div>
+          <div class="clearfix"></div>
+        </div>
+      </div>
+    </div>
+    <script src="//api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+  </div>
+</html>

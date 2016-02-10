@@ -1,4 +1,3 @@
-
 $(function(){
     var myMap,
         animate_time = 300,
@@ -8,23 +7,36 @@ $(function(){
         fixed_width = 1599,
         gap = 28;
 
-    ymaps.ready(function () {
-        myMap = new ymaps.Map('map', {
-            center: [55.751574, 37.573856],
-            zoom: 9
+    /* Yandex Maps Init */
+    if ( $('#map').length ) {
+        ymaps.ready(function () {
+            myMap = new ymaps.Map('map', {
+                center: [55.751574, 37.573856],
+                zoom: 9
+            });
+            myMap.behaviors.disable("scrollZoom");
+            $( window ).scroll(function() {
+                myMap.container.fitToViewport();
+            })
         });
-        myMap.behaviors.disable("scrollZoom");
-        $( window ).scroll(function() {
-            myMap.container.fitToViewport();
-        })
-    });
+    }
+
+    if ( $('#map_profile').length ) {
+        ymaps.ready(function () {
+            myMap = new ymaps.Map('map_profile', {
+                center: [55.751574, 37.573856],
+                zoom: 9
+            });
+            myMap.behaviors.disable("scrollZoom");
+        });
+    }
 
     setMapWidth(ww);
-    setHrWidth(ww);
+    //setHrWidth(ww);
 
     $( window ).resize(function() {
         setMapWidth( $(window).width() );
-        setHrWidth( $(window).width() );
+        //setHrWidth( $(window).width() );
     });
 
     function setMapWidth(ww) {
