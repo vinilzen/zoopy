@@ -55,11 +55,19 @@ h1.watch {
     line-height: 41px;
     cursor: pointer;
     text-decoration: none;
+    .iconzoopy {
+      position: absolute;
+      right: -14px;
+      top:50%;
+      fill: #000;
+    }
     &:hover, &:focus {
       color: #cc3333;
       text-decoration: none;
       background-image: url(../img/dashed_red.gif);
-    
+      .iconzoopy {
+        fill: #C33;
+      }
     }
   }
 }
@@ -148,23 +156,21 @@ mark, .mark {
 }
 .favorite {
   font-size: 19px;
-  top: 1px;
+  top: 3px;
   display: inline-block;
   height: 19px;
   line-height: 19px;
   position: relative;
-  .iconzoopy-star-big-hover,
-  .iconzoopy-star-big-active {
+  .icon-star-mini {
     display: none;
   }
   &:hover, &:focus {
-    .iconzoopy-star-big-normal {
-      display: none;
-    }
-    .iconzoopy-star-big-hover {
+    .icon-star-mini {
       display: inline-block;
     }
-    // color: #EC9B00;
+    .icon-star-mini-normal {
+      display: none;
+    }
     cursor: pointer;
   }
   &:active {
@@ -217,4 +223,7 @@ mark, .mark {
 }
 .footer-subscribe a {
   margin: 0 3px;
+  position: relative;
+  top: 3px;
+
 }

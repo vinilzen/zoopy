@@ -4,7 +4,8 @@
       ul.pagination.pagination-lg
         li.previous
           a href="#"
-            span.iconzoopy-arrow-big-left
+            svg.iconzoopy.icon-arrow-left
+              use(xlink:href="#icon-arrow-left")
         li.active
           a href="#" 1
         li
@@ -21,7 +22,8 @@
           a href="#" 48
         li.next
           a href="#"
-            span.iconzoopy-arrow-big-right
+            svg.iconzoopy.icon-arrow-right
+              use(xlink:href="#icon-arrow-right")
       .copy
         .pull-left
           p
@@ -29,20 +31,17 @@
         .pull-right
           p.footer-subscribe
             | Подписывайтесь: 
-            a href="#"
-              span.iconzoopy-color-vk
-                span.path1
-                span.path2
-            a href="#"
-              span.iconzoopy-color-fb
-                span.path1
-                span.path2
-            a href="#"
-              span.iconzoopy-color-ok
-                span.path1
-                span.path2
-            a href="#"
-              span.iconzoopy-color-tw
-                span.path1
-                span.path2
+            a href="#link-vk"
+              svg.iconzoopy.icon-color-vk
+                use(xlink:href="#icon-color-vk") /
+            a href="#link-fb"
+              svg.iconzoopy.icon-color-fb
+                use(xlink:href="#icon-color-fb")
+            a href="#link-ok"
+              svg.iconzoopy.icon-color-ok
+                use(xlink:href="#icon-color-ok")
+            a href="#link-tw"
+              svg.iconzoopy.icon-color-tw
+                use(xlink:href="#icon-color-tw")
+
         .clearfix

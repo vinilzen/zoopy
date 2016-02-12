@@ -3,6 +3,9 @@ html
   head
     == Slim::Template.new("slim/head.slim").render
   body
+    / object.hide data="svg/symbols.svg" type="image/svg+xml"
+    == Slim::Template.new("symbols.svg").render
+
     == Slim::Template.new("slim/nav.slim").render
     #map
     .wrapper
@@ -22,37 +25,36 @@ html
                 .pull-right
                   span.label.label-price цена не указана
                   .favorite
-                    span.iconzoopy-star-big-normal
-                    span.iconzoopy-star-big-hover
-                      span.path1
-                      span.path2
-                    span.iconzoopy-star-big-active
-                      span.path1
-                      span.path2
+                    / svg.iconzoopy.icon-star-big-normal
+                    /   use xlink:href="#icon-star-big-normal"
+                    / svg.iconzoopy.icon-star-big-hover
+                    /   use xlink:href="#icon-star-big-hover"
+                    / svg.iconzoopy.icon-star-big-active
+                    /   use xlink:href="#icon-star-big-active"
+                    svg.iconzoopy.icon-star-mini-normal
+                      use xlink:href="#icon-star-mini-normal"
+                    svg.iconzoopy.icon-star-mini
+                      use xlink:href="#icon-star-mini"
+
                 h4.media-heading
                   a.media-heading-title href="#"
                     | Анатолий Saharoza
                     span.glyphicon.glyphicon-map-marker
                   a.soc-link href="#link-vk"
-                    span.iconzoopy-vk.soc-link-gray
-                    span.iconzoopy-color-vk.soc-link-color
-                      span.path1
-                      span.path2
+                    svg.iconzoopy.icon-color-vk.soc-link-color
+                      use(xlink:href="#icon-color-vk") /
+                    svg.iconzoopy.icon-vk.soc-link-gray
+                      use(xlink:href="#icon-vk") /
                   a.soc-link href="#link-fb"
-                    span.iconzoopy-fb.soc-link-gray
-                    span.iconzoopy-color-fb.soc-link-color
-                      span.path1
-                      span.path2
+                    svg.iconzoopy.icon-color-fb.soc-link-color
+                      use(xlink:href="#icon-color-fb") /
+                    svg.iconzoopy.icon-fb.soc-link-gray
+                      use(xlink:href="#icon-fb")
                   a.soc-link href="#link-ok"
-                    span.iconzoopy-ok.soc-link-gray
-                    span.iconzoopy-color-ok.soc-link-color
-                      span.path1
-                      span.path2
-                  a.soc-link href="#link-tw"
-                    span.iconzoopy-tw.soc-link-gray
-                    span.iconzoopy-color-tw.soc-link-color
-                      span.path1
-                      span.path2
+                    svg.iconzoopy.icon-color-ok.soc-link-color
+                      use(xlink:href="#icon-color-ok") /
+                    svg.iconzoopy.icon-ok.soc-link-gray
+                      use(xlink:href="#icon-ok")
                 p
                   | Живу один в просторной квартире, не держу одновременно более одного животного. Работаю дома (писатель), поэтому уделю вашему любимцу максимум внимания. Очень люблю кошек.
                   br
@@ -104,30 +106,42 @@ html
 
                 p.text-sm.text-muted Беру
                 .pets
-                  span.iconzoopy-pet-cat
-                    span.iconzoopy-woman.second-line
-                      em.path1
-                      em.path2
-                  span.iconzoopy-pet-dog
-                    span.iconzoopy-man.second-line
-                      em.path1
-                      em.path2
-                  span.iconzoopy-pet-hamster
-                    em
-                  span.iconzoopy-pet-rabbit
-                    em
-                  span.iconzoopy-pet-horek
-                    em
-                  span.iconzoopy-pet-ezhik
-                    em
-                  span.iconzoopy-pet-turtle
-                    em
-                  span.iconzoopy-pet-parrot
-                    em
-                  span.iconzoopy-pet-fish
-                    em
-                  span.iconzoopy-pet-ulitka
-                    em
+                  .pet-item
+                    svg.iconzoopy.icon-pet-cat
+                      use(xlink:href="#icon-pet-cat")
+                    .second-line
+                      svg.iconzoopy.icon-man
+                        use(xlink:href="#icon-man")
+                  .pet-item
+                    svg.iconzoopy.icon-pet-dog
+                      use(xlink:href="#icon-pet-dog")
+                    .second-line
+                      svg.iconzoopy.icon-woman
+                        use(xlink:href="#icon-woman")
+                  .pet-item.disabled
+                    svg.iconzoopy.icon-pet-hamster
+                      use(xlink:href="#icon-pet-hamster")
+                  .pet-item.disabled
+                    svg.iconzoopy.icon-pet-rabbit
+                      use(xlink:href="#icon-pet-rabbit")
+                  .pet-item.disabled
+                    svg.iconzoopy.icon-pet-horek
+                      use(xlink:href="#icon-pet-horek")
+                  .pet-item
+                    svg.iconzoopy.icon-pet-ezhik
+                      use(xlink:href="#icon-pet-ezhik")
+                  .pet-item
+                    svg.iconzoopy.icon-pet-turtle
+                      use(xlink:href="#icon-pet-turtle")
+                  .pet-item
+                    svg.iconzoopy.icon-pet-parrot
+                      use(xlink:href="#icon-pet-parrot")
+                  .pet-item
+                    svg.iconzoopy.icon-pet-fish
+                      use(xlink:href="#icon-pet-fish")
+                  .pet-item.disabled
+                    svg.iconzoopy.icon-pet-ulitka
+                      use(xlink:href="#icon-pet-ulitka")
               
                 .panel.panel-contact.pull-right
                   .panel-body
@@ -272,12 +286,6 @@ html
 
                 p.text-sm.text-muted Беру
                 .pets
-                  span.glyphicon.glyphicon-user
-                  span.glyphicon.glyphicon-leaf.disabled
-                  span.glyphicon.glyphicon-fire.disabled
-                  span.glyphicon.glyphicon-eye-open.disabled
-                  span.glyphicon.glyphicon-user.disabled
-                  span.glyphicon.glyphicon-leaf.disabled
 
                 .panel.panel-contact.pull-right
                   .panel-body

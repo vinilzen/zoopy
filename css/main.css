@@ -5199,216 +5199,95 @@ button.close {
   margin-top: 0;
   margin-right: 28px; }
 
-@font-face {
-  font-family: 'icozoopy';
-  src: url("../fonts/icozoopy.ttf?v90vjf") format("truetype"), url("../fonts/icozoopy.woff?v90vjf") format("woff"), url("../fonts/icozoopy.svg?v90vjf#icozoopy") format("svg");
-  font-weight: normal;
-  font-style: normal; }
+.iconzoopy.icon-calendar {
+  width: 15px;
+  height: 11px;
+  fill: #c0c0c0; }
+  .iconzoopy.icon-calendar:hover, .iconzoopy.icon-calendar:focus {
+    opacity: .8; }
 
-[class^="iconzoopy-"], [class*=" iconzoopy-"] {
-  /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: 'icozoopy' !important;
-  speak: none;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
-  /* Better Font Rendering =========== */
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale; }
+.iconzoopy.icon-key {
+  width: 23px;
+  height: 11px;
+  fill: #fff; }
 
-.iconzoopy-pet-hamster:before {
-  content: ""; }
+.iconzoopy.icon-arrow-down {
+  width: 11px;
+  height: 8px;
+  fill: #d4dbdf; }
 
-.iconzoopy-pet-ulitka:before {
-  content: ""; }
+.iconzoopy.icon-price {
+  width: 7px;
+  height: 8px;
+  fill: #666669; }
 
-.iconzoopy-pet-ezhik:before {
-  content: ""; }
+.iconzoopy.icon-color-tw, .iconzoopy.icon-tw, .iconzoopy.icon-color-vk, .iconzoopy.icon-vk, .iconzoopy.icon-color-fb, .iconzoopy.icon-fb, .iconzoopy.icon-color-ok, .iconzoopy.icon-ok {
+  width: 16px;
+  height: 16px; }
 
-.iconzoopy-pet-turtle:before {
-  content: ""; }
+.iconzoopy.icon-tw, .iconzoopy.icon-vk, .iconzoopy.icon-fb, .iconzoopy.icon-ok {
+  fill: #999; }
 
-.iconzoopy-pet-cat:before {
-  content: ""; }
+.iconzoopy.icon-pet-cat {
+  width: 27px;
+  height: 24px; }
 
-.iconzoopy-pet-dog:before {
-  content: ""; }
+.iconzoopy.icon-pet-dog {
+  width: 26px;
+  height: 25px; }
 
-.iconzoopy-pet-rabbit:before {
-  content: ""; }
+.iconzoopy.icon-pet-hamster {
+  width: 25px;
+  height: 26px; }
 
-.iconzoopy-pet-horek:before {
-  content: ""; }
+.iconzoopy.icon-pet-rabbit {
+  width: 26px;
+  height: 26px; }
 
-.iconzoopy-pet-parrot:before {
-  content: ""; }
+.iconzoopy.icon-pet-horek {
+  width: 28px;
+  height: 26px; }
 
-.iconzoopy-pet-fish:before {
-  content: ""; }
+.iconzoopy.icon-pet-ezhik {
+  width: 26px;
+  height: 23px; }
 
-.iconzoopy-geopoint:before {
-  content: ""; }
+.iconzoopy.icon-pet-turtle {
+  width: 26px;
+  height: 26px; }
 
-.iconzoopy-calendar:before {
-  content: ""; }
+.iconzoopy.icon-pet-parrot {
+  width: 26px;
+  height: 27px; }
 
-.iconzoopy-price:before {
-  content: ""; }
+.iconzoopy.icon-pet-fish {
+  width: 26px;
+  height: 24px; }
 
-.iconzoopy-fb:before {
-  content: ""; }
+.iconzoopy.icon-pet-ulitka {
+  width: 29px;
+  height: 27px; }
 
-.iconzoopy-vk:before {
-  content: ""; }
+.iconzoopy.icon-star-big-normal, .iconzoopy.icon-star-big-hover, .iconzoopy.icon-star-big-active {
+  width: 31px;
+  height: 30px; }
 
-.iconzoopy-ok:before {
-  content: ""; }
+.iconzoopy.icon-star-mini, .iconzoopy.icon-star-mini-normal {
+  width: 21px;
+  height: 19px; }
 
-.iconzoopy-tw:before {
-  content: ""; }
+.iconzoopy.icon-man {
+  width: 16px;
+  height: 16px; }
 
-.iconzoopy-color-vk .path1:before {
-  content: "";
-  color: #5c82ac; }
+.iconzoopy.icon-woman {
+  width: 13px;
+  height: 20px; }
 
-.iconzoopy-color-vk .path2:before {
-  content: "";
-  margin-left: -1em;
-  color: white; }
-
-.iconzoopy-color-ok .path1:before {
-  content: "";
-  color: #fb8400; }
-
-.iconzoopy-color-ok .path2:before {
-  content: "";
-  margin-left: -1em;
-  color: white; }
-
-.iconzoopy-color-fb .path1:before {
-  content: "";
-  color: #335c9c; }
-
-.iconzoopy-color-fb .path2:before {
-  content: "";
-  margin-left: -1em;
-  color: white; }
-
-.iconzoopy-color-tw .path1:before {
-  content: "";
-  color: #2aa9e0; }
-
-.iconzoopy-color-tw .path2:before {
-  content: "";
-  margin-left: -1em;
-  color: white; }
-
-.iconzoopy-shpritz-no .path1:before {
-  content: "";
-  color: #7f7f7f; }
-
-.iconzoopy-shpritz-no .path2:before {
-  content: "";
-  margin-left: -1em;
-  color: #cc3333; }
-
-.iconzoopy-shpritz-yes:before {
-  content: ""; }
-
-.iconzoopy-search:before {
-  content: ""; }
-
-.iconzoopy-pencil:before {
-  content: ""; }
-
-.iconzoopy-camera .path1:before {
-  content: "";
-  color: rgba(0, 0, 0, 0.5); }
-
-.iconzoopy-camera .path2:before {
-  content: "";
-  margin-left: -1.111328125em;
-  color: rgba(255, 255, 255, 0.85); }
-
-.iconzoopy-X:before {
-  content: ""; }
-
-.iconzoopy-woman .path1:before {
-  content: "";
-  color: black; }
-
-.iconzoopy-woman .path2:before {
-  content: "";
-  margin-left: -0.650390625em;
-  color: #c7297b; }
-
-.iconzoopy-man .path1:before {
-  content: "";
-  color: black; }
-
-.iconzoopy-man .path2:before {
-  content: "";
-  margin-left: -0.9375em;
-  color: #0076ad; }
-
-.iconzoopy-V:before {
-  content: ""; }
-
-.iconzoopy-V2:before {
-  content: ""; }
-
-.iconzoopy-arrow-left:before {
-  content: ""; }
-
-.iconzoopy-arrow-right:before {
-  content: ""; }
-
-.iconzoopy-arrow-big-left:before {
-  content: ""; }
-
-.iconzoopy-arrow-big-right:before {
-  content: ""; }
-
-.iconzoopy-eye:before {
-  content: ""; }
-
-.iconzoopy-key:before {
-  content: ""; }
-
-.iconzoopy-star-big-normal:before {
-  content: ""; }
-
-.iconzoopy-star-big-active .path1:before {
-  content: "";
-  color: #ffc700; }
-
-.iconzoopy-star-big-active .path2:before {
-  content: "";
-  margin-left: -1.033203125em;
-  color: #ffd84c; }
-
-.iconzoopy-star-big-hover .path1:before {
-  content: "";
-  color: #ec9b00; }
-
-.iconzoopy-star-big-hover .path2:before {
-  content: "";
-  margin-left: -1.033203125em;
-  color: #ffd84c; }
-
-.iconzoopy-star-mini-hover-click .path1:before {
-  content: "";
-  color: #ffc700; }
-
-.iconzoopy-star-mini-hover-click .path2:before {
-  content: "";
-  margin-left: -1.10546875em;
-  color: #ffd84c; }
-
-.iconzoopy-star-mini-normal:before {
-  content: ""; }
+.iconzoopy.icon-arrow-left, .iconzoopy.icon-arrow-right {
+  margin-top: 2px;
+  width: 22px;
+  height: 18px; }
 
 .pagination {
   display: inline-block;
@@ -5588,6 +5467,8 @@ button.close {
   border-radius: 0;
   border: none;
   z-index: 4; }
+  .navbar-default .navbar-nav > li > a .iconzoopy {
+    margin-left: 7px; }
   .navbar-default .navbar-nav > li > a:hover,
   .navbar-default .navbar-nav > li > a:focus {
     color: #e9f6ff; }
@@ -5631,10 +5512,6 @@ button.close {
   margin-right: 24px;
   margin-top: 24px;
   position: relative; }
-  .watch .iconzoopy-caret {
-    position: absolute;
-    right: -14px;
-    top: 50%; }
 
 .date-days {
   display: inline-block;
@@ -5793,10 +5670,17 @@ h1.watch {
     line-height: 41px;
     cursor: pointer;
     text-decoration: none; }
+    h1.watch a .iconzoopy {
+      position: absolute;
+      right: -14px;
+      top: 50%;
+      fill: #000; }
     h1.watch a:hover, h1.watch a:focus {
       color: #cc3333;
       text-decoration: none;
       background-image: url(../img/dashed_red.gif); }
+      h1.watch a:hover .iconzoopy, h1.watch a:focus .iconzoopy {
+        fill: #C33; }
 
 .text-sm {
   font-size: 12px;
@@ -5870,20 +5754,19 @@ mark, .mark {
 
 .favorite {
   font-size: 19px;
-  top: 1px;
+  top: 3px;
   display: inline-block;
   height: 19px;
   line-height: 19px;
   position: relative; }
-  .favorite .iconzoopy-star-big-hover,
-  .favorite .iconzoopy-star-big-active {
+  .favorite .icon-star-mini {
     display: none; }
   .favorite:hover, .favorite:focus {
     cursor: pointer; }
-    .favorite:hover .iconzoopy-star-big-normal, .favorite:focus .iconzoopy-star-big-normal {
-      display: none; }
-    .favorite:hover .iconzoopy-star-big-hover, .favorite:focus .iconzoopy-star-big-hover {
+    .favorite:hover .icon-star-mini, .favorite:focus .icon-star-mini {
       display: inline-block; }
+    .favorite:hover .icon-star-mini-normal, .favorite:focus .icon-star-mini-normal {
+      display: none; }
   .favorite:active .iconzoopy-star-big-hover,
   .favorite:active .iconzoopy-star-big-normal {
     display: none; }
@@ -5927,7 +5810,9 @@ mark, .mark {
   margin-left: 6px; }
 
 .footer-subscribe a {
-  margin: 0 3px; }
+  margin: 0 3px;
+  position: relative;
+  top: 3px; }
 
 .btn-submit {
   font-size: 14px;
@@ -6115,29 +6000,38 @@ mark, .mark {
     margin-left: -1px; }
 
 .pets {
-  margin-top: 4px; }
+  margin-top: 4px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  /* span[class^="iconzoopy-pet"], span[class*=" iconzoopy-pet"] {
+    float: left;
+    font-size: 27px;
+    margin-right: 20px;
+    color: #262626;
+    &.disabled {
+      color: #b6b6b6;
+    }
+    em {
+      font-style: normal;
+      display: inline-block;
+    }
+  } */ }
   .pets:before, .pets:after {
     content: " ";
     display: table; }
   .pets:after {
     clear: both; }
+  .pets .pet-item {
+    margin-top: 4px;
+    margin-right: 20px;
+    display: inline-block;
+    min-height: 27px; }
+    .pets .pet-item.disabled svg {
+      color: #b6b6b6; }
   .pets .second-line {
     display: block;
-    text-align: center;
-    font-size: 20px;
-    margin-top: 4px; }
-    .pets .second-line.iconzoopy-man {
-      font-size: 18px; }
-  .pets span[class^="iconzoopy-pet"], .pets span[class*=" iconzoopy-pet"] {
-    float: left;
-    font-size: 27px;
-    margin-right: 20px;
-    color: #262626; }
-    .pets span[class^="iconzoopy-pet"].disabled, .pets span[class*=" iconzoopy-pet"].disabled {
-      color: #b6b6b6; }
-    .pets span[class^="iconzoopy-pet"] em, .pets span[class*=" iconzoopy-pet"] em {
-      font-style: normal;
-      display: inline-block; }
+    text-align: center; }
 
 .soc-btns {
   margin-left: -7px;
@@ -6177,12 +6071,11 @@ mark, .mark {
     position: relative;
     padding-right: 4px; }
     .media-heading .soc-link .soc-link-color {
-      font-size: .9em;
       color: #999999;
       opacity: 0;
       position: absolute;
       left: 0;
-      top: 1px; }
+      top: 0; }
     .media-heading .soc-link .soc-link-gray {
       opacity: 1; }
     .media-heading .soc-link:hover .soc-link-gray, .media-heading .soc-link:focus .soc-link-gray {

@@ -1,0 +1,107 @@
+.iconzoopy {
+	&.icon-calendar {
+		width: 15px;
+		height: 11px;
+		fill: #c0c0c0;
+		&:hover, &:focus {
+			opacity: .8;
+		}
+	}
+	&.icon-key {
+		width: 23px;
+		height: 11px;
+		fill: #fff;
+	}
+	&.icon-arrow-down {
+		width: 11px;
+		height: 8px;
+		fill: #d4dbdf;
+	}
+	&.icon-price {
+		width: 7px;
+		height: 8px;
+		fill: #666669;
+	}
+	&.icon-color-tw,
+	&.icon-tw,
+	&.icon-color-vk,
+	&.icon-vk,
+	&.icon-color-fb,
+	&.icon-fb,
+	&.icon-color-ok,
+	&.icon-ok {
+		width: 16px;
+		height: 16px;
+	}
+	&.icon-tw,
+	&.icon-vk,
+	&.icon-fb,
+	&.icon-ok {
+		fill: #999;
+	}
+	&.icon-pet-cat {
+		width: 27px;
+		height: 24px;
+	}
+	&.icon-pet-dog {
+		width: 26px;
+		height: 25px;
+	}
+	&.icon-pet-hamster {
+		width: 25px;
+		height: 26px;
+	}
+	&.icon-pet-rabbit {
+		width: 26px;
+		height: 26px;
+	}
+	&.icon-pet-horek {
+		width: 28px;
+		height: 26px;
+	}
+	&.icon-pet-ezhik {
+		width: 26px;
+		height: 23px;
+	}
+	&.icon-pet-turtle {
+		width: 26px;
+		height: 26px;
+	}
+	&.icon-pet-parrot {
+		width: 26px;
+		height: 27px;
+	}
+	&.icon-pet-fish {
+		width: 26px;
+		height: 24px;
+	}
+	&.icon-pet-ulitka {
+		width: 29px;
+		height: 27px;
+	}
+	&.icon-star-big-normal,
+	&.icon-star-big-hover,
+	&.icon-star-big-active {
+		width: 31px;
+		height: 30px;
+	}
+	&.icon-star-mini,
+	&.icon-star-mini-normal {
+		width: 21px;
+		height: 19px;
+	}
+	&.icon-man {
+		width: 16px;
+		height: 16px;
+	}
+	&.icon-woman {
+		width: 13px;
+		height: 20px;
+	}
+	&.icon-arrow-left,
+	&.icon-arrow-right {
+		margin-top: 2px;
+		width: 22px;
+		height: 18px;
+	}
+}

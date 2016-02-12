@@ -12,7 +12,8 @@ nav.navbar.navbar-default.navbar-main.navbar-background
         li.dropdown
           a.dropdown-toggle aria-expanded="false" aria-haspopup="true" data-toggle="dropdown" href="#" role="button" 
             | Санкт-Петербург
-            span.iconzoopy-V.iconzoopy-caret
+            svg.iconzoopy.icon-arrow-down
+              use(xlink:href="#icon-arrow-down")
           ul.dropdown-menu
             li
               a href="#" Москва
@@ -23,7 +24,8 @@ nav.navbar.navbar-default.navbar-main.navbar-background
       ul.nav.navbar-nav.navbar-right.navbar-user
         li
           a.navbar-login href="#"
-            span.iconzoopy-key-hover
+            svg.iconzoopy.icon-key
+              use(xlink:href="#icon-key")
             |  Вход
         li.active
           a href="#" Хочу зарабатывать присмотром за животными
@@ -35,7 +37,8 @@ nav.navbar.navbar-filter.navbar-fixed-top
           | Присмотрят за 
           a href="#"
             | кошкой
-            span.iconzoopy-V.iconzoopy-caret
+            svg.iconzoopy.icon-arrow-down
+              use(xlink:href="#icon-arrow-down")
         .date-from.date-choice
           p
             | 9
@@ -43,7 +46,8 @@ nav.navbar.navbar-filter.navbar-fixed-top
           .corner-cut
             .corner-circle
           a.calendar href="#"
-            span.iconzoopy-calendar
+            svg.iconzoopy.icon-calendar
+              use(xlink:href="#icon-calendar")
           button.close type="button" data-dismiss="alert" aria-label="Close"
             span aria-hidden="true" &times;
         .date-days
@@ -53,7 +57,8 @@ nav.navbar.navbar-filter.navbar-fixed-top
             | 15
             span.date-month июля
           a.calendar href="#"
-            span.iconzoopy-calendar
+            svg.iconzoopy.icon-calendar
+              use(xlink:href="#icon-calendar")
           .corner-cut
             .corner-circle
           button.close type="button" data-dismiss="alert" aria-label="Close"
@@ -73,7 +78,8 @@ nav.navbar.navbar-filter.navbar-fixed-top
           li
             a.nav-price href="#"
               | Цены 
-              span.iconzoopy-price
+              svg.iconzoopy.icon-price
+                use(xlink:href="#icon-price")
           li
             a href="#"
               span.dotted за период

@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="11" height="8" viewBox="0 0 11 8">
+  <defs>
+    <filter id="filter" x="0.25" y="0.719" width="10.5" height="6.375" filterUnits="userSpaceOnUse">
+      <feFlood result="flood" flood-color="#c6d4de"/>
+      <feComposite result="composite" operator="in" in2="SourceGraphic"/>
+      <feBlend result="blend" in2="SourceGraphic"/>
+    </filter>
+  </defs>
+  <path id="V" d="M5.5,7.084L0.24,1.823l1.1-1.1L5.5,4.883l4.16-4.16,1.1,1.1Z"/>
+</svg>

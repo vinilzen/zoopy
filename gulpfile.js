@@ -3,7 +3,8 @@ var gulp            = require('gulp'),
     sourcemaps      = require('gulp-sourcemaps'),
 	browserSync     = require('browser-sync').create(),
     autoprefixer    = require('gulp-autoprefixer'),
-	slim            = require("gulp-slim");
+	slim            = require("gulp-slim"),
+    svgSprite       = require("gulp-svg-sprites");
 
 var bootstrapDir = 'bower_components/bootstrap-sass';
 
@@ -34,7 +35,7 @@ gulp.task('sass', function() {
     return gulp.src("scss/main.scss")
         .pipe(sourcemaps.init())
         .pipe(sass({
-            includePaths: [bootstrapDir + '/assets/stylesheets', 'icozoopy'],
+            includePaths: [bootstrapDir + '/assets/stylesheets'],
         }).on('error', sass.logError))
         .pipe(sourcemaps.write("."))
         .pipe(gulp.dest("./css"))
@@ -53,6 +54,22 @@ gulp.task('bootstrapjs', function() { 
 gulp.task('jqueryjs', function() { 
     return gulp.src('bower_components/jquery/dist/jquery.min.js') 
         .pipe(gulp.dest('./js')); 
+});
+
+
+gulp.task('sprites', function () {
+    return gulp.src('svg/*.svg')
+        .pipe(svgSprite({
+            mode: 'symbols',
+            common: 'iconzoopy',
+            layout: 'diagonal',
+            selector: "icon-%f",
+            svg: {
+                symbols: 'symbols.svg'
+            }
+            // cssFile: "scss/_sprite.scss",  for sprite mod
+        }))
+        .pipe(gulp.dest("./"));
 });
 
 gulp.task('default', ['serve', 'bootstrapjs', 'jqueryjs', 'icons']);
