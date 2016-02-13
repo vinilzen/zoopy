@@ -1,0 +1,28 @@
+doctype html
+html
+	head
+		== Slim::Template.new("slim/head.slim").render
+	body
+		== Slim::Template.new("slim/nav.slim").render
+		.wrap
+			article
+				section
+					.content
+						== Slim::Template.new("slim/search.slim").render
+						== Slim::Template.new("slim/media.slim").render
+				section.fluid
+					.content
+						== Slim::Template.new("slim/review_content.slim").render
+				section
+					.content
+						== Slim::Template.new("slim/media.slim").render
+				section.fluid
+					.content
+						== Slim::Template.new("slim/review_content.slim").render
+			aside#map
+
+
+    script src="//api-maps.yandex.ru/2.1/?lang=ru_RU"
+    script src="js/jquery.min.js"
+    script src="js/bootstrap.min.js"
+    script src="js/main.js"

@@ -1,24 +1,6 @@
 @import "scarfolding";
 @import "bootstrap";
-
-@media (max-width: 1599px) {
-  .container, .container-fluid {
-    width: auto;
-    padding-left: 45px;
-    padding-right: 45px;
-  }
-}
-@media (min-width: 1600px) {
-  .container {
-      width: 1534px;
-  }
-}
-.full-width {
-  display: block;
-  clear: both;
-  margin-top: 0;
-  margin-right: 28px;
-}
+@import "layout";
 
 @import "icons";
 @import "pagination";

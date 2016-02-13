@@ -1,6 +1,11 @@
 .main-content {
   padding-top: 0px;
 }
+.navbar-header {
+  .navbar-brand {
+    padding-left: 0;
+  }
+}
 .navbar-filter {
   background-color: #fff;
   margin-bottom: 0;
@@ -69,6 +74,10 @@
   border-radius: 0;
   border: none;
   z-index: 4;
+  .navbar-collapse {
+    padding-left: 0;
+    padding-right: 0;
+  }
   .navbar-nav > li > a {
     .iconzoopy {
       margin-left: 7px;
@@ -223,7 +232,7 @@
   }
 }
 .navbar-default .navbar-user {
-  margin: 12px -15px 12px 0;
+  margin: 12px 0 12px 0;
   background-color: #788b9a;
   border-radius: 5px;
   > li {

@@ -1,0 +1,146 @@
+.media
+  .media-left
+    a href="#" 
+      img.media-object src="img/av1.jpg" /
+  .media-body.media-body-content
+    .pull-right
+      span.label.label-price цена не указана
+      .favorite
+        svg.iconzoopy.icon-star-mini-normal
+          use xlink:href="#icon-star-mini-normal"
+        svg.iconzoopy.icon-star-mini
+          use xlink:href="#icon-star-mini"
+
+    h4.media-heading
+      a.media-heading-title href="#"
+        | Анатолий Saharoza
+        span.glyphicon.glyphicon-map-marker
+      a.soc-link href="#link-vk"
+        svg.iconzoopy.icon-color-vk.soc-link-color
+          use(xlink:href="#icon-color-vk") /
+        svg.iconzoopy.icon-vk.soc-link-gray
+          use(xlink:href="#icon-vk") /
+      a.soc-link href="#link-fb"
+        svg.iconzoopy.icon-color-fb.soc-link-color
+          use(xlink:href="#icon-color-fb") /
+        svg.iconzoopy.icon-fb.soc-link-gray
+          use(xlink:href="#icon-fb")
+      a.soc-link href="#link-ok"
+        svg.iconzoopy.icon-color-ok.soc-link-color
+          use(xlink:href="#icon-color-ok") /
+        svg.iconzoopy.icon-ok.soc-link-gray
+          use(xlink:href="#icon-ok")
+    p
+      | Живу один в просторной квартире, не держу одновременно более одного животного. Работаю дома (писатель), поэтому уделю вашему любимцу максимум внимания. Очень люблю кошек.
+      br
+      | Также с удовольствием присмотрю за грызунами.
+    p Корм и наполнитель могу приобретать сам за деньги хозяина. Возможны забор и доставка животного.
+    dl.dl-horizontal.dl-index
+      dt.text-left
+        span Опыт
+      dd несколько животных
+      dt.text-left
+        span Дети
+      dd нет
+      dt.text-left
+        span Животные в доме
+      dd кошка стерил. , 2 кота не кастр. , доберман-девочка не стерил. , попугай
+
+    p.text-lime.text-sm Предлагаю
+
+    .tags
+      .btn.btn-lime.btn-xs всегда дома
+      .btn.btn-lime.btn-xs ветуслуги
+      .btn.btn-lime.btn-xs груминг (уход)
+      .btn.btn-lime.btn-xs хендлинг
+      .btn.btn-lime.btn-xs стрижка
+      .btn.btn-lime.btn-xs зоопсихолог
+      .btn.btn-lime.btn-xs ветеринар
+      .btn.btn-lime.btn-xs дрессировка
+      .btn.btn-lime.btn-xs выгул
+      .btn.btn-lime.btn-xs без детей
+      .btn.btn-lime.btn-xs коррекция поведения
+      .btn.btn-lime.btn-xs парк рядом
+      .btn.btn-lime.btn-xs зоотакси
+      .btn.btn-lime.btn-xs фото/видео-отчеты
+
+    p.text-sm.text-muted Требования
+    .tags
+      .btn.btn-default.btn-xs всегда дома
+      .btn.btn-default.btn-xs ветуслуги
+      .btn.btn-default.btn-xs груминг (уход)
+      .btn.btn-default.btn-xs хендлинг
+      .btn.btn-default.btn-xs стрижка
+      .btn.btn-default.btn-xs зоопсихолог
+      .btn.btn-default.btn-xs ветеринар
+      .btn.btn-default.btn-xs дрессировка
+      .btn.btn-default.btn-xs выгул
+      .btn.btn-default.btn-xs без детей
+      .btn.btn-default.btn-xs коррекция поведения
+      .btn.btn-default.btn-xs парк рядом
+
+    p.text-sm.text-muted Беру
+    .pets
+      .pet-item
+        svg.iconzoopy.icon-pet-cat
+          use(xlink:href="#icon-pet-cat")
+        .second-line
+          svg.iconzoopy.icon-man
+            use(xlink:href="#icon-man")
+      .pet-item
+        svg.iconzoopy.icon-pet-dog
+          use(xlink:href="#icon-pet-dog")
+        .second-line
+          svg.iconzoopy.icon-woman
+            use(xlink:href="#icon-woman")
+      .pet-item.disabled
+        svg.iconzoopy.icon-pet-hamster
+          use(xlink:href="#icon-pet-hamster")
+      .pet-item.disabled
+        svg.iconzoopy.icon-pet-rabbit
+          use(xlink:href="#icon-pet-rabbit")
+      .pet-item.disabled
+        svg.iconzoopy.icon-pet-horek
+          use(xlink:href="#icon-pet-horek")
+      .pet-item
+        svg.iconzoopy.icon-pet-ezhik
+          use(xlink:href="#icon-pet-ezhik")
+      .pet-item
+        svg.iconzoopy.icon-pet-turtle
+          use(xlink:href="#icon-pet-turtle")
+      .pet-item
+        svg.iconzoopy.icon-pet-parrot
+          use(xlink:href="#icon-pet-parrot")
+      .pet-item
+        svg.iconzoopy.icon-pet-fish
+          use(xlink:href="#icon-pet-fish")
+      .pet-item.disabled
+        svg.iconzoopy.icon-pet-ulitka
+          use(xlink:href="#icon-pet-ulitka")
+  
+    .panel.panel-contact.pull-right
+      .panel-body
+        p
+          span.tel +7 962 987-●●-●●
+          br
+          a href="#" s...@gmail.com
+      .panel-right
+        span.glyphicon.glyphicon-eye-open
+
+    .photo-preview
+      .list-photo                  
+        a href="#"
+          img src="img/photo1.jpg"
+        a href="#"
+          img src="img/photo2.jpg"
+        a href="#"
+          img src="img/photo3.jpg"
+        a href="#"
+          img src="img/photo4.jpg"
+      p
+        | 40 m
+        sup 2
+      a.control href="#"
+        span.glyphicon.glyphicon-triangle-right
+    
+    == Slim::Template.new("slim/review_link.slim").render

@@ -24,7 +24,7 @@ gulp.task('serve', function() {
 });
 
 gulp.task('slim', function(){
-  gulp.src(["slim/index.slim", "slim/create-profile.slim"])
+  gulp.src(["slim/index.slim", "slim/create-profile.slim", "slim/layout.slim"])
     .pipe(slim({
       pretty: true
     }))

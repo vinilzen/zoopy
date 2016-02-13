@@ -31,11 +31,11 @@ $(function(){
         });
     }
 
-    setMapWidth(ww);
+    //setMapWidth(ww);
     //setHrWidth(ww);
 
     $( window ).resize(function() {
-        setMapWidth( $(window).width() );
+        //setMapWidth( $(window).width() );
         //setHrWidth( $(window).width() );
     });
 
@@ -80,11 +80,19 @@ $(function(){
     $( window ).scroll(function() {
 
         /* Resize MAP */
-        var st = $(window).scrollTop();// console.log(st);
+        var st = $(window).scrollTop(),
+            wh = $(window).height(),
+            nf = $('.navbar-filter').height();
+        
+        console.log(st);
+
         if ( st < 63 ) {
-            $('#map').css({top: 182-st});
+            $('#map').css({
+                height: wh - 182 + st,
+                // top: 0
+            });
         } else {
-            $('#map').css({top: 123});
+            // $('#map').css({top: st + 123});
         }
     });
 
