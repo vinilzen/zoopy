@@ -2,9 +2,9 @@ $(function(){
     var myMap,
         animate_time = 300,
         ww = $(window).width(),
-        $c = $('body').find('.container'),
-        $mrc = $('body').find('.main-right-column'),
-        fixed_width = 1599,
+        $wrap = $('.wrap'),
+        $article = $('article'),
+        fixed_width = 1534,
         gap = 28;
 
     /* Yandex Maps Init */
@@ -31,29 +31,31 @@ $(function(){
         });
     }
 
-    //setMapWidth(ww);
+    setMapWidth(ww);
     //setHrWidth(ww);
 
     $( window ).resize(function() {
-        //setMapWidth( $(window).width() );
+        setMapWidth( $(window).width() );
         //setHrWidth( $(window).width() );
     });
 
     function setMapWidth(ww) {
-        var wc = $c.width(),
-            wrc = $mrc.width(),
+        var wc = $wrap.width(),
+            wrc = $article.width(),
             wu = (ww-wc)/2;
 
-        if (ww > fixed_width) {
+        $('#map').width( ww - wu - wrc );
+
+        /*if (ww > fixed_width) {
             $('#map').width( ww-wrc-wu-gap);
         } else {
             $('#map').width( ww-wrc-45-gap );
-        }
+        }*/
     }
     
     function setHrWidth(ww){
 
-        var wc = $c.outerWidth(),
+        var wc = $wrap.outerWidth(),
             wu = (ww-wc)/2;
 
         if (ww > fixed_width) {
@@ -80,19 +82,13 @@ $(function(){
     $( window ).scroll(function() {
 
         /* Resize MAP */
-        var st = $(window).scrollTop(),
-            wh = $(window).height(),
-            nf = $('.navbar-filter').height();
-        
-        console.log(st);
+        var st = $(window).scrollTop();
 
+        var st = $(window).scrollTop();// console.log(st);
         if ( st < 63 ) {
-            $('#map').css({
-                height: wh - 182 + st,
-                // top: 0
-            });
+            $('#map').css({top: 182-st});
         } else {
-            // $('#map').css({top: st + 123});
+            $('#map').css({top: 123});
         }
     });
 

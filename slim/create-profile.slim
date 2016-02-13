@@ -3,8 +3,9 @@ html
 	head
 		== Slim::Template.new("slim/head.slim").render
 	body
-		nav.navbar.navbar-default
-			.container
+		== Slim::Template.new("symbols.svg").render
+		nav.navbar.navbar-default.navbar-create-profile
+			.wrap
 				.navbar-header
 					button.navbar-toggle.collapsed aria-controls="navbar" aria-expanded="false" data-target="#navbar" data-toggle="collapse" type="button" 
 						span.sr-only Toggle navigation
@@ -20,12 +21,12 @@ html
 								| Анатолий Saharoza
 						li
 							a href="#"
-								span.glyphicon.glyphicon-log-out
+								svg.iconzoopy.icon-exit
+									use xlink:href="#icon-exit"
 		.container-fluid.alert.alert-warning
-			.row
-				.col-xs-12.text-center
-					h3 Вы успешно зарегистрировались
-					p Чтобы вас увидели, необходимо заполнить и опубликовать свой профиль
+			.col-xs-12.text-center
+				h3 Вы успешно зарегистрировались
+				p Чтобы вас увидели, необходимо заполнить и опубликовать свой профиль
 		
 		.container
 			.row
@@ -118,54 +119,66 @@ html
 									td кот
 									td кастрирован
 									td
-										span.iconzoopy-shpritz-yes
+										svg.iconzoopy.icon-shpritz-yes
+											use xlink:href="#icon-shpritz-yes"
 									td постоянно
 									td
 										a.edit-property href="#"
-											span.iconzoopy-pencil
+											svg.iconzoopy.icon-pencil
+												use xlink:href="#icon-pencil"
 									td
 										a.edit-property href="#"
-											span.iconzoopy-X
+											svg.iconzoopy.icon-x-big
+												use xlink:href="#icon-x-big"
+
 								tr
 									td Муся
 									td кошка
 									td
 										span.mark не стерелизована
 									td
-										span.iconzoopy-shpritz-no
-											span.path1
-											span.path2
+										svg.iconzoopy.icon-shpritz-no
+											use xlink:href="#icon-shpritz-no"
 									td до 27 ноября
 									td
 										a.edit-property href="#"
-											span.iconzoopy-pencil
+											svg.iconzoopy.icon-pencil
+												use xlink:href="#icon-pencil"
 									td
 										a.edit-property href="#"
-											span.iconzoopy-X
+											svg.iconzoopy.icon-x-big
+												use xlink:href="#icon-x-big"
 								tr
 									td Рокси
 									td доберман девочка
 									td стерелизована
 									td
-										span.iconzoopy-shpritz-yes
+										svg.iconzoopy.icon-shpritz-yes
+											use xlink:href="#icon-shpritz-yes"
 									td до 5 ноября
 									td
 										a.edit-property href="#"
-											span.iconzoopy-pencil
+											svg.iconzoopy.icon-pencil
+												use xlink:href="#icon-pencil"
 									td
 										a.edit-property href="#"
-											span.iconzoopy-X
+											svg.iconzoopy.icon-x-big
+												use xlink:href="#icon-x-big"
 								tr.disabled
 									td Бося
 									td йоркширский терьер мальчик
 									td не кастрирован
 									td
-										span.iconzoopy-shpritz-yes
+										svg.iconzoopy.icon-shpritz-yes
+											use xlink:href="#icon-shpritz-yes"
 									td до 8 декабря
 									td
 									td
-										a.undo-property href="#"
-											span.glyphicon.glyphicon-repeat
+										a.edit-property href="#"
+											svg.iconzoopy.icon-undo
+												use xlink:href="#icon-undo"
+
+
 								tr
 									td Щуша
 									td шиншилла
@@ -174,10 +187,12 @@ html
 									td до 4 ноября
 									td
 										a.edit-property href="#"
-											span.iconzoopy-pencil
+											svg.iconzoopy.icon-pencil
+												use xlink:href="#icon-pencil"
 									td
 										a.edit-property href="#"
-											span.iconzoopy-X
+											svg.iconzoopy.icon-x-big
+												use xlink:href="#icon-x-big"
 
 							.btn.btn-add
 								span.glyphicon.glyphicon-plus
@@ -189,6 +204,8 @@ html
 								li.pet-list
 									a.pet-item.collapsed href="#collapse-pet-cat" role="button" data-toggle="collapse"
 										span.iconzoopy-pet-cat
+											svg.iconzoopy.icon-pet-cat
+												use xlink:href="#icon-pet-cat"
 										strong.pet-type Кошек
 									form.form-inline.form-pet.collapse#collapse-pet-cat
 
@@ -239,6 +256,8 @@ html
 								li.pet-list
 									a.pet-item href="#collapse-pet-dog" role="button" data-toggle="collapse" aria-expanded="true"
 										span.iconzoopy-pet-dog
+											svg.iconzoopy.icon-pet-dog
+												use xlink:href="#icon-pet-dog"
 										strong.pet-type собак
 									form.form-inline.form-pet.collapse.in#collapse-pet-dog aria-expanded="true"
 										label.radio-inline
@@ -283,12 +302,18 @@ html
 											|  Диапазон
 								li.pet-list
 									span.iconzoopy-pet-hamster
+										svg.iconzoopy.icon-pet-hamster
+											use xlink:href="#icon-pet-hamster"
 									strong.pet-type мелких грызунов
 								li.pet-list
 									span.iconzoopy-pet-rabbit
+										svg.iconzoopy.icon-pet-rabbit
+											use xlink:href="#icon-pet-rabbit"
 									strong.pet-type кроликов
 								li.pet-list
 									span.iconzoopy-pet-horek
+										svg.iconzoopy.icon-pet-horek
+											use xlink:href="#icon-pet-horek"
 									strong.pet-type хорьков
 									form.form-inline.form-bottom-indent
 										label.radio-inline
@@ -302,9 +327,13 @@ html
 											|  девочек
 								li.pet-list
 									span.iconzoopy-pet-ezhik
+										svg.iconzoopy.icon-pet-ezhik
+											use xlink:href="#icon-pet-ezhik"
 									strong.pet-type ежей
 								li.pet-list
 									span.iconzoopy-pet-turtle
+										svg.iconzoopy.icon-pet-turtle
+											use xlink:href="#icon-pet-turtle"
 									strong.pet-type рептилий, амфибий
 									form.form-inline.form-bottom-indent
 										label.radio-inline
@@ -318,12 +347,18 @@ html
 											|  девочек
 								li.pet-list
 									span.iconzoopy-pet-parrot
+										svg.iconzoopy.icon-pet-parrot
+											use xlink:href="#icon-pet-parrot"
 									strong.pet-type птиц
 								li.pet-list
 									span.iconzoopy-pet-fish
+										svg.iconzoopy.icon-pet-fish
+											use xlink:href="#icon-pet-fish"
 									strong.pet-type рыбок
 								li.pet-list
 									span.iconzoopy-pet-ulitka
+										svg.iconzoopy.icon-pet-ulitka
+											use xlink:href="#icon-pet-ulitka"
 									strong.pet-type улиток, пауков, насекомых
 					dl.dl-horizontal.dl-profile
 						dt Присмотрю

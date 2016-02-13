@@ -3,23 +3,29 @@ html
 	head
 		== Slim::Template.new("slim/head.slim").render
 	body
+		== Slim::Template.new("symbols.svg").render
+
 		== Slim::Template.new("slim/nav.slim").render
 		.wrap
 			article
-				section
+				section.section-first
 					.content
 						== Slim::Template.new("slim/search.slim").render
 						== Slim::Template.new("slim/media.slim").render
-				section.fluid
+				section.section-fluid
 					.content
 						== Slim::Template.new("slim/review_content.slim").render
 				section
 					.content
 						== Slim::Template.new("slim/media.slim").render
-				section.fluid
+				section.section-fluid
 					.content
 						== Slim::Template.new("slim/review_content.slim").render
-			aside#map
+				section.section-fluid.section-footer
+					.content
+						== Slim::Template.new("slim/footer.slim").render
+		
+		aside#map data-spy="affix" data-offset-top="60"
 
 
     script src="//api-maps.yandex.ru/2.1/?lang=ru_RU"

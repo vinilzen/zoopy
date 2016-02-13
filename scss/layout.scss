@@ -10,11 +10,6 @@ $break-width-point-min: $max-width + $gap*2 - 1px;
 
 $header-height: 183px;
 
-/* .container {
-  min-width: $min-width;
-  max-width: $max-width;
-} */
-
 .wrap {
   min-width: $min-width;
   max-width: $max-width;
@@ -26,74 +21,18 @@ $header-height: 183px;
 	padding-left: $padding;
 }
 aside {
-  height: calc(100vh - #{$header-height});
-  width: #{$lw}%;
-	position: relative;
-  // @media (max-width: $break-width-point-min) {
-  @media (max-width: $max-width - 1px) {
-  	width: calc( #{$lw}% + #{$gap} );
-  	margin-left: - $gap;
-  }
-  // @media (min-width: $break-width-point) {
-  @media (min-width: $max-width) {
-		left: calc( ( #{$max-width} - 100vw ) / 2 - #{$gap} );
-		width: calc( ( 100vw - #{$max-width} ) / 2 + #{$lw}% + #{$gap} );
-		// left: 0;
-		// width: calc( ( 100vw - #{$max-width} ) / 2 + (#{$lw}/100 * #{$max-width}) + #{$gap} );
-  }
-  /* &.map-fix-top {
-  	height: calc(100vh - #{$header-height} + 63px);
-  } */
+	position: fixed;
+	left: 0;
+	top: 182px;
+	bottom: 0;
+	width: 33%;
 }
-
 article {
   position: relative;
   float: right;
   width: #{$rw}%;
 }
-section.fluid {
-	margin-right: calc( ( #{$max-width} - 100vw ) / 2 - #{$gap});
-	@media (max-width: $max-width) {
-		margin-right: - #{$gap};
-	}
-	@media (min-width: $break-width-point) {
-		width: calc( 100% + ( 100vw - #{$max-width} ) / 2 + #{$gap});
-		margin-right: calc( ( #{$max-width} - 100vw ) / 2 - #{$gap});
-	}
-}
-.fluid {
-	.content {
-		.media-body {
-			.alert{
-				margin-right: -$gap;
-			}
-		}
-		@media (max-width: $break-width-point - 1px) {
-			.media-header {
-				margin-right: -$gap;
-			}
-		}
-		@media (min-width: $max-width) {
-			.media-body {
-				padding-right: calc( ( 100vw - #{$max-width}  ) / 2 );
-				.alert {
-					margin-right: calc( ( #{$max-width} - 100vw ) / 2 - #{$gap} );
-				}
-			}
-			.media-header {	
-				padding-right: calc( ( 100vw - #{$max-width}  ) / 2 + #{$gap} );
-				.review-arrows {
-					right: calc( ( 100vw - #{$max-width}  ) / 2 );
-				}
-			}
-		}
-		@media (min-width: $break-width-point) {
-			.media-body {
-				padding-right: calc( ( 100vw - #{$max-width}  ) / 2 + #{$gap} );
-			}
-		}
-	}
-}
+
 .tab-pane-review {
   background-color: #f3f2e8;
   padding-right: $gap;
@@ -102,4 +41,74 @@ section.fluid {
   @media (min-width: $break-width-point) {
     padding-right: 0;
   }
+}
+.footer {
+  z-index: 1;
+  position: relative;
+  margin-top: 0;
+  padding-right: 45px;
+  @media (min-width: $break-width-point) {
+  	padding-right: calc( ( 100vw - 1534px ) / 2 + 45px);
+  }
+  .col-xs-12 {
+    min-height: 170px;
+  }
+}
+
+section {
+	margin-top: 21px;
+	&.section-fluid {
+		margin-top: 0;
+		margin-right: calc( ( #{$max-width} - 100vw ) / 2 - #{$gap});
+		@media (max-width: $max-width) {
+			margin-right: - #{$gap};
+		}
+		@media (min-width: $break-width-point) {
+			width: calc( 100% + ( 100vw - #{$max-width} ) / 2 + #{$gap});
+			margin-right: calc( ( #{$max-width} - 100vw ) / 2 - #{$gap});
+		}
+		.content {
+			.media-body {
+				.alert{
+					margin-right: -$gap;
+				}
+			}
+			@media (max-width: $break-width-point - 1px) {
+				.media-header {
+					margin-right: -$gap;
+				}
+			}
+			@media (min-width: $max-width) {
+				.media-body {
+					padding-right: calc( ( 100vw - #{$max-width}  ) / 2 );
+					.alert {
+						margin-right: calc( ( #{$max-width} - 100vw ) / 2 - #{$gap} );
+					}
+				}
+				.media-header {	
+					padding-right: calc( ( 100vw - #{$max-width}  ) / 2 + #{$gap} );
+					.review-arrows {
+						right: calc( ( 100vw - #{$max-width}  ) / 2 );
+					}
+				}
+			}
+			@media (min-width: $break-width-point) {
+				.media-body {
+					padding-right: calc( ( 100vw - #{$max-width}  ) / 2 + #{$gap} );
+				}
+			}
+		}
+	}
+	&.section-first {
+		margin-top: 14px;
+	}
+	&.section-footer {
+		min-height: 170px;
+		background: #f8f8f8; /* Old browsers */
+		background: -moz-linear-gradient(top,  #f8f8f8 70%, #e3e3e3 100%); /* FF3.6-15 */
+		background: -webkit-linear-gradient(top,  #f8f8f8 70%,#e3e3e3 100%); /* Chrome10-25,Safari5.1-6 */
+		background: linear-gradient(to bottom,  #f8f8f8 70%,#e3e3e3 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f8f8f8', endColorstr='#e3e3e3',GradientType=0 ); /* IE6-9 */
+		border-top: 1px solid #e5e5e5;
+	}
 }

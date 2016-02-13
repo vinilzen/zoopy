@@ -15,34 +15,8 @@
   height: 300px;
 }
 
-.ftr {
-  min-height: 170px;
-  background: #f8f8f8; /* Old browsers */
-  background: -moz-linear-gradient(top,  #f8f8f8 70%, #e3e3e3 100%); /* FF3.6-15 */
-  background: -webkit-linear-gradient(top,  #f8f8f8 70%,#e3e3e3 100%); /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(to bottom,  #f8f8f8 70%,#e3e3e3 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f8f8f8', endColorstr='#e3e3e3',GradientType=0 ); /* IE6-9 */
-  border-top: 1px solid #e5e5e5;
-}
 .wrapper {
   position: relative;
-}
-.footer-bgr {
-  width: 100%;
-  bottom: 0;
-  right: 0;
-  position: absolute;
-  z-index: 0;
-  @extend .ftr;
-}
-.footer {
-  z-index: 1;
-  position: relative;
-  margin-top: 0;
-  padding-right: 28px;
-  .col-xs-12 {
-    min-height: 170px;
-  }
 }
 .copy {
   position: absolute;
