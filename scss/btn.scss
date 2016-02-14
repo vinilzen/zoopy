@@ -29,7 +29,7 @@
   background-color: #f1f0e4;
   border-radius: 4px;
   height: 28px;
-  line-height: 28px;
+  line-height: 26px;
   padding: 0 12px;
 }
 .btn-add {
@@ -93,7 +93,10 @@
     &.rejected {
       color: #999;
       position: relative;
-      padding-right: 24px;
+      padding-right: 7px;
+      .alert {
+        padding-right: 8px;
+      }
     }
   }
   .btn-gray-border {
@@ -125,5 +128,44 @@
     height: 45px;
     line-height: 45px;
     padding: 0 20px;
+  }
+}
+.btn-add-plus {
+  position: relative;
+  padding-left: 30px;
+  &:after, &:before {
+    content: '';
+    display: block;
+    background-color: #898679;
+    position: absolute;    
+  }
+  &.btn-add-plus-sm { 
+    &:after {
+      width: 2px;
+      height: 12px;
+      left: 13px;
+      top: 8px;
+    }
+    &:before {
+      width: 12px;
+      height: 2px;
+      top: 13px;
+      left: 8px;
+    }
+  }
+  &.btn-add-plus-lg {
+    padding-left: 32px;
+    &:after {
+      width: 3px;
+      height: 15px;
+      left: 15px;
+      top: 9px;
+    }
+    &:before {
+      width: 15px;
+      height: 3px;
+      top: 15px;
+      left: 9px;
+    }
   }
 }

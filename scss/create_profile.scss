@@ -1,3 +1,7 @@
+
+a, a:focus {
+  outline: none;
+}
 .container-fluid.alert.alert-warning {
 	background-color: #ffee9f;
 	border-radius: 0;
@@ -462,5 +466,20 @@
 	}
 	.form-group {
 		margin-left: 0;
+	}
+}
+.user-photo {
+	width: 129px;
+	height: 129px;
+	background-color: #e4e3d6;
+	border-radius: 5px;
+	position: relative;
+	.iconzoopy {
+		color: #f1f0e4;
+		fill: #f1f0e4;
+		position: absolute;
+		bottom: -4px;
+	    width: 129px;
+	    height: 120px;
 	}
 }

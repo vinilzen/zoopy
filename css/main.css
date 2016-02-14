@@ -5385,6 +5385,14 @@ section {
   width: 9px;
   height: 9px; }
 
+.iconzoopy.icon-x-closepopup {
+  width: 10px;
+  height: 9px; }
+
+.iconzoopy.icon-user {
+  width: 38px;
+  height: 33px; }
+
 .pagination {
   display: inline-block;
   padding-left: 0;
@@ -5950,7 +5958,7 @@ mark, .mark {
   background-color: #f1f0e4;
   border-radius: 4px;
   height: 28px;
-  line-height: 28px;
+  line-height: 26px;
   padding: 0 12px; }
 
 .btn-add {
@@ -6006,7 +6014,9 @@ mark, .mark {
 .dl-profile .btn-green-border.rejected {
   color: #999;
   position: relative;
-  padding-right: 24px; }
+  padding-right: 7px; }
+  .dl-profile .btn-green-border.rejected .alert {
+    padding-right: 8px; }
 
 .dl-profile .btn-gray-border.active {
   border-color: #b7b7b7;
@@ -6032,6 +6042,37 @@ mark, .mark {
     height: 45px;
     line-height: 45px;
     padding: 0 20px; }
+
+.btn-add-plus {
+  position: relative;
+  padding-left: 30px; }
+  .btn-add-plus:after, .btn-add-plus:before {
+    content: '';
+    display: block;
+    background-color: #898679;
+    position: absolute; }
+  .btn-add-plus.btn-add-plus-sm:after {
+    width: 2px;
+    height: 12px;
+    left: 13px;
+    top: 8px; }
+  .btn-add-plus.btn-add-plus-sm:before {
+    width: 12px;
+    height: 2px;
+    top: 13px;
+    left: 8px; }
+  .btn-add-plus.btn-add-plus-lg {
+    padding-left: 32px; }
+    .btn-add-plus.btn-add-plus-lg:after {
+      width: 3px;
+      height: 15px;
+      left: 15px;
+      top: 9px; }
+    .btn-add-plus.btn-add-plus-lg:before {
+      width: 15px;
+      height: 3px;
+      top: 15px;
+      left: 9px; }
 
 #map {
   -webkit-box-shadow: inset -1px 0px 0px 0px rgba(0, 0, 0, 0.1);
@@ -6500,6 +6541,9 @@ mark, .mark {
   .review-edit-link:hover, .review-edit-link:focus {
     color: #666; }
 
+a, a:focus {
+  outline: none; }
+
 .container-fluid.alert.alert-warning {
   background-color: #ffee9f;
   border-radius: 0;
@@ -6883,5 +6927,19 @@ mark, .mark {
     width: 129px; }
   .form-horizontal.form-margin-left-zero .form-group {
     margin-left: 0; }
+
+.user-photo {
+  width: 129px;
+  height: 129px;
+  background-color: #e4e3d6;
+  border-radius: 5px;
+  position: relative; }
+  .user-photo .iconzoopy {
+    color: #f1f0e4;
+    fill: #f1f0e4;
+    position: absolute;
+    bottom: -4px;
+    width: 129px;
+    height: 120px; }
 
 /*# sourceMappingURL=main.css.map */

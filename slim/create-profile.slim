@@ -194,9 +194,7 @@ html
 											svg.iconzoopy.icon-x-big
 												use xlink:href="#icon-x-big"
 
-							.btn.btn-add
-								span.glyphicon.glyphicon-plus
-								| Добавить
+							.btn.btn-add.btn-add-plus.btn-add-plus-lg Добавить
 					dl.dl-horizontal.dl-profile
 						dt Беру
 						dd
@@ -451,11 +449,9 @@ html
 							.btn.btn-xs.btn-default.btn-green-border.rejected
 								s кручу хвостик
 								em.alert.alert-danger отказано
-								.close
-									span aria-hidden="true" &times;
-							.btn.btn-xs.btn-text
-								span.glyphicon.glyphicon-plus
-								| Предложить свое...
+								svg.iconzoopy.icon-x-closepopup
+									use xlink:href="#icon-x-closepopup"
+							.btn.btn-xs.btn-text.btn-add-plus.btn-add-plus-sm Предложить свое...
 
 					dl.dl-horizontal.dl-profile
 						dt.text-muted
@@ -472,9 +468,7 @@ html
 							.btn.btn-xs.btn-default.btn-gray-border не портит мебель, обои и т. п.
 							.btn.btn-xs.btn-default.btn-gray-border кастрация/стерилизация
 							.btn.btn-xs.btn-default.btn-gray-border приучено к лотку
-							.btn.btn-xs.btn-text
-								span.glyphicon.glyphicon-plus
-								| Предложить свое...
+							.btn.btn-xs.btn-text.btn-add-plus.btn-add-plus-sm Предложить свое...
 
 					dl.dl-horizontal.dl-profile
 						dt Описание
@@ -566,7 +560,10 @@ html
 								
 							form.form-horizontal.form-margin-left-zero
 								.form-group
-									img src="img/user.png" alt=""/
+									.user-photo
+										svg.iconzoopy.icon-user
+											use xlink:href="#icon-user"
+
 								.form-group
 									submit.btn.btn-add Выбрать фото...
 
