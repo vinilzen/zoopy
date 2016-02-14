@@ -200,9 +200,22 @@ a, a:focus {
 .dropdown-pet-price-type {
 	.dropdown-menu {
 		min-width: auto;
-    margin-top: -30px;
-    // opacity: 0.5;
-    margin-left: -11px;
+		margin-top: -30px;
+		margin-left: -11px;
+		.iconzoopy {
+			position: absolute;
+			display: none;
+			top: 5px;
+			left: 5px;
+		}
+		li {
+			position: relative;
+		}
+		.checked {
+			.iconzoopy {
+				display: block;
+			}
+		}
 	}
 }
 .checkbox-left-indent {
@@ -482,4 +495,54 @@ a, a:focus {
 	    width: 129px;
 	    height: 120px;
 	}
+}
+.sex-all,
+.sex-man,
+.sex-woman {
+	width: 16px;
+	height: 23px;
+	position: relative;
+	&:after {
+		left: -15px;
+		top:6px;
+		position: absolute;
+		display: none;
+		content: '';
+		width: 7px;
+		height: 7px;
+		background-color: #4a4a4a;
+		border-radius: 50%;
+	}
+}
+.sex-all {
+	&:before {
+		left: -18px;
+		top: 3px;
+		width: 13px;
+		height: 13px;
+		position: absolute;
+		display: block;
+		content: '';
+		border: 1px solid #4a4a4a;
+		border-radius: 50%;
+	}
+}
+.sex-man .icon-man-radio {
+	position: absolute;
+	left: -18px;
+	top: 0px;
+}
+.sex-woman .icon-woman-radio {
+	position: absolute;
+	left: -18px;
+	top: 3px;
+}
+.radio-inline {
+	input:checked + .sex-woman, 
+	input:checked + .sex-man, 
+	input:checked + .sex-all {
+		&:after {
+			display: block;
+		}
+	} 
 }

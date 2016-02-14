@@ -5393,6 +5393,18 @@ section {
   width: 38px;
   height: 33px; }
 
+.iconzoopy.icon-man-radio {
+  width: 16px;
+  height: 16px; }
+
+.iconzoopy.icon-woman-radio {
+  width: 13px;
+  height: 20px; }
+
+.iconzoopy.icon-V {
+  width: 12px;
+  height: 13px; }
+
 .pagination {
   display: inline-block;
   padding-left: 0;
@@ -6702,6 +6714,15 @@ a, a:focus {
   min-width: auto;
   margin-top: -30px;
   margin-left: -11px; }
+  .dropdown-pet-price-type .dropdown-menu .iconzoopy {
+    position: absolute;
+    display: none;
+    top: 5px;
+    left: 5px; }
+  .dropdown-pet-price-type .dropdown-menu li {
+    position: relative; }
+  .dropdown-pet-price-type .dropdown-menu .checked .iconzoopy {
+    display: block; }
 
 .checkbox-left-indent {
   margin-left: 10px; }
@@ -6941,5 +6962,50 @@ a, a:focus {
     bottom: -4px;
     width: 129px;
     height: 120px; }
+
+.sex-all,
+.sex-man,
+.sex-woman {
+  width: 16px;
+  height: 23px;
+  position: relative; }
+  .sex-all:after,
+  .sex-man:after,
+  .sex-woman:after {
+    left: -15px;
+    top: 6px;
+    position: absolute;
+    display: none;
+    content: '';
+    width: 7px;
+    height: 7px;
+    background-color: #4a4a4a;
+    border-radius: 50%; }
+
+.sex-all:before {
+  left: -18px;
+  top: 3px;
+  width: 13px;
+  height: 13px;
+  position: absolute;
+  display: block;
+  content: '';
+  border: 1px solid #4a4a4a;
+  border-radius: 50%; }
+
+.sex-man .icon-man-radio {
+  position: absolute;
+  left: -18px;
+  top: 0px; }
+
+.sex-woman .icon-woman-radio {
+  position: absolute;
+  left: -18px;
+  top: 3px; }
+
+.radio-inline input:checked + .sex-woman:after,
+.radio-inline input:checked + .sex-man:after,
+.radio-inline input:checked + .sex-all:after {
+  display: block; }
 
 /*# sourceMappingURL=main.css.map */

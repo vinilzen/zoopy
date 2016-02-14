@@ -208,13 +208,20 @@ html
 									form.form-inline.form-pet.collapse#collapse-pet-cat
 
 										label.radio-inline
-											input type="radio" name="type1" value="option1"
+											input.hide checked="checked" type="radio" name="type1" value="option1"
+											span.sex-all
 											|  всех
 										label.radio-inline
-											input type="radio" name="type1" value="option2"
+											input.hide type="radio" name="type1" value="option2"
+											span.sex-man
+												svg.iconzoopy.icon-man-radio
+													use xlink:href="#icon-man-radio"
 											|  мальчиков
 										label.radio-inline
-											input type="radio" name="type1" value="option3"
+											input.hide type="radio" name="type1" value="option3"
+											span.sex-woman
+												svg.iconzoopy.icon-woman-radio
+													use xlink:href="#icon-woman-radio"
 											|  девочек
 
 										.clearfix
@@ -233,11 +240,15 @@ html
 														| /сутки
 													span.iconzoopy-V.caret-icon
 												ul.dropdown-menu
-													li
+													li.checked
+														svg.iconzoopy.icon-V
+															use xlink:href="#icon-V"
 														a href="#"
 															em.rub &#8399;
 															| /сутки
 													li
+														svg.iconzoopy.icon-V
+															use xlink:href="#icon-V"
 														a href="#"
 															em.rub &#8399;
 															| /час
@@ -259,13 +270,20 @@ html
 										strong.pet-type собак
 									form.form-inline.form-pet.collapse.in#collapse-pet-dog aria-expanded="true"
 										label.radio-inline
-											input type="radio" name="type1" value="option1"
+											input.hide checked="checked" type="radio" name="type1" value="option1"
+											span.sex-all
 											|  всех
 										label.radio-inline
-											input type="radio" name="type1" value="option2"
+											input.hide type="radio" name="type1" value="option2"
+											span.sex-man
+												svg.iconzoopy.icon-man-radio
+													use xlink:href="#icon-man-radio"
 											|  мальчиков
 										label.radio-inline
-											input type="radio" name="type1" value="option3"
+											input.hide type="radio" name="type1" value="option3"
+											span.sex-woman
+												svg.iconzoopy.icon-woman-radio
+													use xlink:href="#icon-woman-radio"
 											|  девочек
 
 										.clearfix
