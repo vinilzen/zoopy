@@ -500,7 +500,13 @@ html
 							strong Эл. почта
 							span Не обязательно
 						dd
-							p example@gmail.com
+							.col-sm-padding-zero
+								a href="#" example@gmail.com
+							.col-sm
+								p.text-sm
+									| Будет видна всем.
+									br 
+									| Есть защита от спама.
 
 					dl.dl-horizontal.dl-profile
 						dt.text-muted
@@ -510,7 +516,7 @@ html
 								| сети
 							span Не обязательно
 						dd
-							p
+							p.line-height22
 								| Привязанный аккаунт соцсети это:
 								br
 								| — возможность входить без пароля, просто нажимая иконку любой из привязанных соцсетей
@@ -519,33 +525,35 @@ html
 								br
 								| — более полное представление о вас
 
-							.row
-								.col-sm
-									img src="img/vk.png" alt=""/
-									| https://vk.com/id29349184
-								.col-sm
-									a.btn.btn-add href="#"
-										span.glyphicon.glyphicon-link
-										|  Привязать
-							.row
-								.col-sm
-									img src="img/fb.png" alt=""/
-									span.text-muted Адрес страницы
-								.col-sm
-									a.btn.btn-add href="#"
-										span.glyphicon.glyphicon-link
-										|  Привязать
-							.row
-								.col-lg
-									img src="img/ok.png" alt=""
-									img src="img/av1.jpg" width="33" alt=""
-									span.nickname.dib
-										| Толя Сахаров
-										button.close type="button" aria-label="Close"
-											span aria-hidden="true" &times;
-									label.checkbox-inline
-										input type="checkbox"
-										| Использовать аватар
+							.conection
+								.row.row-soc
+									.col-sm
+										img src="img/vk.png" alt=""/
+										| https://vk.com/id29349184
+									.col-sm
+										a.btn.btn-add href="#"
+											span.glyphicon.glyphicon-link
+											|  Привязать
+								.row.row-soc
+									.col-sm
+										img src="img/fb.png" alt=""/
+										span.text-light Адрес страницы
+									.col-sm
+										a.btn.btn-add href="#"
+											span.glyphicon.glyphicon-link
+											|  Привязать
+								.row.row-soc
+									.col-lg
+										img src="img/ok.png" alt=""
+										img src="img/av1.jpg" width="33" alt=""
+										span.nickname.dib
+											| Толя Сахаров
+											a.nickname.remove-connection href="#"
+												svg.iconzoopy.icon-x-big
+													use xlink:href="#icon-x-big"
+										label.checkbox-inline
+											input type="checkbox"
+											| Использовать аватар
 
 					dl.dl-horizontal.dl-profile
 						dt Аватар
@@ -555,13 +563,29 @@ html
 								| Чтобы понять, что за человек, сначала смотрят на внешность.
 								br
 								| К профилям с фото больше доверия: «Похоже, у них нет причин скрывать лицо».
+								
+							form.form-horizontal.form-margin-left-zero
+								.form-group
+									img src="img/user.png" alt=""/
+								.form-group
+									submit.btn.btn-add Выбрать фото...
+
 
 					dl.dl-horizontal.dl-profile
 						dt Фото жилья
 						dd 
-							img.photo-house src="img/photo.jpg" alt=""/
-							img.photo-house src="img/photo.jpg" alt=""/
-							img.photo-house src="img/photo.jpg" alt=""/
+							a.create-profile-photo href="#"
+								img.photo-house src="img/photo.jpg" alt=""/
+								svg.iconzoopy.icon-x-mini
+									use xlink:href="#icon-x-mini"
+							a.create-profile-photo href="#"
+								img.photo-house src="img/photo.jpg" alt=""/
+								svg.iconzoopy.icon-x-mini
+									use xlink:href="#icon-x-mini"
+							a.create-profile-photo href="#"
+								img.photo-house src="img/photo.jpg" alt=""/
+								svg.iconzoopy.icon-x-mini
+									use xlink:href="#icon-x-mini"
 							p.text-sm Минимум 3 фотографии условий содержания
 							
 							.upload
@@ -573,37 +597,18 @@ html
 	.container-fluid.container-footer
 		.row
 			.col-xs-12
-				dl.dl-horizontal.dl-profile
-					dt
-					dd
-						.btn.btn-lg.btn-green.pull-left Опубликовать
-						p.text-check 
-							| Необходимо заполнить еще 
-							span.dotted 3 блока
-				.copy
-					.pull-left
-						p
-							a href="#123"  support@zoopy.ru
-					.pull-right
-						p.footer-subscribe
-							| Подписывайтесь: 
-							a href="#"
-								span.iconzoopy-color-vk
-									span.path1
-									span.path2
-							a href="#"
-								span.iconzoopy-color-fb
-									span.path1
-									span.path2
-							a href="#"
-								span.iconzoopy-color-ok
-									span.path1
-									span.path2
-							a href="#"
-								span.iconzoopy-color-tw
-									span.path1
-									span.path2
-					.clearfix
+				.container.posrel
+					dl.dl-horizontal.dl-profile
+						dt
+						dd
+							.btn.btn-lg.btn-green.pull-left Опубликовать
+							p.text-check 
+								| Необходимо заполнить еще 
+								span.dotted 3 блока
+					.copy
+						.pull-left
+							p
+								a href="#123"  support@zoopy.ru
 				
 		script src="//api-maps.yandex.ru/2.1/?lang=ru_RU"
 		script src="js/jquery.min.js"

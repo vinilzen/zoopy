@@ -26,6 +26,14 @@
 		padding-right: 0;
 	}
 }
+.container-map + .container {
+	.dl-profile {
+		margin-top: 38px;
+		&:first-child {
+			margin-top: 31px;
+		}
+	}
+}
 
 .table-create-profile {
 	max-width: 770px;
@@ -114,6 +122,8 @@
 	}
 	.pet-item {
 		color: #000;
+		margin-top: -4px;
+		display: inline-block;
 		&:hover, &:focus {
 			text-decoration: none;
 		}
@@ -147,7 +157,7 @@
 	}
 }
 .form-pet {
-  margin-top: 10px;
+  margin-top: 4px;
   margin-bottom: 20px;
   margin-left: -5px;
 	.radio-inline {
@@ -227,6 +237,7 @@
 	float: left;
 	margin-left: 38px;
 	font-size: 12px;
+	margin-bottom: 30px;
 }
 .col-sm {
 	float: left;
@@ -235,7 +246,7 @@
 	padding-left: 28px;
 	line-height: 33px;
 	img {
-		margin-right: 7px;
+		margin-right: 10px;
 	}
 }
 .col-lg {
@@ -245,11 +256,12 @@
 	}
 }
 .nickname {
-	margin-right: 80px;
-}
-.photo-house {
-	margin-right: 22px;
-	margin-bottom: 20px;
+	margin-right: 47px;
+	.remove-connection {
+		position: relative;
+		top:2px;
+		margin-left: 5px;
+	}
 }
 .upload {
 	margin-top: 17px;
@@ -259,7 +271,9 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	border-radius: 3px;
 	flex-direction: column;
+	margin-bottom: 60px;
 }
 .create-profile-list {
 	margin-left: 0;
@@ -394,5 +408,59 @@
 	background: linear-gradient(to right,  rgba(145,162,173,1) 0%,rgba(145,162,173,1) 50%,rgba(120,139,154,1) 51%,rgba(120,139,154,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 	.navbar-collapse {
 		background-color: rgba(145,162,173,1);
+	}
+}
+
+.col-sm-padding-zero {
+	float: left;
+	width: 287px;
+	padding-bottom: 17px;
+	line-height: 33px;
+}
+.row-soc {
+    margin-top: 7px;
+    display: block;
+    float: left;
+    margin-bottom: -8px;
+}
+.conection {
+	margin-bottom: 36px;
+	float: left;	
+}
+.create-profile-photo {
+	position: relative;
+	display: inline-block;
+// .photo-house {
+	margin-right: 22px;
+	margin-bottom: 20px;
+	.iconzoopy {
+		display: none;
+		position: absolute;
+		width: 15px;
+		height: 15px;
+		right: -7px;
+		top: -6px;
+		background-color: #fff;
+		padding: 3px;
+		border-radius: 50%;
+		color: #999;
+	}
+	&:hover, &:focus {
+		.iconzoopy {
+			display: block;
+		}
+	}
+}
+.posrel {
+	position: relative;
+	min-height: 170px;
+}
+.form-horizontal.form-margin-left-zero {
+	margin-top: 25px;
+	.btn-add {
+		width: 129px;
+	}
+	.form-group {
+		margin-left: 0;
 	}
 }

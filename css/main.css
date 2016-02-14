@@ -5259,17 +5259,16 @@ section {
     margin-top: 14px; }
   section.section-footer {
     min-height: 170px;
-    background: #f8f8f8;
-    /* Old browsers */
     background: -moz-linear-gradient(top, #f8f8f8 70%, #e3e3e3 100%);
     /* FF3.6-15 */
     background: -webkit-linear-gradient(top, #f8f8f8 70%, #e3e3e3 100%);
     /* Chrome10-25,Safari5.1-6 */
     background: linear-gradient(to bottom, #f8f8f8 70%, #e3e3e3 100%);
     /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f8f8f8', endColorstr='#e3e3e3',GradientType=0 );
-    /* IE6-9 */
     border-top: 1px solid #e5e5e5; }
+
+.navbar-fixed-top.affix + .wrap article {
+  top: 123px; }
 
 .iconzoopy.icon-calendar {
   width: 15px;
@@ -5381,6 +5380,10 @@ section {
 .iconzoopy.icon-exit {
   width: 15px;
   height: 11px; }
+
+.iconzoopy.icon-x-mini {
+  width: 9px;
+  height: 9px; }
 
 .pagination {
   display: inline-block;
@@ -5912,6 +5915,12 @@ mark, .mark {
   margin: 0 3px;
   position: relative;
   top: 3px; }
+
+.line-height22 {
+  line-height: 2.2; }
+
+.text-light {
+  color: #aeaeae; }
 
 .btn-submit {
   font-size: 14px;
@@ -6515,6 +6524,11 @@ mark, .mark {
     padding-left: 0;
     padding-right: 0; }
 
+.container-map + .container .dl-profile {
+  margin-top: 38px; }
+  .container-map + .container .dl-profile:first-child {
+    margin-top: 31px; }
+
 .table-create-profile {
   max-width: 770px; }
   .table-create-profile a.edit-property {
@@ -6578,7 +6592,9 @@ mark, .mark {
     top: 5px;
     margin-right: 10px; }
   .pet-list .pet-item {
-    color: #000; }
+    color: #000;
+    margin-top: -4px;
+    display: inline-block; }
     .pet-list .pet-item:hover, .pet-list .pet-item:focus {
       text-decoration: none; }
     .pet-list .pet-item.collapsed {
@@ -6606,7 +6622,7 @@ mark, .mark {
       display: none; }
 
 .form-pet {
-  margin-top: 10px;
+  margin-top: 4px;
   margin-bottom: 20px;
   margin-left: -5px; }
   .form-pet .radio-inline {
@@ -6676,7 +6692,8 @@ mark, .mark {
   width: 190px;
   float: left;
   margin-left: 38px;
-  font-size: 12px; }
+  font-size: 12px;
+  margin-bottom: 30px; }
 
 .col-sm {
   float: left;
@@ -6685,7 +6702,7 @@ mark, .mark {
   padding-left: 28px;
   line-height: 33px; }
   .col-sm img {
-    margin-right: 7px; }
+    margin-right: 10px; }
 
 .col-lg {
   padding-left: 28px; }
@@ -6693,11 +6710,11 @@ mark, .mark {
     margin-right: 7px; }
 
 .nickname {
-  margin-right: 80px; }
-
-.photo-house {
-  margin-right: 22px;
-  margin-bottom: 20px; }
+  margin-right: 47px; }
+  .nickname .remove-connection {
+    position: relative;
+    top: 2px;
+    margin-left: 5px; }
 
 .upload {
   margin-top: 17px;
@@ -6707,7 +6724,9 @@ mark, .mark {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column; }
+  border-radius: 3px;
+  flex-direction: column;
+  margin-bottom: 60px; }
 
 .create-profile-list {
   margin-left: 0; }
@@ -6818,5 +6837,51 @@ mark, .mark {
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */ }
   .navbar-create-profile .navbar-collapse {
     background-color: #91a2ad; }
+
+.col-sm-padding-zero {
+  float: left;
+  width: 287px;
+  padding-bottom: 17px;
+  line-height: 33px; }
+
+.row-soc {
+  margin-top: 7px;
+  display: block;
+  float: left;
+  margin-bottom: -8px; }
+
+.conection {
+  margin-bottom: 36px;
+  float: left; }
+
+.create-profile-photo {
+  position: relative;
+  display: inline-block;
+  margin-right: 22px;
+  margin-bottom: 20px; }
+  .create-profile-photo .iconzoopy {
+    display: none;
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    right: -7px;
+    top: -6px;
+    background-color: #fff;
+    padding: 3px;
+    border-radius: 50%;
+    color: #999; }
+  .create-profile-photo:hover .iconzoopy, .create-profile-photo:focus .iconzoopy {
+    display: block; }
+
+.posrel {
+  position: relative;
+  min-height: 170px; }
+
+.form-horizontal.form-margin-left-zero {
+  margin-top: 25px; }
+  .form-horizontal.form-margin-left-zero .btn-add {
+    width: 129px; }
+  .form-horizontal.form-margin-left-zero .form-group {
+    margin-left: 0; }
 
 /*# sourceMappingURL=main.css.map */

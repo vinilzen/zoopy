@@ -579,9 +579,14 @@
               <strong>Эл. почта</strong><span>Не обязательно</span>
             </dt>
             <dd>
-              <p>
-                example@gmail.com
-              </p>
+              <div class="col-sm-padding-zero">
+                <a href="#">example@gmail.com</a>
+              </div>
+              <div class="col-sm">
+                <p class="text-sm">
+                  Будет видна всем.<br />Есть защита от спама.
+                </p>
+              </div>
             </dd>
           </dl>
           <dl class="dl-horizontal dl-profile">
@@ -589,28 +594,30 @@
               <strong>Социальные<br />сети</strong><span>Не обязательно</span>
             </dt>
             <dd>
-              <p>
+              <p class="line-height22">
                 Привязанный аккаунт соцсети это:<br />— возможность входить без пароля, просто нажимая иконку любой из привязанных соцсетей<br />— больше доверия пользователей<br />— более полное представление о вас
               </p>
-              <div class="row">
-                <div class="col-sm">
-                  <img alt="" src="img/vk.png" />https://vk.com/id29349184
+              <div class="conection">
+                <div class="row row-soc">
+                  <div class="col-sm">
+                    <img alt="" src="img/vk.png" />https://vk.com/id29349184
+                  </div>
+                  <div class="col-sm">
+                    <a class="btn btn-add" href="#"><span class="glyphicon glyphicon-link"></span> Привязать</a>
+                  </div>
                 </div>
-                <div class="col-sm">
-                  <a class="btn btn-add" href="#"><span class="glyphicon glyphicon-link"></span> Привязать</a>
+                <div class="row row-soc">
+                  <div class="col-sm">
+                    <img alt="" src="img/fb.png" /><span class="text-light">Адрес страницы</span>
+                  </div>
+                  <div class="col-sm">
+                    <a class="btn btn-add" href="#"><span class="glyphicon glyphicon-link"></span> Привязать</a>
+                  </div>
                 </div>
-              </div>
-              <div class="row">
-                <div class="col-sm">
-                  <img alt="" src="img/fb.png" /><span class="text-muted">Адрес страницы</span>
-                </div>
-                <div class="col-sm">
-                  <a class="btn btn-add" href="#"><span class="glyphicon glyphicon-link"></span> Привязать</a>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-lg">
-                  <img alt="" src="img/ok.png" /><img alt="" src="img/av1.jpg" width="33" /><span class="nickname dib">Толя Сахаров<button aria-label="Close" class="close" type="button"><span aria-hidden="true">&times;</span></button></span><label class="checkbox-inline"><input type="checkbox" />Использовать аватар</label>
+                <div class="row row-soc">
+                  <div class="col-lg">
+                    <img alt="" src="img/ok.png" /><img alt="" src="img/av1.jpg" width="33" /><span class="nickname dib">Толя Сахаров<a class="nickname remove-connection" href="#"><svg class="iconzoopy icon-x-big"><use xlink:href="#icon-x-big"></use></svg></a></span><label class="checkbox-inline"><input type="checkbox" />Использовать аватар</label>
+                  </div>
                 </div>
               </div>
             </dd>
@@ -624,6 +631,14 @@
               <p>
                 Чтобы понять, что за человек, сначала смотрят на внешность.<br />К профилям с фото больше доверия: «Похоже, у них нет причин скрывать лицо».
               </p>
+              <form class="form-horizontal form-margin-left-zero">
+                <div class="form-group">
+                  <img alt="" src="img/user.png" />
+                </div>
+                <div class="form-group">
+                  <submit class="btn btn-add">Выбрать фото...</submit>
+                </div>
+              </form>
             </dd>
           </dl>
           <dl class="dl-horizontal dl-profile">
@@ -631,7 +646,7 @@
               Фото жилья
             </dt>
             <dd>
-              <img alt="" class="photo-house" src="img/photo.jpg" /><img alt="" class="photo-house" src="img/photo.jpg" /><img alt="" class="photo-house" src="img/photo.jpg" />
+              <a class="create-profile-photo" href="#"><img alt="" class="photo-house" src="img/photo.jpg" /><svg class="iconzoopy icon-x-mini"><use xlink:href="#icon-x-mini"></use></svg></a><a class="create-profile-photo" href="#"><img alt="" class="photo-house" src="img/photo.jpg" /><svg class="iconzoopy icon-x-mini"><use xlink:href="#icon-x-mini"></use></svg></a><a class="create-profile-photo" href="#"><img alt="" class="photo-house" src="img/photo.jpg" /><svg class="iconzoopy icon-x-mini"><use xlink:href="#icon-x-mini"></use></svg></a>
               <p class="text-sm">
                 Минимум 3 фотографии условий содержания
               </p>
@@ -652,29 +667,25 @@
   <div class="container-fluid container-footer">
     <div class="row">
       <div class="col-xs-12">
-        <dl class="dl-horizontal dl-profile">
-          <dt></dt>
-          <dd>
-            <div class="btn btn-lg btn-green pull-left">
-              Опубликовать
+        <div class="container posrel">
+          <dl class="dl-horizontal dl-profile">
+            <dt></dt>
+            <dd>
+              <div class="btn btn-lg btn-green pull-left">
+                Опубликовать
+              </div>
+              <p class="text-check">
+                Необходимо заполнить еще <span class="dotted">3 блока</span>
+              </p>
+            </dd>
+          </dl>
+          <div class="copy">
+            <div class="pull-left">
+              <p>
+                <a href="#123"> support@zoopy.ru</a>
+              </p>
             </div>
-            <p class="text-check">
-              Необходимо заполнить еще <span class="dotted">3 блока</span>
-            </p>
-          </dd>
-        </dl>
-        <div class="copy">
-          <div class="pull-left">
-            <p>
-              <a href="#123"> support@zoopy.ru</a>
-            </p>
           </div>
-          <div class="pull-right">
-            <p class="footer-subscribe">
-              Подписывайтесь: <a href="#"><span class="iconzoopy-color-vk"><span class="path1"></span><span class="path2"></span></span></a><a href="#"><span class="iconzoopy-color-fb"><span class="path1"></span><span class="path2"></span></span></a><a href="#"><span class="iconzoopy-color-ok"><span class="path1"></span><span class="path2"></span></span></a><a href="#"><span class="iconzoopy-color-tw"><span class="path1"></span><span class="path2"></span></span></a>
-            </p>
-          </div>
-          <div class="clearfix"></div>
         </div>
       </div>
     </div>
