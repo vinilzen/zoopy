@@ -34,9 +34,10 @@ html
 					dl.dl-horizontal.dl-profile
 						dt Адрес
 						dd 
-							p.text-bottom-36.text-top-4
-								span.attribute Город
-								span Москва
+							.form-inline.form-inline-create.form-inline-first-fix
+								.form-group
+									label.attribute Город
+									input.form-control type="text" placeholder="Город" value="Москва"
 							ul.list-inline.create-profile-list
 								li.active
 									a href="#new_addr" aria-controls="create-profile-addr" role="tab" data-toggle="tab"
@@ -47,13 +48,17 @@ html
 							
 							.tab-content
 								.tab-pane.tab-pane-addr.active#new_addr
-									.addr-propery
-										p
-											span Улица
-										p
-											span Дом
-										p
-											span Корпус
+									.addr-propery.form-inline.form-inline-create
+										.form-group
+											label.attribute Улица
+											input.form-control type="text"
+										.form-group
+											label.attribute Дом
+											input.form-control.form-control-xs type="text"
+										.form-group
+											label.attribute Корпус
+											input.form-control.form-control-xs type="text"
+
 										.caret-right
 										.caret-white.caret-right
 									.create-profile-comment
@@ -88,11 +93,13 @@ html
 
 							.tab-content
 								.tab-pane.active#movement_free_in_house
-									p 
-										span.movemen-square Площадь
-										span
-											| m
-											sup 2
+									.form-inline.form-inline-fix.form-inline-create
+										.form-group
+											label.movemen-square Площадь
+											input.form-control.form-control-xs type="text"
+											span
+												| м
+												sup 2
 								.tab-pane#movement_cage
 								.tab-pane#movement_both
 
@@ -226,9 +233,12 @@ html
 
 										.clearfix
 
-										.pet-prices
+										.pet-prices.form-inline.form-inline-create
 											.pet-price-range
-												span.pet-price.pet-price-one 250
+												.form-group
+													input.form-control.form-control-xs type="text" value="250"
+
+												span.pet-price.pet-price-one 
 												span.pet-price.pet-price-from.hide
 												em.hide –
 												span.pet-price.pet-price-to.hide
@@ -288,22 +298,26 @@ html
 
 										.clearfix
 
-										.pet-prices
+										.pet-prices.form-inline.form-inline-create
 											.pet-price-range
-												span.pet-price.pet-price-from 180
+												.form-group
+													input.form-control.form-control-xs type="text" value="180"
 												em
-												span.pet-price.pet-price-to 200
+												.form-group
+													input.form-control.form-control-xs type="text" value="200"
 												
 											.dropdown.dropdown-pet-price-type.dib
 												a.dropdown-pet-pay data-toggle="dropdown" href="#"
 													em.rub &#8399;
 													| /сутки
 
-										.pet-prices.pet-prices-second
+										.pet-prices.pet-prices-second.form-inline.form-inline-create
 											.pet-price-range
-												span.pet-price.pet-price-from 20
+												.form-group
+													input.form-control.form-control-xs type="text" value="20"
 												em
-												span.pet-price.pet-price-to 40
+												.form-group
+													input.form-control.form-control-xs type="text" value="40"
 												
 											.dropdown.dropdown-pet-price-type.dib
 												a.dropdown-pet-pay data-toggle="dropdown" href="#"
@@ -313,9 +327,10 @@ html
 										a.pet-remove-price-type.text-muted href="#"
 											span.iconzoopy-X
 										
-										label.checkbox-inline.checkbox-pet-range
-											input type="checkbox" name="type2" value="option4" checked="checked"
-											|  Диапазон
+										.form-group
+											label.checkbox-inline.checkbox-pet-range
+												input type="checkbox" name="type2" value="option4" checked="checked"
+												|  Диапазон
 								li.pet-list
 									span.iconzoopy-pet-hamster
 										svg.iconzoopy.icon-pet-hamster
@@ -497,9 +512,8 @@ html
 								| Расскажите о себе и условиях содержания.
 							.row-dd
 								.col-text
-									p Живу один в просторной квартире, не держу одновременно более одного животного. Работаю дома (писатель), поэтому уделю вашему любимцу максимум внимания. Очень люблю кошек. Также с удовольствием присмотрю за грызунами.
-									p Корм и наполнитель могу приобретать сам за деньги хозяина. Возможны забор и доставка животного.
-									p Живу один в просторной квартире, не держу одновременно более одного животного. Работаю дома (писатель), поэтому уделю вашему любимцу максимум внимания. Очень люблю кошек. Присмотрю за грызунами.
+									textarea.form-control.form-control-textarea
+										| Живу один в просторной квартире, не держу одновременно более одного животного. Работаю дома (писатель), поэтому уделю вашему любимцу максимум внимания. Очень люблю кошек. Также с удовольствием присмотрю за грызунами. Корм и наполнитель могу приобретать сам за деньги хозяина. Возможны забор и доставка животного. Живу один в просторной квартире, не держу одновременно более одного животного. Работаю дома (писатель), поэтому уделю вашему любимцу максимум внимания. Очень люблю кошек. Присмотрю за грызунами.
 								.col-vrezka
 									p Короткий емкий текст, разделенный на абзацы, воспринимается намного легче 
 									img src="img/parag.png" alt=""
@@ -513,7 +527,9 @@ html
 							span Не обязательно
 						dd
 							.col-sm-padding-zero
-								a href="#" example@gmail.com
+								.form-inline.form-inline-create
+									.form-group
+										input.form-control type="email" value="example@gmail.com"
 							.col-sm
 								p.text-sm
 									| Будет видна всем.
@@ -538,31 +554,86 @@ html
 								| — более полное представление о вас
 
 							.conection
-								.row.row-soc
-									.col-sm
-										img src="img/vk.png" alt=""/
-										| https://vk.com/id29349184
-									.col-sm
-										a.btn.btn-add href="#"
+								.line
+									.input-group.input-group-create
+										span.input-group-addon.input-group-addon-vk
+											svg.iconzoopy.icon-vk-logo
+												use xlink:href="#icon-vk-logo"
+										input.form-control type="text" value="https://vk.com/id76634467" placeholder="Адрес страницы" 
+										span.input-group-addon
 											span.glyphicon.glyphicon-link
 											|  Привязать
-								.row.row-soc
-									.col-sm
-										img src="img/fb.png" alt=""/
-										span.text-light Адрес страницы
-									.col-sm
-										a.btn.btn-add href="#"
+								.line
+									.input-group.input-group-create
+										span.input-group-addon.input-group-addon-fb
+											svg.iconzoopy.icon-fb-big
+												use xlink:href="#icon-fb-big"
+										input.form-control type="text" value="" placeholder="Адрес страницы"
+										span.input-group-addon
 											span.glyphicon.glyphicon-link
 											|  Привязать
+									a.undo-link-profile href="#"
+										svg.iconzoopy.icon-undo
+											use xlink:href="#icon-undo"
+										| Вернуть
+								.line
+									.input-group.input-group-create
+										span.input-group-addon.input-group-addon-ok
+											svg.iconzoopy.icon-ok-logo
+												use xlink:href="#icon-ok-logo"
+										input.form-control type="text" value="" placeholder="Адрес страницы"
+										span.input-group-addon
+											span.glyphicon.glyphicon-link
+											|  Привязать
+
 								.row.row-soc
 									.col-lg
-										img src="img/ok.png" alt=""
+										span.soc-btn.soc-btn-ok
+											svg.iconzoopy.icon-ok-logo
+												use xlink:href="#icon-ok-logo"
 										img src="img/av1.jpg" width="33" alt=""
 										span.nickname.dib
 											| Толя Сахаров
 											a.nickname.remove-connection href="#"
-												svg.iconzoopy.icon-x-big
-													use xlink:href="#icon-x-big"
+												svg.iconzoopy.icon-x-mini
+													use xlink:href="#icon-x-mini"
+												| Отвязать
+										label.checkbox-inline
+											input type="checkbox"
+											| Использовать аватар
+								
+								.clearfix
+								
+								.row.row-soc
+									.col-lg
+										span.soc-btn.soc-btn-fb
+											svg.iconzoopy.icon-fb-big
+												use xlink:href="#icon-fb-big"
+										img src="img/av1.jpg" width="33" alt=""
+										span.nickname.dib
+											| Толя Сахаров
+											a.nickname.remove-connection href="#"
+												svg.iconzoopy.icon-x-mini
+													use xlink:href="#icon-x-mini"
+												| Отвязать
+										label.checkbox-inline
+											input type="checkbox"
+											| Использовать аватар
+								
+								.clearfix
+								
+								.row.row-soc
+									.col-lg
+										span.soc-btn.soc-btn-vk
+											svg.iconzoopy.icon-vk-logo
+												use xlink:href="#icon-vk-logo"
+										img src="img/av1.jpg" width="33" alt=""
+										span.nickname.dib
+											| Толя Сахаров
+											a.nickname.remove-connection href="#"
+												svg.iconzoopy.icon-x-mini
+													use xlink:href="#icon-x-mini"
+												| Отвязать
 										label.checkbox-inline
 											input type="checkbox"
 											| Использовать аватар

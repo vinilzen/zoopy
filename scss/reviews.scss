@@ -45,7 +45,8 @@
   border-bottom: none;
   > li{
     &:last-child {
-      margin-left: 9px;
+      // margin-left: 9px;
+      // margin-right: -7px;
     }
     > a {
       padding: 2px 7px 5px;
@@ -282,4 +283,12 @@
   &:hover, &:focus {
     color: #666;
   }
+}
+.btn-default-y {
+  background-color: transparent;
+  margin-left: 23px;
+  border-color: #d3d2c5;
+}
+.text-share {
+  margin-top: 10px;
 }

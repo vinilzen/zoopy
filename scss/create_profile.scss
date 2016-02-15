@@ -138,23 +138,27 @@ a, a:focus {
 	}
 }
 .pet-prices {
-	margin-left: 30px;
+	margin-left: 3px;
 	display: inline-block;
+	/* &.form-inline {
+		position: relative;
+		top: -7px;
+	} */
 	&.pet-prices-second {
-		margin-left: 48px;
+		margin-left: 11px;
 	}
 }
 .pet-price-range {
 	display: inline-block;
 	em {
-		width: 14px;
+		width: 13px;
 		height: 1px;
 		display: inline-block;
 		background-color: #000;
-		margin-left: 14px;
-		margin-right: 35px;
+		margin-left: 2px;
+		margin-right: 1px;
 		position: relative;
-		top: -4px;
+		top: -3px;
 		&.hide {
 			display: none;
 		}
@@ -165,8 +169,8 @@ a, a:focus {
   margin-bottom: 20px;
   margin-left: -5px;
 	.radio-inline {
-    margin-right: 8px;
-    margin-bottom: 26px;
+		margin-right: 8px;
+		margin-bottom: 19px;
 	}
 }
 .pet-type {
@@ -187,8 +191,10 @@ a, a:focus {
   margin-top: -2px;
 }
 .dropdown-pet-pay {
-	margin-right: 10px;
-	margin-left: 10px;
+    margin-right: 10px;
+    margin-left: 3px;
+    top: 1px;
+    position: relative;
 	&:hover {
 		text-decoration: none;
 	}
@@ -242,12 +248,10 @@ a, a:focus {
 	}
 }
 .row-dd {
-	padding: 10px 8px;
+	padding: 4px 0px;
 }
 .col-text {
 	float: left;
-	max-width: 660px;
-	margin-right: 38px;
 }
 .col-vrezka {
 	width: 190px;
@@ -255,6 +259,10 @@ a, a:focus {
 	margin-left: 38px;
 	font-size: 12px;
 	margin-bottom: 30px;
+	margin-top: -3px;
+	p {
+		margin-bottom: 12px;
+	}	
 }
 .col-sm {
 	float: left;
@@ -273,11 +281,23 @@ a, a:focus {
 	}
 }
 .nickname {
-	margin-right: 47px;
+	margin-right: 15px;
 	.remove-connection {
 		position: relative;
 		top:2px;
 		margin-left: 5px;
+		color: transparent;
+		.iconzoopy {
+			color: #666;
+			margin-right: 4px;
+			top: -1px;
+			position: relative;
+		}
+		&:hover, &:focus {
+			opacity: .7;
+			color: #666;
+			text-decoration: none;
+		}
 	}
 }
 .upload {
@@ -325,7 +345,7 @@ a, a:focus {
 }
 .addr-propery {
 	max-width: 600px;
-  min-width: 411px;
+	min-width: 411px;
 }
 .tab-content {
 	> .active {
@@ -333,8 +353,8 @@ a, a:focus {
 			display: flex;
 			flex-direction: row;
 			align-items: center;
-			margin-top: 21px;
-    	margin-bottom: 19px;
+			margin-top: 20px;
+    		margin-bottom: 19px;
 			.create-profile-comment {
 				p {
 					font-size: 12px;
@@ -344,7 +364,7 @@ a, a:focus {
 			.addr-propery {
 				flex-direction: column;
 				display: flex;
-				min-height: 150px;
+				min-height: 154px;
 				justify-content: space-between;
 				p {
 					margin: 5px 0;
@@ -354,7 +374,10 @@ a, a:focus {
 	}
 }
 .movemen-square {
-	margin-right: 80px;
+	margin-right: 19px;
+	& + .form-control {
+		margin-right: 4px;
+	}
 }
 .container-footer {
 	height: 170px;
@@ -430,19 +453,19 @@ a, a:focus {
 
 .col-sm-padding-zero {
 	float: left;
-	width: 287px;
+	width: 267px;
 	padding-bottom: 17px;
 	line-height: 33px;
 }
 .row-soc {
-    margin-top: 7px;
     display: block;
     float: left;
-    margin-bottom: -8px;
+    margin-bottom: 16px;
 }
 .conection {
 	margin-bottom: 36px;
-	float: left;	
+	float: left;
+	margin-top: 9px;
 }
 .create-profile-photo {
 	position: relative;
@@ -545,4 +568,135 @@ a, a:focus {
 			display: block;
 		}
 	} 
+}
+.dl-profile {
+	.form-inline {
+		.form-group {
+			label {
+				font-weight: normal;
+			}
+		}
+	}
+}
+.form-inline-create {
+	.form-control {
+		border-radius: 3px;
+		width: 266px;
+		&.form-control-xs {
+			width: 55px;
+		}
+	}
+	.pet-price-range {
+		.form-control.form-control-xs {
+			width: 60px;
+			text-align: right;
+		}
+	}
+}
+.form-inline-first-fix {
+    margin-bottom: 28px;
+    margin-top: -2px;
+}
+.form-inline-create {
+    .form-control {
+    	padding-left: 8px;
+    	padding-right: 8px;
+    }
+}
+.attribute {
+  display: inline-block;
+  min-width: 115px;
+}
+.form-inline-fix {
+	margin-top: 20px;
+}
+.form-control-textarea {
+    min-width: 721px;
+    min-height: 215px;
+    padding-right: 40px;
+    line-height: 1.45;
+    padding-left: 8px;
+    padding-top: 5px;
+}
+.line {
+	@include clearfix;
+}
+.input-group-create {
+    width: 532px;
+	margin-bottom: 16px;
+	float: left;
+	&:last-of-type {
+		margin-bottom: 10px;
+	}
+	.form-control {
+		border-left-color: transparent;
+	}
+	.input-group-addon {
+    	padding: 2px 10px;
+		&:last-child {
+			background-color: #f1f0e4;
+    		padding-right: 15px;
+			color: #999;
+			.glyphicon {
+				color: #bdbbae;
+			}
+		}
+		.icon-fb-big {
+			position: relative;
+			top: 7px;
+			left: 4px;
+		}
+	}
+}
+.soc-btn {
+	display: inline-block;
+	width: 33px;
+	height: 33px;
+	border-radius: 3px;	
+	text-align: center;
+	margin-right: 7px;
+	float: left;
+	.iconzoopy {
+		position: relative;
+		top: 4px;
+	}
+}
+.input-group-addon-vk {
+	background-color: #5c82ac;
+	border-color: #5c82ac;
+}
+.input-group-addon-ok {
+	background-color: #fb8400;
+	border-color: #fb8400;
+}
+.input-group-addon-fb {
+	background-color: #335c9c;
+	border-color: #335c9c;
+}
+.soc-btn-ok {
+	background-color: #fb8400;
+}
+.soc-btn-vk {
+	background-color: #5c82ac;
+}
+.soc-btn-fb {
+	background-color: #335c9c;
+	.icon-fb-big {
+		position: relative;
+		top: 10px;
+		left: 4px;
+	}
+}
+.undo-link-profile {
+	position: relative;
+	top: 7px;
+	left: 20px;
+	color: transparent;
+	.iconzoopy {
+		margin-right: 7px;
+	}
+	&:hover, &:focus {
+		text-decoration: none;
+		color: #999;
+	}
 }

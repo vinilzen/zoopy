@@ -89,8 +89,8 @@
         p.pull-left.text-sm.text-muted 20 сентября 2015
         p.pull-right
           a.review-edit-link href="#"
-            span.iconzoopy-pencil
-
+            svg.iconzoopy.icon-pencil
+              use xlink:href="#icon-pencil"
   #1_review_plus.tab-pane.tab-pane-review
     .media
       .media-header
@@ -179,7 +179,11 @@
         form
           .form-group
             textarea.form-control rows="5" Супер Зооняня и очень хороший человек! Осталась очень довольна! Сразу видно, что человек любит животных. Отдала собачку в первый раз, очень переживала. Надежда каждый день звонила, рассказывала, как там мой пёсик. Огромное спасибо!
-          / .pull-right
-          /   a.review-edit href="#"
-          /     span.iconzoopy-pencil
           button.btn.btn-submit Сохранить
+  #1_review_share.tab-pane.tab-pane-review
+    .media
+      .media-left
+      .media-body
+        p.text-right.text-share
+          img src="img/share.png" alt=""/
+          span.btn.btn-xs.btn-default.btn-default-y Скопировать ссылку
