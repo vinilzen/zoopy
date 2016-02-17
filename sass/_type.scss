@@ -22,21 +22,36 @@
 .dotted {
   text-decoration: none;
   display: inline-block;
-  border-bottom: 1px dotted $text-color;
+  // border-bottom: 1px dotted $text-color;
 }
 a {
   .dotted {
     text-decoration: none;
     display: inline-block;
-    border-bottom: 1px dotted $link-color;
+    // border-bottom: 1px dotted $link-color;
+    background: url(../img/point.png) repeat-x 1px bottom;
   }
   &:hover, &:focus {
     .dotted {
       text-decoration: none;
-      border-bottom: 1px dotted $link-hover-color;
+      // border-bottom: 1px dotted $link-hover-color;
     }
   }
 }
+.label {
+  .dotted {
+    text-decoration: none;
+    display: inline-block;
+    line-height: 17px;
+    background: url(../img/point_green.png) repeat-x 2px bottom;
+  }
+}
+li.active a {
+  .dotted {
+    background: none;
+  }
+}
+
 .btn:focus,
 .btn.focus,
 .btn:active:focus,
@@ -57,8 +72,8 @@ h1.watch {
     text-decoration: none;
     .iconzoopy {
       position: absolute;
-      right: -14px;
-      top:50%;
+      right: -15px;
+      top: 23px;
       fill: #000;
     }
     &:hover, &:focus {
@@ -102,11 +117,11 @@ dl.dl-index {
       position: absolute;
       left: 0;
       top: 0;
-      background: url(../img/point.png) repeat-x left bottom;
+      background: url(../img/point.png) repeat-x 2px bottom;
     }
   }
   dd {
-    margin-left: $dl-horizontal-offset;
+    margin-left: 156px;//$dl-horizontal-offset;
   }
 }
 .dl-profile {
@@ -152,7 +167,8 @@ mark, .mark {
 }
 .favorite {
   font-size: 19px;
-  top: 3px;
+  top: 2px;
+  left: -1px;
   display: inline-block;
   height: 19px;
   line-height: 19px;
@@ -180,15 +196,20 @@ mark, .mark {
     // color: #FFC700;
   }
 }
-.label-price.label-is-price {
-  font-size: 19px;
-  color: #000;
-  padding: 1px 5px 1px;
-  line-height: 24px;
-  height: 24px;
-  .rub {
-    font-size: 16px;
-    margin-left: 1px;
+.label-price {
+  position: relative;
+  top: -2px;
+  margin-right: 21px;
+  &.label-is-price {
+    font-size: 19px;
+    color: #000;
+    padding: 1px 5px 1px;
+    line-height: 24px;
+    height: 24px;
+    .rub {
+      font-size: 16px;
+      margin-left: 1px;
+    }
   }
 }
 .text-bottom-indent {

@@ -1,12 +1,18 @@
 .form-search {
-  margin-top: 14px;
+  margin-top: 13px;
+  margin-bottom: 25px;
   .form-group {
     position: relative;
-    padding-right: 44px;
+    padding-right: 43px;
   }
   .form-control {
+
     border-color: #e5e5e5;
     padding-left: 35px;
+    &:focus {
+      box-shadow: 0px 0px 0px 2px #d8ef7c;
+      border-color: #CCC;
+    }
     &::-webkit-input-placeholder {
       color: #aeaeae;
       font-size: 14px;
@@ -53,7 +59,7 @@
   .glyphicon {
     color: #e5e5e5;
     position: absolute;
-    z-index: 0;
+    z-index: 0; 
     left: 10px;
     font-size: 16px;
     width: 20px;
@@ -62,4 +68,9 @@
     padding: 10px 0;
     top: 0;
   }
+}
+.fav {
+  position: relative;
+  color: #d3d3d3;
+  right: -6px; 
 }

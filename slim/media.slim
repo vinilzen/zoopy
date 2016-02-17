@@ -4,7 +4,8 @@
       img.media-object src="img/av1.jpg" /
   .media-body.media-body-content
     .pull-right
-      span.label.label-price цена не указана
+      span.label.label-price
+        span.dotted цена не указана
       .favorite
         svg.iconzoopy.icon-star-mini-normal
           use xlink:href="#icon-star-mini-normal"
@@ -44,7 +45,21 @@
       dd нет
       dt.text-left
         span Животные в доме
-      dd кошка стерил. , 2 кота не кастр. , доберман-девочка не стерил. , попугай
+      dd.dd-shpritz
+        | кошка стерил.
+        span.text-ico
+          svg.iconzoopy.icon-shpritz-yes
+            use xlink:href="#icon-shpritz-yes"
+        | , 2 кота 
+        mark не кастр.
+        span.text-ico
+          svg.iconzoopy.icon-shpritz-no
+            use xlink:href="#icon-shpritz-no"
+        |, доберман-девочка 
+        mark не стерил.
+        span.text-ico
+          svg.iconzoopy.icon-shpritz-no
+            use xlink:href="#icon-shpritz-no", попугай
 
     p.text-lime.text-sm Предлагаю
 
@@ -66,9 +81,9 @@
 
     p.text-sm.text-muted Требования
     .tags
-      .btn.btn-default.btn-xs всегда дома
-      .btn.btn-default.btn-xs ветуслуги
-      .btn.btn-default.btn-xs груминг (уход)
+      .btn.btn-default.btn-xs договор
+      .btn.btn-default.btn-xs ветпаспорт
+      .btn.btn-default.btn-xs прививки
       .btn.btn-default.btn-xs хендлинг
       .btn.btn-default.btn-xs стрижка
       .btn.btn-default.btn-xs зоопсихолог
@@ -85,14 +100,14 @@
         svg.iconzoopy.icon-pet-cat
           use(xlink:href="#icon-pet-cat")
         .second-line
-          svg.iconzoopy.icon-man
-            use(xlink:href="#icon-man")
+          svg.iconzoopy.icon-woman
+            use(xlink:href="#icon-woman")
       .pet-item
         svg.iconzoopy.icon-pet-dog
           use(xlink:href="#icon-pet-dog")
         .second-line
-          svg.iconzoopy.icon-woman
-            use(xlink:href="#icon-woman")
+          svg.iconzoopy.icon-man
+            use(xlink:href="#icon-man")
       .pet-item.disabled
         svg.iconzoopy.icon-pet-hamster
           use(xlink:href="#icon-pet-hamster")
@@ -141,7 +156,7 @@
         a href="#"
           img src="img/photo4.jpg"
       p
-        | 40 m
+        | 40 м
         sup 2
       a.control href="#"
         span.glyphicon.glyphicon-triangle-right

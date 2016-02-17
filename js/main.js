@@ -8,7 +8,7 @@ $(function(){
         gap = 28;
 
     /* Yandex Maps Init */
-    if ( $('#map').length ) {
+    if ( $('#map').length && window.location.href.search('localhost') == -1 ) {
         ymaps.ready(function () {
             myMap = new ymaps.Map('map', {
                 center: [55.751574, 37.573856],

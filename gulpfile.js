@@ -2,7 +2,7 @@ var gulp            = require('gulp'),
 	sass            = require('gulp-sass'),
     sourcemaps      = require('gulp-sourcemaps'),
 	browserSync     = require('browser-sync').create(),
-    autoprefixer    = require('gulp-autoprefixer'),
+    // prefix          = require('gulp-autoprefixer'),
 	slim            = require("gulp-slim"),
     svgSprite       = require("gulp-svg-sprites");
 
@@ -17,7 +17,7 @@ gulp.task('serve', function() {
         open: false
     });
 
-    gulp.watch("scss/*.scss", ['sass']);
+    gulp.watch("sass/*.scss", ['sass']);
 	gulp.watch(bootstrapDir+"/assets/stylesheets/*/*.scss", ['sass']);
 	gulp.watch("slim/*.slim", ['slim']);
 	gulp.watch("*.html").on('change', browserSync.reload);
@@ -32,12 +32,13 @@ gulp.task('slim', function(){
 });
 
 gulp.task('sass', function() {
-    return gulp.src("scss/main.scss")
+    return gulp.src("sass/main.scss")
         .pipe(sourcemaps.init())
         .pipe(sass({
             includePaths: [bootstrapDir + '/assets/stylesheets'],
         }).on('error', sass.logError))
-        .pipe(sourcemaps.write("."))
+        // .pipe(prefix("last 1 version", "> 1%"))
+        .pipe(sourcemaps.write('.', {includeContent: false}))
         .pipe(gulp.dest("./css"))
         .pipe(browserSync.stream());
 });
