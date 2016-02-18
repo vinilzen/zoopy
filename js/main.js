@@ -92,4 +92,21 @@ $(function(){
         }
     });
 
+
+    // add/remove class for tab-pane container (for add padding)
+    $('a[class^="review_"], a[class*="review_"]').on('shown.bs.tab', function (e) {
+        // e.target // newly activated tab
+        // e.relatedTarget // previous active tab
+        var id = $(e.target).attr('href');
+
+        $(id).closest('.tab-review-content').removeClass('tab-review-content-closed');
+
+    }).on('hidden.bs.tab', function (e) {
+        var id = $(e.target).attr('href'),
+            tab_review_content = $(id).closest('.tab-review-content');
+
+        if ( tab_review_content.children('.tab-pane.active').length == 0 ) {
+            tab_review_content.addClass('tab-review-content-closed');
+        }
+    });
 })

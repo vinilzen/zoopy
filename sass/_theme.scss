@@ -144,7 +144,13 @@
   height: 33px;
   background-image: url(../img/soc.png);
   background-repeat: no-repeat;
-  margin: 0 7px;
+  margin: 0 8px 0 7px;
+  &:first-child {
+    margin-left: 2px;
+  }
+  &:last-child {
+    margin-right: 0;
+  }
   &.soc-vk {
     background-position: left  top;
   }

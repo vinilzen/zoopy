@@ -5346,6 +5346,9 @@ button.close {
 .content {
   padding-left: 28px; }
 
+.content-second {
+  padding-top: 12px; }
+
 aside {
   position: fixed;
   left: 0;
@@ -5589,10 +5592,14 @@ section {
   width: 12px;
   height: 26px; }
 
+.iconzoopy.icon-slider-left, .iconzoopy.icon-slider-right {
+  width: 12px;
+  height: 19px; }
+
 .pagination {
   display: inline-block;
   padding-left: 0;
-  margin: 42px 0 0;
+  margin: 40px 0 0;
   border-radius: 4px; }
   .pagination > li {
     display: inline;
@@ -5613,7 +5620,7 @@ section {
     .pagination > li > span {
       position: relative;
       float: left;
-      padding: 6px 12px;
+      padding: 7px 13px;
       line-height: 1.42857;
       text-decoration: none;
       font-size: 16px;
@@ -5636,7 +5643,12 @@ section {
   .pagination > .previous > a,
   .pagination > .next > a {
     border: 1px solid #d3d3d3;
-    padding: 7px 18px 5px; }
+    padding: 8px 19px 5px 17px; }
+    .pagination > .previous > a:hover, .pagination > .previous > a:focus,
+    .pagination > .next > a:hover,
+    .pagination > .next > a:focus {
+      border-width: 2px;
+      padding: 7px 18px 4px 16px; }
   .pagination > .disabled > span,
   .pagination > .disabled > span:hover,
   .pagination > .disabled > span:focus,
@@ -5972,17 +5984,24 @@ a .dotted {
   display: inline-block;
   background: url(../img/point.png) repeat-x 1px bottom; }
 
-a:hover .dotted, a:focus .dotted {
-  text-decoration: none; }
+a.review_plus .dotted {
+  background-image: url(../img/point_lightgreen.png); }
+
+a.review_minus .dotted {
+  background-image: url(../img/point_redminus.png); }
+
+a.review_neutral .dotted {
+  background-image: url(../img/point_gray.png); }
+
+a:hover .dotted {
+  text-decoration: none;
+  background: url(../img/point_red.png) repeat-x 1px bottom; }
 
 .label .dotted {
   text-decoration: none;
   display: inline-block;
   line-height: 17px;
   background: url(../img/point_green.png) repeat-x 2px bottom; }
-
-li.active a .dotted {
-  background: none; }
 
 .btn:focus,
 .btn.focus,
@@ -6083,18 +6102,18 @@ mark, .mark {
 .favorite {
   font-size: 19px;
   top: 2px;
-  left: -1px;
+  left: 0px;
   display: inline-block;
   height: 19px;
   line-height: 19px;
   position: relative; }
   .favorite .icon-star-mini {
     display: none; }
-  .favorite:hover, .favorite:focus {
+  .favorite:hover, .favorite:focus, .favorite.active {
     cursor: pointer; }
-    .favorite:hover .icon-star-mini, .favorite:focus .icon-star-mini {
+    .favorite:hover .icon-star-mini, .favorite:focus .icon-star-mini, .favorite.active .icon-star-mini {
       display: inline-block; }
-    .favorite:hover .icon-star-mini-normal, .favorite:focus .icon-star-mini-normal {
+    .favorite:hover .icon-star-mini-normal, .favorite:focus .icon-star-mini-normal, .favorite.active .icon-star-mini-normal {
       display: none; }
   .favorite:active .iconzoopy-star-big-hover,
   .favorite:active .iconzoopy-star-big-normal {
@@ -6104,17 +6123,21 @@ mark, .mark {
 
 .label-price {
   position: relative;
+  border-radius: 4px;
   top: -2px;
-  margin-right: 21px; }
+  margin-right: 19px;
+  padding: 2px 10px 5px 9px; }
   .label-price.label-is-price {
+    top: 0px;
+    margin-right: 18px;
     font-size: 19px;
     color: #000;
     padding: 1px 5px 1px;
     line-height: 24px;
     height: 24px; }
     .label-price.label-is-price .rub {
-      font-size: 16px;
-      margin-left: 1px; }
+      font-size: 15px;
+      margin-left: 4px; }
 
 .text-bottom-indent {
   margin-bottom: 35px; }
@@ -6142,10 +6165,15 @@ mark, .mark {
   font-size: 8px;
   margin-left: 6px; }
 
-.footer-subscribe a {
-  margin: 0 3px;
-  position: relative;
-  top: 3px; }
+.footer-subscribe {
+  margin-right: -1px;
+  margin-top: -2px; }
+  .footer-subscribe a {
+    margin: 0 0 0 9px;
+    position: relative;
+    top: 3px; }
+    .footer-subscribe a:first-child {
+      margin-left: 4px; }
 
 .line-height22 {
   line-height: 2.2; }
@@ -6155,12 +6183,12 @@ mark, .mark {
 
 .btn-submit {
   font-size: 14px;
-  line-height: 33px;
+  line-height: 30px;
   height: 33px;
   background-color: #dbef8c;
   color: #000;
   border-color: #c7d6b5;
-  padding: 0 20px; }
+  padding: 0 19px 0 20px; }
   .btn-submit:hover, .btn-submit:focus {
     border-color: #abc094; }
   .btn-submit:active {
@@ -6419,7 +6447,11 @@ mark, .mark {
   height: 33px;
   background-image: url(../img/soc.png);
   background-repeat: no-repeat;
-  margin: 0 7px; }
+  margin: 0 8px 0 7px; }
+  .soc:first-child {
+    margin-left: 2px; }
+  .soc:last-child {
+    margin-right: 0; }
   .soc.soc-vk {
     background-position: left  top; }
   .soc.soc-fb {
@@ -6497,7 +6529,7 @@ mark, .mark {
   margin-top: 5px;
   position: relative;
   overflow-x: hidden;
-  padding-left: 1px; }
+  padding-left: 2px; }
   .photo-preview:before, .photo-preview:after {
     content: " ";
     display: table; }
@@ -6549,14 +6581,13 @@ mark, .mark {
 
 .panel-contact {
   height: 88px;
-  margin-top: 5px;
-  margin-bottom: 10px;
   width: 285px;
+  margin: 5px 1px 10px -311px;
   float: right;
-  margin-left: -311px;
   background-color: #f3f2e8; }
   .panel-contact .panel-body {
     padding-right: 88px;
+    padding-left: 13px;
     float: left;
     width: 100%;
     color: #000;
@@ -6566,9 +6597,12 @@ mark, .mark {
     .panel-contact .panel-body p {
       display: inline-block;
       vertical-align: middle;
-      margin: 0; }
+      margin: 0;
+      position: relative;
+      top: -4px; }
     .panel-contact .panel-body a {
-      margin-left: 12px;
+      margin-left: 13px;
+      padding-bottom: 1px;
       color: #000;
       text-decoration: none;
       border-bottom: 1px solid #c2c2ba; }
@@ -6588,6 +6622,10 @@ mark, .mark {
     transition: background-color .2s ease; }
     .panel-contact .panel-right:hover {
       background-color: #ece6d9; }
+    .panel-contact .panel-right .iconzoopy {
+      position: relative;
+      left: 2px;
+      top: -2px; }
 
 .tel {
   margin-top: 4px;
@@ -6595,11 +6633,8 @@ mark, .mark {
   display: inline-block;
   margin-bottom: 5px; }
 
-.reviews a span, .reviews a {
+.reviews a {
   color: #000;
-  border-bottom-style: dotted;
-  border-bottom-width: 1px;
-  border-bottom-color: #000;
   display: inline-block;
   text-decoration: none; }
 
@@ -6627,7 +6662,7 @@ mark, .mark {
   float: right; }
 
 .nav.nav-tabs-reviews {
-  margin-left: -3px;
+  margin-left: -1px;
   border-bottom: none; }
   .nav.nav-tabs-reviews > li {
     margin-left: -5px; }
@@ -6636,13 +6671,16 @@ mark, .mark {
     .nav.nav-tabs-reviews > li:last-child {
       margin-right: -7px; }
     .nav.nav-tabs-reviews > li > a {
-      padding: 2px 5px 5px 7px;
+      padding: 2px 5px 6px 7px;
       margin-right: 0; }
       .nav.nav-tabs-reviews > li > a.review_new {
         margin-left: 20px; }
       .nav.nav-tabs-reviews > li > a:hover {
-        background-color: #f3f2e8;
-        border-color: #f3f2e8; }
+        background-color: transparent;
+        border-color: transparent; }
+        .nav.nav-tabs-reviews > li > a:hover span {
+          color: #cc3333;
+          border-color: #cc3333; }
   .nav.nav-tabs-reviews > li.active > a,
   .nav.nav-tabs-reviews > li.active > a:hover,
   .nav.nav-tabs-reviews > li.active > a:focus {
@@ -6652,8 +6690,11 @@ mark, .mark {
 .tab-content {
   float: none; }
 
+.tab-content.tab-review-content.tab-review-content-closed {
+  padding-top: 10px; }
+
 .tab-content.tab-review-content .media {
-  padding-bottom: 15px;
+  padding-bottom: 9px;
   overflow: visible; }
 
 .tab-content.tab-review-content .media-header {
@@ -6667,15 +6708,15 @@ mark, .mark {
     color: #000;
     font-weight: normal;
     margin-bottom: 0;
+    margin-right: 11px;
     line-height: 14px;
     height: 14px;
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-bottom: 12px;
+    padding: 5px 23px 12px 8px;
     display: inline-block;
     position: relative; }
     .tab-content.tab-review-content .media-header label span {
-      margin-right: 8px; }
+      margin-right: 10px;
+      margin-top: -2px; }
   .tab-content.tab-review-content .media-header input {
     display: none; }
     .tab-content.tab-review-content .media-header input:checked + label:after {
@@ -6684,18 +6725,32 @@ mark, .mark {
       width: 100%;
       height: 2px;
       left: 0px;
-      top: 26px;
+      top: 32px;
       background-color: #666666;
       position: absolute; }
 
 .tab-content.tab-review-content .media-body {
-  padding-top: 15px;
+  padding-top: 12px;
+  padding-left: 2px;
   overflow: visible; }
+  .tab-content.tab-review-content .media-body form {
+    padding-bottom: 19px;
+    padding-top: 5px; }
   .tab-content.tab-review-content .media-body .form-control {
     border: none; }
+  .tab-content.tab-review-content .media-body textarea.form-control {
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    margin-left: 2px;
+    min-height: 155px;
+    padding-left: 9px;
+    padding-top: 5px; }
+  .tab-content.tab-review-content .media-body .btn-submit {
+    margin-top: -6px;
+    margin-left: 2px; }
   .tab-content.tab-review-content .media-body .alert {
     font-size: 12px;
-    margin-top: -15px;
+    margin-top: -12px;
     padding-top: 5px;
     padding-bottom: 5px;
     border-radius: 0; }
@@ -6719,71 +6774,89 @@ mark, .mark {
 .media-left-review {
   width: 129px;
   text-align: center;
-  padding-top: 17px; }
+  position: relative;
+  padding-top: 16px;
+  left: 2px; }
   .media-left-review p {
     line-height: 17px;
-    margin: 10px 20px 0; }
+    margin: 8px 20px 0; }
 
 .circle {
   display: block;
   content: ' ';
-  width: 9px;
-  height: 9px;
   border-radius: 50%;
-  background-color: #666666;
+  width: 15px;
+  height: 15px;
   float: left;
-  margin-right: 6px;
-  position: relative; }
-  .circle:after, .circle:before {
+  margin-right: 0;
+  text-align: center;
+  padding: 2px;
+  border: 1px solid transparent; }
+  .circle em {
+    width: 9px;
+    height: 9px;
     display: block;
-    position: absolute;
     content: ' ';
-    background-color: #fff; }
-  .circle.circle-lg {
-    width: 14px;
-    height: 14px; }
+    border-radius: 50%;
+    background-color: #666;
+    position: relative; }
+    .circle em:after, .circle em:before {
+      display: block;
+      position: absolute;
+      content: ' ';
+      background-color: #fff; }
+  .circle.active {
+    border-color: #000; }
 
-.circle_plus {
+.circle.circle-lg em {
+  width: 14px;
+  height: 14px; }
+
+.circle_plus em {
   background-color: #6a9b01; }
-  .circle_plus:after {
+  .circle_plus em:after {
     width: 1px;
     height: 7px;
     left: 4px;
     top: 1px; }
-  .circle_plus:before {
+  .circle_plus em:before {
     height: 1px;
     width: 7px;
     top: 4px;
     left: 1px; }
-  .circle_plus.circle-lg:after {
-    width: 2px;
-    height: 10px;
-    left: 6px;
-    top: 2px; }
-  .circle_plus.circle-lg:before {
-    height: 2px;
-    width: 10px;
-    top: 6px;
-    left: 2px; }
 
-.circle_minus {
+.circle_plus.circle-lg em:after {
+  width: 2px;
+  height: 10px;
+  left: 6px;
+  top: 2px; }
+
+.circle_plus.circle-lg em:before {
+  height: 2px;
+  width: 10px;
+  top: 6px;
+  left: 2px; }
+
+.circle_minus em {
   background-color: #cc3333; }
-  .circle_minus:before {
+  .circle_minus em:before {
     height: 1px;
     width: 7px;
     top: 4px;
     left: 1px; }
-  .circle_minus.circle-lg:before {
-    height: 2px;
-    width: 10px;
-    top: 6px;
-    left: 2px; }
+
+.circle_minus.circle-lg em:before {
+  height: 2px;
+  width: 10px;
+  top: 6px;
+  left: 2px; }
 
 .review-list {
   float: left;
   margin-right: 95px;
-  padding-bottom: 18px;
-  padding-top: 8px; }
+  padding-bottom: 13px;
+  padding-top: 2px;
+  margin-left: -1px; }
   .review-list span {
     margin-top: 11px; }
 
@@ -6799,7 +6872,7 @@ mark, .mark {
   top: 0;
   bottom: 0;
   font-size: 19px;
-  min-height: 46px;
+  min-height: 40px;
   color: #000;
   width: 45px;
   height: 100%;
@@ -6813,6 +6886,14 @@ mark, .mark {
   .review-arrow span {
     display: table-cell;
     vertical-align: middle; }
+  .review-arrow svg {
+    position: relative;
+    line-height: 1;
+    top: 2px; }
+    .review-arrow svg.icon-slider-right {
+      left: -1px; }
+    .review-arrow svg.icon-slider-left {
+      left: -2px; }
   .review-arrow:hover, .review-arrow:focus {
     background-color: #e7e4d4;
     color: #000;
@@ -6821,11 +6902,14 @@ mark, .mark {
     color: #d7d5c2; }
 
 .select-mood {
-  padding-top: 12px;
+  padding-top: 8px;
+  margin-left: 1px;
   padding-bottom: 12px; }
 
 .review-edit-link {
-  color: #ababab; }
+  color: #ababab;
+  /* position: relative;
+  left: 7px; */ }
   .review-edit-link:hover, .review-edit-link:focus {
     color: #666; }
 
@@ -6836,6 +6920,12 @@ mark, .mark {
 
 .text-share {
   margin-top: 10px; }
+
+.text-date {
+  margin-top: 2px; }
+
+.bb {
+  border-bottom: 1px solid #e6e5d8; }
 
 a, a:focus {
   outline: none; }
