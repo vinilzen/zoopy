@@ -7,6 +7,7 @@
   color: #000;
   border-color: #c7d6b5;
   padding: 0 19px 0 20px;
+  border-radius: 5px;
   &:hover, &:focus {
     border-color: #abc094;
   }
@@ -22,8 +23,8 @@
 }
 .btn-xs, .btn-group-xs > .btn,
 .btn-group-xs > .btn {
-  padding: 0px 6px 1px;
-  line-height: 20px;
+  padding: 0px 6px 2px;
+  line-height: 19px;
 }
 .btn-text {
   background-color: #f1f0e4;

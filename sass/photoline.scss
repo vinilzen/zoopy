@@ -53,12 +53,86 @@
     }
   }
 }
+@media (min-width: 1151px) {
+  .list-photo a img {
+    min-width: 119px;
+    min-height: 88px;
+  }
+  .apparat {
+    display: none;
+  }
+}
+@media (max-width: 1150px) {
+  .photo-preview:after {
+    display: none;
+  }
+  .control, .photo-preview p {
+    opacity: 0;
+  }
+  .list-photo {
+    margin-left: -1px;
+    position: relative;
+    a {
+      display: none;
+      &:first-child {
+        position: relative;
+        width: 129px;
+        height: 88px;
+        display: block;
+        z-index: 1000;
+        &:after, &:before {
+          z-index: 999;
+          display: block;
+          content: '';
+          position: absolute;
+          width: 123px;
+          height: 82px;
+          background-color: #fff;
+          border: 1px solid #ccc;
+          top:3px;
+          left:3px;
+        }
+        &:after {
+          top: 6px;
+          left: 6px;
+          z-index: 998;
+        }
+        img {
+          background-color: #fff;
+          border: 1px solid #ccc;
+          z-index: 1000;
+          padding: 2px;
+          display: block;
+          position: absolute;
+          border-radius: 0;
+          width: 123px;
+          height: 82px;
+        }
+      }
+    }
+  }
+  .apparat {
+    display: block;
+    position: absolute;
+    top:58px;
+    left:97px;
+    z-index: 1001;
+    span {
+      position: absolute;
+      left: 7px;
+      top: 2px;
+      color: #fff;
+      font-size: 11px;
+    }
+  }
+}
 .panel-contact {
   height: 88px;
   width: 285px;
   margin: 5px 1px 10px -311px;
   float: right;
   background-color: #f3f2e8;
+  border-radius: 5px;
   .panel-body {
     padding-right: 88px;
     padding-left: 13px;

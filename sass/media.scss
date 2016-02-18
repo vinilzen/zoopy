@@ -3,6 +3,7 @@
   padding-bottom: 0;
 }
 .media-object {
+  border-radius: 5px;
   padding-top: 7px;
 }
 .media-heading {
@@ -38,6 +39,10 @@
     }
 
   }
+  span.glyphicon, .iconzoopy, span[class^="iconzoopy-"], span[class*=" iconzoopy-"]  {
+    font-size: .9em;
+    color: #999999;
+  }
   a.media-heading-title {
     text-decoration: none;
     padding-bottom: 1px;
@@ -49,12 +54,12 @@
       margin-left: 4px;
     }
     &:hover, &:focus {
-      border-bottom-color: rgba(0,0,0,0);
+      color: #c00;
+      background: url(../img/point_red.png) repeat-x left bottom;// border-bottom: 1px dotted #999999;// border-bottom-color: rgba(0,0,0,0);
+      .glyphicon {
+        color: #c00;
+      }
     }
-  }
-  span.glyphicon, span[class^="iconzoopy-"], span[class*=" iconzoopy-"]  {
-    font-size: .9em;
-    color: #999999;
   }
 }
 .media-body-content {

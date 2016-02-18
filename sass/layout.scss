@@ -1,14 +1,19 @@
 /* Proportion */
 $lw: 31;
 $rw: 69;
-$min-width: 1000px;
-$max-width: 1534px;
+$min-width: 910px;
+// $max-width: 1534px;
+$max-width: 1624px;
 $gap: 45px;
 $padding: 28px;
 $break-width-point: $max-width + $gap*2;
 $break-width-point-min: $max-width + $gap*2 - 1px;
 
 $header-height: 183px;
+
+body {
+	min-width: $min-width + $gap*2;
+}
 
 .wrap {
   min-width: $min-width;

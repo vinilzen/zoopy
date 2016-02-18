@@ -22,20 +22,11 @@
       .media-left
         .media-left-review
           img.img-circle src="img/av4.jpg" alt=""/
+          a.soc-profile href="#"
+            svg.iconzoopy.icon-color-vk
+              use xlink:href="#icon-color-vk"
           p.text-sm Марта Оленкевич
-      .media-body
-        .alert.hide.alert-danger role="alert"
-          p
-            span.dotted Старый
-            |  отзыв заменен на 
-            span.label.label-default текущий
-            a.btn.btn-xs.btn-default href="#" Вернуть старый
-        p Большое спасибо, Елена, за Вашу помощь!!! Елена оказалась очень надежной, доброй и замечательной зооняней!!! Я очень рада, что выбрала ее, мы оставляли собачку (метис йорка и ши-тцу, мальчик) на месяц, Елена отписывалась по скайпу о том, как у них дела, и от ее слов было хорошо и спокойно , он правда был в надежных руках, с ним играли, подолгу гуляли, чесали, заплетали, мыли и все было хорошо, забрала его в прекрасном настроении и состоянии. Спасибо огромное!!!
-        p.pull-left.text-sm.text-muted.text-date 20 сентября 2015
-        p.pull-right
-          a.review-edit-link href="#"
-            svg.iconzoopy.icon-pencil
-              use xlink:href="#icon-pencil"
+      == Slim::Template.new("slim/media_body.slim").render
   #2_review_plus.tab-pane.tab-pane-review
     .media
       .media-header
@@ -48,13 +39,11 @@
       .media-left
         .media-left-review
           img.img-circle src="img/av4.jpg" alt=""/
+          a.soc-profile href="#"
+            svg.iconzoopy.icon-color-fb
+              use xlink:href="#icon-color-fb"
           p.text-sm Марта Оленкевич
-      .media-body
-        p Большое спасибо, Елена, за Вашу помощь!!! Елена оказалась очень надежной, доброй и замечательной зооняней!!! Я очень рада, что выбрала ее, мы оставляли собачку (метис йорка и ши-тцу, мальчик) на месяц, Елена отписывалась по скайпу о том, как у них дела, и от ее слов было хорошо и спокойно , он правда был в надежных руках, с ним играли, подолгу гуляли, чесали, заплетали, мыли и все было хорошо, забрала его в прекрасном настроении и состоянии. Спасибо огромное!!!
-        p.text-sm.text-muted.text-date 20 сентября 2015
-        p.pull-right
-          a href="#"
-            span.iconzoopy-pencil
+      == Slim::Template.new("slim/media_body.slim").render
   #2_review_neutral.tab-pane.tab-pane-review
     .media
       .media-header
@@ -67,9 +56,7 @@
         .media-left-review
           img.img-circle src="img/av4.jpg" alt=""/
           p.text-sm Марта Оленкевич
-      .media-body
-        p Большое спасибо, Елена, за Вашу помощь!!! Елена оказалась очень надежной, доброй и замечательной зооняней!!! Я очень рада, что выбрала ее, мы оставляли собачку (метис йорка и ши-тцу, мальчик) на месяц, Елена отписывалась по скайпу о том, как у них дела, и от ее слов было хорошо и спокойно , он правда был в надежных руках, с ним играли, подолгу гуляли, чесали, заплетали, мыли и все было хорошо, забрала его в прекрасном настроении и состоянии. Спасибо огромное!!!
-        p.text-sm.text-muted.text-date 20 сентября 2015
+      == Slim::Template.new("slim/media_body.slim").render
   #2_review_minus.tab-pane.tab-pane-review
     .media
       .media-header
@@ -82,9 +69,7 @@
         .media-left-review
           img.img-circle src="img/av4.jpg" alt=""/
           p.text-sm Марта Оленкевич
-      .media-body
-        p Большое спасибо, Елена, за Вашу помощь!!! Елена оказалась очень надежной, доброй и замечательной зооняней!!! Я очень рада, что выбрала ее, мы оставляли собачку (метис йорка и ши-тцу, мальчик) на месяц, Елена отписывалась по скайпу о том, как у них дела, и от ее слов было хорошо и спокойно , он правда был в надежных руках, с ним играли, подолгу гуляли, чесали, заплетали, мыли и все было хорошо, забрала его в прекрасном настроении и состоянии. Спасибо огромное!!!
-        p.text-sm.text-muted.text-date 20 сентября 2015
+      == Slim::Template.new("slim/media_body.slim").render
   #2_review_new.tab-pane.tab-pane-review
     .media
       .media-header

@@ -6,12 +6,16 @@
   // left: 0;
   // background-color: rgba(109,251,106,1);
   // border-right: 1px solid rgba(0,0,0,.1);
-  -webkit-box-shadow: inset -1px 0px 0px 0px rgba(0,0,0,0.1);
+  /* -webkit-box-shadow: inset -1px 0px 0px 0px rgba(0,0,0,0.1);
   -moz-box-shadow: inset -1px 0px 0px 0px rgba(0,0,0,0.1);
   box-shadow: inset -1px 0px 0px 0px rgba(0,0,0,0.1);
-  z-index: 1;
   padding-top: 1px;
   padding-right: 1px;
+  */
+  z-index: 1100;
+
+  border-top: 1px solid #e5e5e5;
+  border-right: 1px solid #d2d2d2;
 }
 #map_profile {
   height: 300px;
@@ -34,7 +38,7 @@
     a {
       border-bottom: 1px solid #c2c2ba;
       &:hover {
-        border-bottom: 1px solid #c00;
+        border-bottom: 1px solid #f5d6d6;
       }
     }
   }
@@ -48,6 +52,10 @@
     float: left;
     margin-top: -1px;
     margin-left: -1px;
+    &:hover {
+      color: #c00;
+      background-color: transparent;
+    }
   }
 }
 .pets {

@@ -45,13 +45,9 @@ nav.navbar.navbar-filter.navbar-fixed-top
           p
             | 9
             span.date-month июля
-          .corner-cut
-            .corner-circle
           a.calendar href="#"
             svg.iconzoopy.icon-calendar
               use(xlink:href="#icon-calendar")
-          button.close type="button" data-dismiss="alert" aria-label="Close"
-            span aria-hidden="true" &times;
         .date-days
           p 7 сут.
         .date-to.date-choice
@@ -63,8 +59,9 @@ nav.navbar.navbar-filter.navbar-fixed-top
               use(xlink:href="#icon-calendar")
           .corner-cut
             .corner-circle
-          button.close type="button" data-dismiss="alert" aria-label="Close"
-            span aria-hidden="true" &times;
+          .close
+            svg.iconzoopy.icon-x-closepopup
+              use xlink:href="#icon-x-closepopup"
       .col-xs-12
         ul.nav.navbar-nav.navbar-left
           li

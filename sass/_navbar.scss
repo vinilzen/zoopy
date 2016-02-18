@@ -28,8 +28,12 @@
       a {
         color: #7ead1a;
         border-bottom: 1px solid #666666;
+        cursor: default;
         span {
           border-color: transparent;
+        }
+        span.dotted {
+          background: none;
         }
       }
     }
@@ -68,6 +72,7 @@
   margin-left: -15px;
 }
 .navbar-default {
+  min-width: 1000px;
   margin-bottom: 0;
   background-color: #91a2ad;
   border-color: #91a2ad;
@@ -197,19 +202,22 @@
   }
   .close {
     display: none;
-    color: #999999;
+    color: #999;
     font-size: 14px;
     position: absolute;
     opacity: 1;
-    top: -12px;
-    right: -10px;
+    top: -11px;
+    right: -8px;
     padding: 3px;
-  }
-  &:hover {
-    .corner-cut, .close {
-      display: block;
+    &:hover {
+      color: #666;
     }
   }
+  // &:hover {
+  .corner-cut, .close {
+    display: block;
+  }
+  // }
   a.calendar {
     display: block;
     position: absolute;
@@ -246,7 +254,7 @@
       border: 2px solid transparent;
       background-color: #788b9a;
       padding: 6px 16px;
-      border-radius: 4px;
+      border-radius: 5px;
       &.navbar-login {
         padding-left: 0;
       }

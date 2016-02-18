@@ -208,11 +208,19 @@ mark, .mark {
 }
 .label-price {
   position: relative;
-  border-radius: 4px;
+  border-radius: 5px;
   top: -2px;
   margin-right: 19px;
   padding: 2px 10px 5px 9px;
+  cursor: pointer;
+  &:hover {
+    color: #c00;
+    span.dotted {
+      background-image: url(../img/point_red.png);
+    }
+  }
   &.label-is-price {
+    cursor: default;
     top: 0px;
     margin-right: 18px;
     font-size: 19px;

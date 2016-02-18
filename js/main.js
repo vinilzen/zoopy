@@ -4,6 +4,8 @@ $(function(){
         ww = $(window).width(),
         $wrap = $('.wrap'),
         $article = $('article'),
+        min_width = 1000,
+        min_width_real = 1000-90,
         fixed_width = 1534,
         gap = 28;
 
@@ -44,7 +46,12 @@ $(function(){
             wrc = $article.width(),
             wu = (ww-wc)/2;
 
-        $('#map').width( ww - wu - wrc );
+        if ( ww > min_width - 1 ){
+            $('#map').width( ww - wu - wrc );
+        } else {
+            // $('#map').width( 300 );
+            $('#map').width( 328 );
+        }
 
         /*if (ww > fixed_width) {
             $('#map').width( ww-wrc-wu-gap);
@@ -88,7 +95,7 @@ $(function(){
         if ( st < 63 ) {
             $('#map').css({top: 182-st});
         } else {
-            $('#map').css({top: 123});
+            $('#map').css({top: 122});
         }
     });
 
