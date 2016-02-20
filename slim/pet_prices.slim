@@ -1,0 +1,37 @@
+.pet-prices.form-inline.form-inline-create
+	.pet-price-range
+		.form-group
+			input.form-control.form-control-xs type="text" value="250"
+
+		span.pet-price.pet-price-one 
+		span.pet-price.pet-price-from.hide
+		em.hide –
+		span.pet-price.pet-price-to.hide
+		
+	.dropdown.dropdown-pet-price-type.dib
+		a.dropdown-pet-pay data-toggle="dropdown" href="#"
+			span.dotted
+				em.rub &#8399;
+				| /сутки
+			span.iconzoopy-V.caret-icon
+		ul.dropdown-menu
+			li.checked
+				svg.iconzoopy.icon-V
+					use xlink:href="#icon-V"
+				a href="#"
+					em.rub &#8399;
+					| /сутки
+			li
+				svg.iconzoopy.icon-V
+					use xlink:href="#icon-V"
+				a href="#"
+					em.rub &#8399;
+					| /час
+
+a.pet-add-price-type.text-muted href="#"
+	span.text-muted + 
+	span.dotted за час
+
+label.checkbox-inline.checkbox-pet-range
+	input type="checkbox" name="type2" value="option4"
+	|  Диапазон

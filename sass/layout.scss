@@ -1,6 +1,6 @@
 /* Proportion */
-$lw: 31;
-$rw: 69;
+$lw: 39;
+$rw: 61;
 $min-width: 910px;
 // $max-width: 1534px;
 $max-width: 1624px;
@@ -33,12 +33,12 @@ aside {
 	left: 0;
 	top: 182px;
 	bottom: 0;
-	width: 33%;
+	width: 39%;
 }
 article {
   position: relative;
   float: right;
-  width: #{$rw}%;
+  width: 61%;
 }
 
 .tab-pane-review {
@@ -69,7 +69,7 @@ section {
 		margin-top: 0;
 		margin-right: calc( ( #{$max-width} - 100vw ) / 2 - #{$gap});
 		@media (max-width: $max-width) {
-			margin-right: - #{$gap};
+			margin-right: - $gap;
 		}
 		@media (min-width: $break-width-point) {
 			width: calc( 100% + ( 100vw - #{$max-width} ) / 2 + #{$gap});

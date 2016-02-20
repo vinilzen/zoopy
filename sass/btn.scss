@@ -113,6 +113,7 @@
   }
   .btn-xs {
     font-size: 14px;
+    border: 1px solid #ccc;
   }
   .btn-text {
     .glyphicon {
@@ -125,6 +126,9 @@
   background-color: #dbef8c;
   color: #000;
   border-color: #c7d6b5;
+  .dotted:hover {
+    color: #c00;
+  }
   &.btn-lg {
     font-size: 14px;
     height: 45px;

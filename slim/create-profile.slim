@@ -175,16 +175,16 @@ html
 									td Бося
 									td йоркширский терьер мальчик
 									td не кастрирован
-									td
+									td.posrel
 										svg.iconzoopy.icon-shpritz-yes
 											use xlink:href="#icon-shpritz-yes"
+										span.line-dis
 									td до 8 декабря
 									td
 									td
 										a.edit-property href="#"
 											svg.iconzoopy.icon-undo
 												use xlink:href="#icon-undo"
-
 
 								tr
 									td Щуша
@@ -214,63 +214,11 @@ html
 										strong.pet-type Кошек
 									form.form-inline.form-pet.collapse#collapse-pet-cat
 
-										label.radio-inline
-											input.hide checked="checked" type="radio" name="type1" value="option1"
-											span.sex-all
-											|  всех
-										label.radio-inline
-											input.hide type="radio" name="type1" value="option2"
-											span.sex-man
-												svg.iconzoopy.icon-man-radio
-													use xlink:href="#icon-man-radio"
-											|  мальчиков
-										label.radio-inline
-											input.hide type="radio" name="type1" value="option3"
-											span.sex-woman
-												svg.iconzoopy.icon-woman-radio
-													use xlink:href="#icon-woman-radio"
-											|  девочек
+										== Slim::Template.new("slim/label.slim").render
 
 										.clearfix
 
-										.pet-prices.form-inline.form-inline-create
-											.pet-price-range
-												.form-group
-													input.form-control.form-control-xs type="text" value="250"
-
-												span.pet-price.pet-price-one 
-												span.pet-price.pet-price-from.hide
-												em.hide –
-												span.pet-price.pet-price-to.hide
-												
-											.dropdown.dropdown-pet-price-type.dib
-												a.dropdown-pet-pay data-toggle="dropdown" href="#"
-													span.dotted
-														em.rub &#8399;
-														| /сутки
-													span.iconzoopy-V.caret-icon
-												ul.dropdown-menu
-													li.checked
-														svg.iconzoopy.icon-V
-															use xlink:href="#icon-V"
-														a href="#"
-															em.rub &#8399;
-															| /сутки
-													li
-														svg.iconzoopy.icon-V
-															use xlink:href="#icon-V"
-														a href="#"
-															em.rub &#8399;
-															| /час
-										
-
-										a.pet-add-price-type.text-muted href="#"
-											span.text-muted + 
-											span.dotted за час
-										
-										label.checkbox-inline.checkbox-pet-range
-											input type="checkbox" name="type2" value="option4"
-											|  Диапазон
+										== Slim::Template.new("slim/pet_prices.slim").render
 
 								li.pet-list
 									a.pet-item href="#collapse-pet-dog" role="button" data-toggle="collapse" aria-expanded="true"
@@ -279,22 +227,7 @@ html
 												use xlink:href="#icon-pet-dog"
 										strong.pet-type собак
 									form.form-inline.form-pet.collapse.in#collapse-pet-dog aria-expanded="true"
-										label.radio-inline
-											input.hide checked="checked" type="radio" name="type1" value="option1"
-											span.sex-all
-											|  всех
-										label.radio-inline
-											input.hide type="radio" name="type1" value="option2"
-											span.sex-man
-												svg.iconzoopy.icon-man-radio
-													use xlink:href="#icon-man-radio"
-											|  мальчиков
-										label.radio-inline
-											input.hide type="radio" name="type1" value="option3"
-											span.sex-woman
-												svg.iconzoopy.icon-woman-radio
-													use xlink:href="#icon-woman-radio"
-											|  девочек
+										== Slim::Template.new("slim/label.slim").render
 
 										.clearfix
 
@@ -332,65 +265,85 @@ html
 												input type="checkbox" name="type2" value="option4" checked="checked"
 												|  Диапазон
 								li.pet-list
-									span.iconzoopy-pet-hamster
-										svg.iconzoopy.icon-pet-hamster
-											use xlink:href="#icon-pet-hamster"
-									strong.pet-type мелких грызунов
+									a.pet-item.pet-item-hamster.collapsed href="#collapse-pet-hamster" role="button" data-toggle="collapse"
+										span.iconzoopy-pet-hamster
+											svg.iconzoopy.icon-pet-hamster
+												use xlink:href="#icon-pet-hamster"
+										strong.pet-type мелких грызунов
+									form.form-inline.form-pet.collapse#collapse-pet-hamster
+										== Slim::Template.new("slim/label.slim").render
+										.clearfix
+										== Slim::Template.new("slim/pet_prices.slim").render
 								li.pet-list
-									span.iconzoopy-pet-rabbit
-										svg.iconzoopy.icon-pet-rabbit
-											use xlink:href="#icon-pet-rabbit"
-									strong.pet-type кроликов
+									a.pet-item.collapsed href="#collapse-pet-rabbit" role="button" data-toggle="collapse"
+										span.iconzoopy-pet-rabbit
+											svg.iconzoopy.icon-pet-rabbit
+												use xlink:href="#icon-pet-rabbit"
+										strong.pet-type кроликов
+									form.form-inline.form-pet.collapse#collapse-pet-rabbit
+										== Slim::Template.new("slim/label.slim").render
+										.clearfix
+										== Slim::Template.new("slim/pet_prices.slim").render
 								li.pet-list
-									span.iconzoopy-pet-horek
-										svg.iconzoopy.icon-pet-horek
-											use xlink:href="#icon-pet-horek"
-									strong.pet-type хорьков
-									form.form-inline.form-bottom-indent
-										label.radio-inline
-											input type="radio" name="type1" value="option1"
-											|  всех
-										label.radio-inline
-											input type="radio" name="type1" value="option2"
-											|  мальчиков
-										label.radio-inline
-											input type="radio" name="type1" value="option3"
-											|  девочек
+									a.pet-item.collapsed href="#collapse-pet-horek" role="button" data-toggle="collapse"
+										span.iconzoopy-pet-horek
+											svg.iconzoopy.icon-pet-horek
+												use xlink:href="#icon-pet-horek"
+										strong.pet-type хорьков
+									form.form-inline.form-pet.collapse#collapse-pet-horek
+										== Slim::Template.new("slim/label.slim").render
+										.clearfix
+										== Slim::Template.new("slim/pet_prices.slim").render
 								li.pet-list
-									span.iconzoopy-pet-ezhik
-										svg.iconzoopy.icon-pet-ezhik
-											use xlink:href="#icon-pet-ezhik"
-									strong.pet-type ежей
+									a.pet-item.collapsed href="#collapse-pet-ezhik" role="button" data-toggle="collapse"
+										span.iconzoopy-pet-ezhik
+											svg.iconzoopy.icon-pet-ezhik
+												use xlink:href="#icon-pet-ezhik"
+										strong.pet-type ежей
+									form.form-inline.form-pet.collapse#collapse-pet-ezhik
+										== Slim::Template.new("slim/label.slim").render
+										.clearfix
+										== Slim::Template.new("slim/pet_prices.slim").render
 								li.pet-list
-									span.iconzoopy-pet-turtle
-										svg.iconzoopy.icon-pet-turtle
-											use xlink:href="#icon-pet-turtle"
-									strong.pet-type рептилий, амфибий
-									form.form-inline.form-bottom-indent
-										label.radio-inline
-											input type="radio" name="type1" value="option1"
-											|  всех
-										label.radio-inline
-											input type="radio" name="type1" value="option2"
-											|  мальчиков
-										label.radio-inline
-											input type="radio" name="type1" value="option3"
-											|  девочек
+									a.pet-item.collapsed href="#collapse-pet-turtle" role="button" data-toggle="collapse"
+										span.iconzoopy-pet-turtle
+											svg.iconzoopy.icon-pet-turtle
+												use xlink:href="#icon-pet-turtle"
+										strong.pet-type рептилий, амфибий
+									form.form-inline.form-pet.collapse#collapse-pet-turtle
+										== Slim::Template.new("slim/label.slim").render
+										.clearfix
+										== Slim::Template.new("slim/pet_prices.slim").render
 								li.pet-list
-									span.iconzoopy-pet-parrot
-										svg.iconzoopy.icon-pet-parrot
-											use xlink:href="#icon-pet-parrot"
-									strong.pet-type птиц
+									a.pet-item.collapsed href="#collapse-pet-parrot" role="button" data-toggle="collapse"
+										span.iconzoopy-pet-parrot
+											svg.iconzoopy.icon-pet-parrot
+												use xlink:href="#icon-pet-parrot"
+										strong.pet-type птиц
+									form.form-inline.form-pet.collapse#collapse-pet-parrot
+										== Slim::Template.new("slim/label.slim").render
+										.clearfix
+										== Slim::Template.new("slim/pet_prices.slim").render
 								li.pet-list
-									span.iconzoopy-pet-fish
-										svg.iconzoopy.icon-pet-fish
-											use xlink:href="#icon-pet-fish"
-									strong.pet-type рыбок
+									a.pet-item.collapsed href="#collapse-pet-fish" role="button" data-toggle="collapse"
+										span.iconzoopy-pet-fish
+											svg.iconzoopy.icon-pet-fish
+												use xlink:href="#icon-pet-fish"
+										strong.pet-type рыбок
+									form.form-inline.form-pet.collapse#collapse-pet-fish
+										== Slim::Template.new("slim/label.slim").render
+										.clearfix
+										== Slim::Template.new("slim/pet_prices.slim").render
 								li.pet-list
-									span.iconzoopy-pet-ulitka
-										svg.iconzoopy.icon-pet-ulitka
-											use xlink:href="#icon-pet-ulitka"
-									strong.pet-type улиток, пауков, насекомых
+									a.pet-item.collapsed href="#collapse-pet-ulitka" role="button" data-toggle="collapse"
+										span.iconzoopy-pet-ulitka
+											svg.iconzoopy.icon-pet-ulitka
+												use xlink:href="#icon-pet-ulitka"
+										strong.pet-type улиток, пауков, насекомых
+									form.form-inline.form-pet.collapse#collapse-pet-ulitka
+										== Slim::Template.new("slim/label.slim").render
+										.clearfix
+										== Slim::Template.new("slim/pet_prices.slim").render
 					dl.dl-horizontal.dl-profile
 						dt Присмотрю
 						dd
@@ -407,7 +360,8 @@ html
 										span.dotted сегодня
 								li.text-muted
 									| (
-									span.dotted по...
+									a href="#"
+										span.dotted по...
 									| )
 
 		.container-fluid.container-calendar

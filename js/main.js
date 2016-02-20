@@ -116,4 +116,14 @@ $(function(){
             tab_review_content.addClass('tab-review-content-closed');
         }
     });
+
+    $('.form-search input').on('blur keyup',function(){
+        if($(this).val() == '') {
+            $(this).addClass('empty');
+            $(this).removeClass('not-empty');
+        } else {
+            $(this).addClass('not-empty');
+            $(this).removeClass('empty');
+        }
+    });
 })

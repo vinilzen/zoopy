@@ -5,11 +5,31 @@
     position: relative;
     padding-right: 43px;
   }
+  .clear-input {
+    position: absolute;
+    right: 11px;
+    top: 8px;
+    fill: #999;
+    cursor: pointer;
+    color: #999;
+    &:hover {
+      fill: #666;
+      color: #666;
+    }
+  }
+  .form-control.not-empty + .clear-input {
+    opacity: 1;
+  }
+  .form-control.empty + .clear-input {
+    opacity: 0;
+  }
   .form-control {
-
     border-color: #e5e5e5;
     padding-left: 35px;
     border-radius: 5px;
+    &:hover {
+      border-color: #d3d3d3;
+    }
     &:focus {
       box-shadow: 0px 0px 0px 2px #d8ef7c;
       border-color: #CCC;
