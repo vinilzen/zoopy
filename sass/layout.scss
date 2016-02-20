@@ -13,6 +13,19 @@ $header-height: 183px;
 
 body {
 	min-width: $min-width + $gap*2;
+
+
+	background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#91a2ad), to(#91a2ad));
+	background-image: -webkit-linear-gradient(top, #91a2ad, #91a2ad);
+	background-image: -moz-linear-gradient(top, #91a2ad, #91a2ad);
+	background-image: -o-linear-gradient(top, #91a2ad, #91a2ad);
+	background-image: linear-gradient(to bottom, #91a2ad, #91a2ad);
+
+	background-repeat:no-repeat;
+	background-size:100% 60px;
+
+	// background-image: linear-gradient(top, #91a2ad 0%, #91a2ad 100%);
+    // background-color: #91a2ad;
 }
 
 .wrap {

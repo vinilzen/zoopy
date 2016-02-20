@@ -50,7 +50,7 @@ $(function(){
             $('#map').width( ww - wu - wrc );
         } else {
             // $('#map').width( 300 );
-            $('#map').width( 328 );
+            $('#map').width( 400 );
         }
 
         /*if (ww > fixed_width) {

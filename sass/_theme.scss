@@ -75,6 +75,10 @@
     min-height: 54px;
     .iconzoopy {
       position: relative;
+      &.icon-man {
+        top: -1px;
+        left: 1px;
+      }
     }
     .icon-pet-cat {
       top:1px;

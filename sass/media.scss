@@ -66,3 +66,21 @@
   overflow: visible;
   padding-top: 2px;
 }
+.media-left {
+  padding-right: 0;
+  a {
+    display: inline-block;
+    padding-right: 26px;
+  }
+}
+.media-left:hover + .media-body-content {
+  .media-heading {
+    .media-heading-title {
+      color: #c00;
+      background: url(../img/point_red.png) repeat-x left bottom;
+      .glyphicon {
+        color: #c00;
+      }
+    }
+  }
+}
