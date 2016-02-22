@@ -13,32 +13,24 @@
     > span {
       position: relative;
       float: left; // Collapse white-space
-      padding: 7px 13px;// $padding-base-vertical $padding-base-horizontal;
+      padding: 7px 0;// $padding-base-vertical $padding-base-horizontal;
       line-height: $line-height-base;
       text-decoration: none;
       font-size: 16px;
       color: $pagination-color;
-      // background-color: $pagination-bg;
+      width: 40px;
+      height: 40px;
       border: 2px solid $pagination-border;
-      margin-left: 10px;
+      margin-left: 5px;
       border-radius: 19px;
       cursor: pointer;
     }
-   /*  &:first-child {
-      > a,
-      > span {
-        margin-left: 0;
-        @include border-left-radius($border-radius-base);
-      }
-    }
-    &:last-child {
-      > a,
-      > span {
-        @include border-right-radius($border-radius-base);
-      }
-    } */
   }
 
+  > li > span {
+    cursor: default;
+    color: #999;
+  }
   // > li > span {
   > li > a {
     &:hover,
@@ -66,6 +58,7 @@
   > .next > a {
     border: 1px solid #d3d3d3;
     padding: 8px 19px 5px 17px;
+    width: auto;
     &:hover, &:focus {
       border-width: 2px;
       padding: 7px 18px 4px 16px;

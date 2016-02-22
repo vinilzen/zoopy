@@ -20,12 +20,12 @@
         == Slim::Template.new("review-arrows.slim").render
         .clearfix
       .media-left
-        .media-left-review
+        a.media-left-review href="#"
           img.img-circle src="img/av4.jpg" alt=""/
-          a.soc-profile href="#"
+          span.soc-profile href="#"
             svg.iconzoopy.icon-color-vk
               use xlink:href="#icon-color-vk"
-          p.text-sm Марта Оленкевич
+          span.text-sm Марта Оленкевич
       == Slim::Template.new("media_body.slim").render
   #2_review_plus.tab-pane.tab-pane-review
     .media
@@ -37,13 +37,13 @@
         == Slim::Template.new("review-arrows.slim").render
         .clearfix
       .media-left
-        .media-left-review
+        a.media-left-review href="#"
           img.img-circle src="img/av4.jpg" alt=""/
-          a.soc-profile href="#"
+          span.soc-profile href="#"
             svg.iconzoopy.icon-color-fb
               use xlink:href="#icon-color-fb"
-          p.text-sm Марта Оленкевич
-      == Slim::Template.new("media_body.slim").render
+          span.text-sm Марта Оленкевич
+      == Slim::Template.new("media_body1.slim").render
   #2_review_neutral.tab-pane.tab-pane-review
     .media
       .media-header
@@ -53,9 +53,9 @@
         == Slim::Template.new("review-arrows.slim").render
         .clearfix
       .media-left
-        .media-left-review
+        a.media-left-review href="#"
           img.img-circle src="img/av4.jpg" alt=""/
-          p.text-sm Марта Оленкевич
+          span.text-sm Марта Оленкевич
       == Slim::Template.new("media_body.slim").render
   #2_review_minus.tab-pane.tab-pane-review
     .media
@@ -66,26 +66,26 @@
         == Slim::Template.new("review-arrows.slim").render
         .clearfix
       .media-left
-        .media-left-review
+        a.media-left-review href="#"
           img.img-circle src="img/av4.jpg" alt=""/
-          p.text-sm Марта Оленкевич
+          span.text-sm Марта Оленкевич
       == Slim::Template.new("media_body.slim").render
   #2_review_new.tab-pane.tab-pane-review
     .media
       .media-header
         .select-mood
-          input#positive type="radio" name="filter_positive" 
-          label for="positive"
+          input#positive_.positive type="radio" name="filter_positive" checked="checked"
+          label for="positive_"
             span.circle.circle-lg.circle_plus
               em
             | положительный
-          input#neutral type="radio" name="filter_positive" 
-          label for="neutral"
+          input#neutral_.neutral type="radio" name="filter_positive" 
+          label for="neutral_"
             span.circle.circle-lg.circle_neutral
               em
             | нейтральный 
-          input#negative type="radio" name="filter_positive" 
-          label for="negative"
+          input#negative_.negative type="radio" name="filter_positive" 
+          label for="negative_"
             span.circle.circle-lg.circle_minus
               em
             | отрицательный

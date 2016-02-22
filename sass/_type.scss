@@ -179,7 +179,7 @@ mark, .mark {
 .favorite {
   font-size: 19px;
   top: 1px;
-  left: 0px;
+  left: 1px;
   display: inline-block;
   height: 19px;
   line-height: 19px;
@@ -267,6 +267,14 @@ mark, .mark {
     margin: 0 0 0 9px;
     position: relative;
     top: 3px;
+    transition: opacity .3s ease;
+    .iconzoopy {
+      background-color: #fff;
+      border-radius: 50%;
+    }
+    &:hover {
+      opacity: .7;
+    }
     &:first-child {
       margin-left: 4px;
     }

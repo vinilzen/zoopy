@@ -1,12 +1,11 @@
 
 .btn-submit {
   font-size: 14px;
-  line-height: 30px;
-  height: 33px;
+  line-height: 1;
   background-color: #dbef8c;
   color: #000;
   border-color: #c7d6b5;
-  padding: 0 19px 0 20px;
+  padding: 8px 19px 9px 20px;
   border-radius: 5px;
   &:hover, &:focus {
     border-color: #abc094;

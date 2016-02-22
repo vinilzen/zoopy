@@ -68,10 +68,14 @@
 }
 .media-left {
   padding-right: 0;
-  a {
+  a.user_photo {
     display: inline-block;
     padding-right: 26px;
   }
+  /* .soc-profile {
+    display: inline-block;
+    padding-right: 26px;
+  } */
 }
 .media-left:hover + .media-body-content {
   .media-heading {

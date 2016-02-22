@@ -20,9 +20,9 @@
         == Slim::Template.new("review-arrows.slim").render
         .clearfix
       .media-left
-        .media-left-review
+        a.media-left-review href="#"
           img.img-circle src="img/av4.jpg" alt=""/
-          p.text-sm Марта Оленкевич
+          span.text-sm Марта Оленкевич
       == Slim::Template.new("media_body.slim").render
   #1_review_plus.tab-pane.tab-pane-review
     .media
@@ -34,9 +34,9 @@
         == Slim::Template.new("review-arrows.slim").render
         .clearfix
       .media-left
-        .media-left-review
+        a.media-left-review href="#"
           img.img-circle src="img/av4.jpg" alt=""/
-          p.text-sm Марта Оленкевич
+          span.text-sm Марта Оленкевич
       == Slim::Template.new("media_body.slim").render
   #1_review_neutral.tab-pane.tab-pane-review
     .media
@@ -47,7 +47,7 @@
         == Slim::Template.new("review-arrows.slim").render
         .clearfix
       .media-left
-        .media-left-review
+        a.media-left-review href="#"
           img.img-circle src="img/av4.jpg" alt=""/
           p.text-sm Марта Оленкевич
       == Slim::Template.new("media_body.slim").render
@@ -60,25 +60,25 @@
         == Slim::Template.new("review-arrows.slim").render
         .clearfix
       .media-left
-        .media-left-review
+        a.media-left-review href="#"
           img.img-circle src="img/av4.jpg" alt=""/
-          p.text-sm Марта Оленкевич
+          span.text-sm Марта Оленкевич
       == Slim::Template.new("media_body.slim").render
   #1_review_new.tab-pane.tab-pane-review
     .media
       .media-header
         .select-mood
-          input#positive type="radio" name="filter_positive" 
+          input#positive.positive type="radio" name="filter_positive_" checked="checked"
           label for="positive"
             span.circle.circle-lg.circle_plus
               em
             | положительный
-          input#neutral type="radio" name="filter_positive" 
+          input#neutral.neutral type="radio" name="filter_positive_" 
           label for="neutral"
             span.circle.circle-lg.circle_neutral
               em
             | нейтральный 
-          input#negative type="radio" name="filter_positive" 
+          input#negative.negative type="radio" name="filter_positive_" 
           label for="negative"
             span.circle.circle-lg.circle_minus
               em

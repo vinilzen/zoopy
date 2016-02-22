@@ -95,15 +95,20 @@
     label {
       cursor: pointer;
       font-size: 12px;
+      height: 42px;
       color: #000;
       font-weight: normal;
-      margin-bottom: 0;
-      margin-right: 11px;
+      margin-bottom: -1px;
+      margin-right: 27px;
       line-height: 14px;
-      height: 14px;
-      padding: 5px 23px 12px 8px;
+      height: 42px;
+      padding: 13px 8px 0px 7px;
+      min-width: 129px;
       display: inline-block;
       position: relative;
+      &:hover {
+        color: #c00;
+      }
       span {
         margin-right: 10px;
         margin-top: -2px;
@@ -118,9 +123,24 @@
           width: 100%;
           height: 2px;
           left: 0px;
-          top: 32px;
+          top: 40px;
           background-color: #666666;
           position: absolute;
+        }
+      }
+      &.positive:checked + label {
+        &:after {
+          background-color: #6a9b01;
+        }
+      }
+      &.neutral:checked + label {
+        &:after {
+          background-color: #5c5c5c;
+        }
+      }
+      &.negative:checked + label {
+        &:after {
+          background-color: #cc3333;
         }
       }
     }
@@ -139,7 +159,7 @@
     textarea.form-control {
       border: 1px solid #ccc;
       border-radius: 2px;
-      margin-left: 2px;
+      margin-left: 0;
       min-height: 155px;
       padding-left: 9px;
       padding-top: 5px;
@@ -151,23 +171,38 @@
     .alert {
       font-size: 12px;
       margin-top: -12px;
-      padding-top: 5px;
-      padding-bottom: 5px;
+      margin-left: -9px;
+      padding: 4px 15px 4px 9px;
       border-radius: 0;
       span.dotted {
         display: inline-block;
-        border-bottom: 1px dotted #000;
+        background: url(../img/point.png) repeat-x 1px bottom;
+        cursor: pointer;
+        &:hover {
+          color: #c00;
+          background-image: url(../img/point_red.png);
+        }
       }
       span.label-default {
         background-color: #e3ccc1;
         font-size: 12px;
+        padding: 0px 4px;
+        line-height: 19px;
+        border: 1px solid #e3ccc1;
+        display: inline-block;
         font-weight: normal;
         color: #000;
       }
       .btn-default {
+        top: -1px;
+        position: relative;
         margin-left: 14px;
+        padding-bottom: 0px;
         background-color: transparent;
         border-color: #cfb7ac;
+        &:hover {
+          color: #c00;
+        }
       }
       &.alert-danger {
         background-color: #f4e6dc;
@@ -178,14 +213,27 @@
   }
 }
 .media-left-review {
-  width: 129px;
+  width: 155px;
+  display: inline-block;
   text-align: center;
   position: relative;
-  padding-top: 16px;
+  padding: 16px 26px 30px 0;
   left: 2px;
-  p {
+  .text-sm {
     line-height: 17px;
     margin: 8px 20px 0;
+    display: inline-block;
+  }
+  img {
+    transition: opacity .2s ease;
+  }
+  &:hover {
+    img {
+      opacity: .7;
+    }
+    .text-sm {
+      color:#000;
+    }
   }
 }
 .circle {
@@ -218,6 +266,10 @@
   &.active {
     cursor: default;
     border-color: #000;
+  }
+  transition: opacity .3s ease;
+  &:not(.active):hover {
+    opacity: .7;
   }
 }
 .circle.circle-lg em {
@@ -334,9 +386,9 @@
   }
 }
 .select-mood {
-  padding-top: 8px;
-  margin-left: 1px;
-  padding-bottom: 12px;
+  padding-top: 0;
+  margin-left: 2px;
+  // padding-bottom: 12px;
 }
 .review-edit-link {
   color: #ababab;
